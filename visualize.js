@@ -158,7 +158,6 @@ fetch('./output.json')
             .enter()
             .append("path")
             .attr('d', (d, i) => {
-                
                 return d3.symbol().type(shapes[i]).size(200)(); // Adjust the size as needed
             })
             .attr('fill', d => d.color)
@@ -167,20 +166,41 @@ fetch('./output.json')
             .call(drag(simulation));
             
 
+
+
+        // EXAMPLE OF THE G ELEMENTS
+        // <g class="labels" transform="translate(156.10000000000002,212.8) scale(0.3)">
+        //     <foreignObject class="node-label" x="7.0710678118654755" y="0" style="visibility: hidden; pointer-events: none;" width="0" height="0" transform="translate(-74.00948510845227,406.39679026877434)">
+        //         <div xmlns="http://www.w3.org/1999/xhtml" class="label-content" style="display: block;"><span class="maturity">Super High</span> <span class="source">Wicked Wild</span><br>How might we leverage AI to enhance personalized learning experiences?</div>
+        //     </foreignObject>
+        //     <foreignObject class="node-label" x="-9.03088751750192" y="8.273032735715967" style="visibility: hidden; pointer-events: none;" width="0" height="0" transform="translate(-34.23123581801737,396.8421633784107)"><div xmlns="http://www.w3.org/1999/xhtml" class="label-content" style="display: block;"><span class="maturity">High</span> <span class="source">GeoEngineering</span><br>How might we use AI to improve healthcare diagnostics and treatment planning?</div></foreignObject><foreignObject class="node-label" x="1.3823220809823638" y="-15.750847141167634" style="visibility: hidden; pointer-events: none;" width="0" height="0" transform="translate(23.452690391264774,362.75867000542416)"></foreignObject>
+
         // Add labels to the nodes
         const label = svg.append('g')
-        .selectAll('foreignObject')
-        .data(nodes)
-        .enter()
-        .append('foreignObject')
-        .attr('width', '100%')
-        .attr('height', '100%')
-        .attr('class', 'node-label') // Add class to the <foreignObject> element
-        .style('visibility', 'hidden')
-        .style('pointer-events', 'none') // Prevent labels from interfering with mouse events
-        .append('xhtml:div')
-        .attr('class', 'label-content') // Add class to the <div> element
-        .html(d => d.label);
+            .attr('class', 'labels') // Add class to the <g> element for styling
+            .selectAll('foreignObject')
+            .data(nodes)
+            .enter()
+            .append('foreignObject')
+            .attr('class', 'node-label') // Add class to the <foreignObject> element
+            .style('visibility', 'hidden')
+            .style('pointer-events', 'none') // Prevent labels from interfering with mouse events
+            .html(d => `<div xmlns="http://www.w3.org/1999/xhtml" class="label-content">${d.label}</div>`)
+            .each(function(d, i) {
+                const labelElement = this.querySelector('.label-content');
+                if (labelElement) {
+                    const { width, height } = labelElement.getBoundingClientRect();
+                    const nodeElement = node.nodes()[i];
+                    const nodeBBox = nodeElement.getBBox();
+                    d3.select(this)
+                        .attr('width', 200)
+                        .attr('height', '100%')
+                        .attr('x', 10)
+                        .attr('y', 10);
+                }
+            });
+
+
         // Show label on mouseover
         function showLabel(event, d) {
             label.filter(node => node.id === d.id)
@@ -208,19 +228,13 @@ fetch('./output.json')
                 .attr('x2', d => d.target.x)
                 .attr('y2', d => d.target.y);
 
-            // node
-            //     .attr('cx', d => d.x)
-            //     .attr('cy', d => d.y);
-
-             node.attr("transform", d => `translate(${d.x},${d.y})`);
-
+            node.attr("transform", d => `translate(${d.x},${d.y})`);
 
             label
-                // .attr('x', d => d.x + 10) // Adjust the x position of the label relative to the node
-                // .attr('y', d => d.y + 10); // Adjust the y position of the label relative to the node
-                .style('top',d=> `${d.y+10}px`)
-                .style('left',d=> `${d.x+10}px`)
-        });
+                .attr('x', d => d.x+10)
+                .attr('y', d => d.y+10)
+                // .attr('transform', d => `translate(${d.x},${d.y})`);
+    });
 
         // Drag behavior for nodes
         function drag(simulation) {
