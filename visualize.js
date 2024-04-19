@@ -9,29 +9,16 @@ fetch('./output.json')
 
         // Define a color scale based on maturity levels
         const colorScale = {
-            'Low': 'blue',
-            'Medium': 'green',
-            'High': 'orange',
-            'Super High': 'red'
+            'Low': '#90c4a2',
+            'Medium': '#41b6c4',
+            'High': '#2c7fb8',
+            'Super High': '#253494'
         };
 
         // Map maturity levels to colors
         const colors = maturityLevels.map(maturity => colorScale[maturity]);
 
-        // // Create labels combining maturity levels and prompts
-        // const labels = maturityLevels.map((maturity, index) => {
-        //     const promptWords = prompts[index].split(' ');
-        //     const wrappedPrompt = promptWords.reduce((result, word, i) => {
-        //         if (i > 0 && result.split('<br>').pop().length + word.length > 30) {
-        //             return result + '<br>' + word;
-        //         } else {
-        //             return result + (i > 0 ? ' ' : '') + word;
-        //         }
-        //     }, '');
-        //     return `${maturity}:<br>${wrappedPrompt}`;
-        // });
-
-        const labels = maturityLevels.map((maturity, index) => `${maturity}:<br>${prompts[index]}`);
+        const labels = maturityLevels.map((maturity, index) => `<span class="maturity">${maturity}</span><br>${prompts[index]}`);
 
         // Calculate the similarity between embeddings
         const similarity = [];
@@ -53,31 +40,38 @@ fetch('./output.json')
             label: labels[index]
         }));
 
-        // Create links for the force-directed graph based on similarity
-        const threshold = 0.87; // Adjust the threshold as needed
-        // const links = similarity.filter(link => link.dist >= threshold);
-
         const links = [];
-        // Ensure each node has at least one connection
+        const threshold = 0.89; // Adjust the threshold value as needed
+
+        // Iterate over each node
         for (let i = 0; i < nodes.length; i++) {
             const nodeLinks = similarity
-                .filter(link => link.source === i || link.target === i)
-                .sort((a, b) => b.dist - a.dist)
-                .slice(0, 3);
+                .filter(link => (link.source === i || link.target === i) && link.dist >= threshold)
+                .map(link => ({
+                    source: link.source,
+                    target: link.target,
+                    dist: link.dist
+                }));
 
+            // If no connections above the threshold, connect to the closest node
             if (nodeLinks.length === 0) {
-                const randomTarget = Math.floor(Math.random() * nodes.length);
-                if (randomTarget !== i) {
+                const closestLink = similarity
+                    .filter(link => link.source === i || link.target === i)
+                    .sort((a, b) => b.dist - a.dist)[0];
+
+                if (closestLink) {
                     nodeLinks.push({
-                        source: i,
-                        target: randomTarget,
-                        dist: 0.5 // Assign a default distance for the random connection
+                        source: closestLink.source,
+                        target: closestLink.target,
+                        dist: closestLink.dist
                     });
                 }
             }
 
             links.push(...nodeLinks);
-}
+        }
+
+
         // Create the SVG element
         const svg = d3.select('#graph')
         .append('svg')
@@ -91,18 +85,20 @@ fetch('./output.json')
 
 
         const simulation = d3.forceSimulation(nodes)
-            .force('link', d3.forceLink(links).id(d => d.id).distance(d => 200 * (1 - d.dist)))
-            .force('charge', d3.forceManyBody().strength(-30))
-            .force('center', d3.forceCenter(width / 2, height / 2).strength(0.5))
-            .force('boundingBox', boundingBox());
-     
+            .force("link", d3.forceLink(links).id(d => d.id))
+            .force("charge", d3.forceManyBody().strength(-150))
+            .force("x", d3.forceX())
+            .force("y", d3.forceY())
+            .force('center', d3.forceCenter(width / 2, height / 2).strength(0.7))
+
+
         // Bounding box constraint
         function boundingBox() {
-            const padding = 100; // Adjust the padding as needed
+            const padding = 10; // Adjust the padding as needed
             const minX = padding;
             const minY = padding;
-            const maxX = width - padding;
-            const maxY = height - padding;
+            const maxX = width-padding;
+            const maxY = height-padding;
      
             return () => {
                 for (const node of nodes) {
@@ -112,7 +108,7 @@ fetch('./output.json')
             };
         }
         const zoom = d3.zoom()
-            .scaleExtent([0.5, 5]) // Set the minimum and maximum zoom levels
+            .scaleExtent([0.3, 3]) // Set the minimum and maximum zoom levels
             .on('zoom', zoomed);
 
         svg.call(zoom);
@@ -128,7 +124,6 @@ fetch('./output.json')
             .data(links)
             .enter()
             .append('line')
-            .attr('stroke', 'gray')
             .attr('stroke-width', 1);
 
         // Create the nodes
@@ -137,12 +132,11 @@ fetch('./output.json')
             .data(nodes)
             .enter()
             .append('circle')
-            .attr('r', 10)
+            .attr('r', 5)
             .attr('fill', d => d.color)
             .on('mouseover', showLabel)
             .on('mouseout', hideLabel)
             .call(drag(simulation));
-
 
         // Add labels to the nodes
         const label = svg.append('g')
@@ -152,17 +146,12 @@ fetch('./output.json')
             .append('foreignObject')
             .attr('width', '100%')
             .attr('height', '100%')
+            .attr('class', 'node-label') // Add class to the <foreignObject> element
             .style('visibility', 'hidden')
             .style('pointer-events', 'none') // Prevent labels from interfering with mouse events
             .append('xhtml:div')
-            .style('position', 'absolute')
-            .style('background-color', 'white')
-            .style('border', '1px solid black')
-            .style('padding', '5px')
-            .style('font-size', '12px')
-            .style('max-width','200px')
-            .style('word-wrap', 'break-word')
-            .html(d => d.label)
+            .attr('class', 'label-content') // Add class to the <div> element
+            .html(d => d.label);
 
 
 
