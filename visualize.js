@@ -66,7 +66,7 @@ fetch('./output.json')
         }));
 
         const links = [];
-        const threshold = 0.89; // Adjust the threshold value as needed
+        const threshold = 0.895; // Adjust the threshold value as needed
 
         // Iterate over each node
         for (let i = 0; i < nodes.length; i++) {
@@ -95,13 +95,51 @@ fetch('./output.json')
 
             links.push(...nodeLinks);
         }
+        // Select the existing slider element by its ID
+        const slider = d3.select('#threshold-slider')
+            .attr('min', 0.83)    // Assuming you want to change min to 80
+            .attr('max', 0.93)   // Assuming you want to change max to 100
+            .attr('step', 0.001)  // Assuming you want to change step to 0.5
+            .attr('value', threshold) // Assuming 'threshold' is a pre-defined variable
+            .on('input', function () {
+                const newThreshold = +this.value;
+                updateLinks(newThreshold);
+            });
+
+        function updateLinks(newThreshold) {
+            // Filter links based on the new threshold
+            const filteredLinks = similarity.filter(link => link.dist >= newThreshold);
+
+            // Bind the filteredLinks data to the link elements
+            const linkSelection = d3.select('.links-container') // Make sure to select the correct container for the links
+                .selectAll('line')
+                .data(filteredLinks, d => d.source.id + "-" + d.target.id); // Use a key function for object constancy
+
+            // Enter + update
+            linkSelection.enter()
+                .append('line')
+                .merge(linkSelection)
+                .attr('stroke-width', 1);
+
+            // Exit
+            linkSelection.exit().remove();
+
+            // Update the simulation with new links
+            simulation.force("link")
+                .links(filteredLinks)
+                // .distance(link => 100 * (1 - link.dist)) // Adjust distance based on similarity
+                // .strength(0.2); // Set strength to a higher value for more aggressive attraction
+
+            // Restart the simulation with increased alpha for more movement
+            simulation.alpha(1).restart();
+        }
 
 
         // Create the SVG element
         const svg = d3.select('#graph')
-        .append('svg')
-        .attr('width', `100%`)
-        .attr('height', `100%`);
+            .append('svg')
+            .attr('width', `100%`)
+            .attr('height', `100%`);
 
         // Set up the dimensions for the SVG
         const width = svg.node().getBoundingClientRect().width;
@@ -111,32 +149,18 @@ fetch('./output.json')
 
         const simulation = d3.forceSimulation(nodes)
             .force("link", d3.forceLink(links).id(d => d.id))
-            .force("charge", d3.forceManyBody().strength(-150))
+            .force("charge", d3.forceManyBody().strength(-100))
             .force("x", d3.forceX())
             .force("y", d3.forceY())
             .force('center', d3.forceCenter(width / 2, height / 2).strength(0.7))
 
 
-        // Bounding box constraint
-        function boundingBox() {
-            const padding = 10; // Adjust the padding as needed
-            const minX = padding;
-            const minY = padding;
-            const maxX = width-padding;
-            const maxY = height-padding;
-     
-            return () => {
-                for (const node of nodes) {
-                    node.x = Math.max(minX, Math.min(maxX, node.x));
-                    node.y = Math.max(minY, Math.min(maxY, node.y));
-                }
-            };
-        }
+
         const zoom = d3.zoom()
-            .scaleExtent([0.3, 3]) // Set the minimum and maximum zoom levels
+            .scaleExtent([0.5, 5]) // Set the minimum and maximum zoom levels
             .on('zoom', zoomed);
 
-        svg.call(zoom);
+        svg.call(zoom)
 
         function zoomed(event) {
             svg.selectAll('g')
@@ -151,8 +175,11 @@ fetch('./output.json')
             .append('line')
             .attr('stroke-width', 1);
 
+        const nodeGroup = svg.append("g")
+            .attr("class", "nodes"); // Add a class for easier selection if needed
+
         // Create nodes
-        const node = svg.append("g")
+        const node = nodeGroup
             .selectAll("path")
             .data(nodes)
             .enter()
@@ -164,16 +191,7 @@ fetch('./output.json')
             .on('mouseover', showLabel)
             .on('mouseout', hideLabel)
             .call(drag(simulation));
-            
 
-
-
-        // EXAMPLE OF THE G ELEMENTS
-        // <g class="labels" transform="translate(156.10000000000002,212.8) scale(0.3)">
-        //     <foreignObject class="node-label" x="7.0710678118654755" y="0" style="visibility: hidden; pointer-events: none;" width="0" height="0" transform="translate(-74.00948510845227,406.39679026877434)">
-        //         <div xmlns="http://www.w3.org/1999/xhtml" class="label-content" style="display: block;"><span class="maturity">Super High</span> <span class="source">Wicked Wild</span><br>How might we leverage AI to enhance personalized learning experiences?</div>
-        //     </foreignObject>
-        //     <foreignObject class="node-label" x="-9.03088751750192" y="8.273032735715967" style="visibility: hidden; pointer-events: none;" width="0" height="0" transform="translate(-34.23123581801737,396.8421633784107)"><div xmlns="http://www.w3.org/1999/xhtml" class="label-content" style="display: block;"><span class="maturity">High</span> <span class="source">GeoEngineering</span><br>How might we use AI to improve healthcare diagnostics and treatment planning?</div></foreignObject><foreignObject class="node-label" x="1.3823220809823638" y="-15.750847141167634" style="visibility: hidden; pointer-events: none;" width="0" height="0" transform="translate(23.452690391264774,362.75867000542416)"></foreignObject>
 
         // Add labels to the nodes
         const label = svg.append('g')
@@ -186,7 +204,7 @@ fetch('./output.json')
             .style('visibility', 'hidden')
             .style('pointer-events', 'none') // Prevent labels from interfering with mouse events
             .html(d => `<div xmlns="http://www.w3.org/1999/xhtml" class="label-content">${d.label}</div>`)
-            .each(function(d, i) {
+            .each(function (d, i) {
                 const labelElement = this.querySelector('.label-content');
                 if (labelElement) {
                     const { width, height } = labelElement.getBoundingClientRect();
@@ -195,8 +213,8 @@ fetch('./output.json')
                     d3.select(this)
                         .attr('width', 200)
                         .attr('height', '100%')
-                        .attr('x', 10)
-                        .attr('y', 10);
+                    // .attr('x', -100)
+                    // .attr('y', 0);
                 }
             });
 
@@ -205,7 +223,7 @@ fetch('./output.json')
         function showLabel(event, d) {
             label.filter(node => node.id === d.id)
                 .style('visibility', 'visible')
-                d3.select(this)
+            d3.select(this)
                 .style('stroke', 'hotpink')
                 .style('stroke-width', '3px');
         }
@@ -214,10 +232,10 @@ fetch('./output.json')
         function hideLabel(event, d) {
             label.filter(node => node.id === d.id)
                 .style('visibility', 'hidden');
-                d3.select(this)
+            d3.select(this)
                 .style('stroke', null)
                 .style('stroke-width', null);
-        
+
         }
 
         // Update the positions of nodes and links on each tick of the simulation
@@ -231,29 +249,49 @@ fetch('./output.json')
             node.attr("transform", d => `translate(${d.x},${d.y})`);
 
             label
-                .attr('x', d => d.x+10)
-                .attr('y', d => d.y+10)
-                // .attr('transform', d => `translate(${d.x},${d.y})`);
-    });
+                .attr('x', d => d.x + 10)
+                .attr('y', d => d.y + 10)
+        });
 
         // Drag behavior for nodes
         function drag(simulation) {
-            function dragstarted(event) {
+            function dragstarted(event, d) {
                 if (!event.active) simulation.alphaTarget(0.3).restart();
-                event.subject.fx = event.subject.x;
-                event.subject.fy = event.subject.y;
+                d.fx = d.x;
+                d.fy = d.y;
             }
 
-            function dragged(event) {
-                event.subject.fx = event.x;
-                event.subject.fy = event.y;
-            }
+            function dragged(event, d) {
+                d.fx = event.x;
+                d.fy = event.y;
+              
+                // Move linked nodes
+                simulation.force("link").links().forEach(function(link) {
+                  if (link.source === d) {
+                    link.target.fx = link.target.x + (event.x - d.x);
+                    link.target.fy = link.target.y + (event.y - d.y);
+                  } else if (link.target === d) {
+                    link.source.fx = link.source.x + (event.x - d.x);
+                    link.source.fy = link.source.y + (event.y - d.y);
+                  }
+                });
+              }
 
-            function dragended(event) {
+            function dragended(event, d) {
                 if (!event.active) simulation.alphaTarget(0);
-                event.subject.fx = null;
-                event.subject.fy = null;
-            }
+                d.fx = null;
+                d.fy = null;
+              
+                // Release linked nodes
+                simulation.force("link").links().forEach(function(link) {
+                  if (link.source === d || link.target === d) {
+                    link.source.fx = null;
+                    link.source.fy = null;
+                    link.target.fx = null;
+                    link.target.fy = null;
+                  }
+                });
+              }
 
             return d3.drag()
                 .on('start', dragstarted)
