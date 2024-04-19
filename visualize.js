@@ -6,6 +6,25 @@ fetch('./output.json')
         const embeddingVectors = embeddings.map(item => item.embedding);
         const maturityLevels = embeddings.map(item => item.maturity);
         const prompts = embeddings.map(item => item.prompt);
+        const sources = embeddings.map(item => item.source);
+
+        const nodeShapes = [
+            d3.symbolDiamond,
+            d3.symbolCircle,
+            d3.symbolSquare,
+            d3.symbolStar,
+            d3.symbolCross,
+            d3.symbolTriangle,
+            d3.symbolWye,
+            d3.symbolX
+        ];
+        // Create an object to map sources to node shapes
+        const sourceShapeMap = {};
+        const uniqueSources = [...new Set(sources)];
+        uniqueSources.forEach((source, index) => {
+            sourceShapeMap[source] = nodeShapes[index % nodeShapes.length];
+        });
+
 
         // Define a color scale based on maturity levels
         const colorScale = {
@@ -14,11 +33,17 @@ fetch('./output.json')
             'High': '#2c7fb8',
             'Super High': '#253494'
         };
+        const sourceList = {
+            'Low': '#90c4a2',
+            'Medium': '#41b6c4',
+            'High': '#2c7fb8',
+            'Super High': '#253494'
+        };
 
         // Map maturity levels to colors
         const colors = maturityLevels.map(maturity => colorScale[maturity]);
-
-        const labels = maturityLevels.map((maturity, index) => `<span class="maturity">${maturity}</span><br>${prompts[index]}`);
+        const shapes = sources.map(source => sourceShapeMap[source]);
+        const labels = embeddings.map(item => `<span class="maturity">${item.maturity}</span> <span class="source">${item.source}</span><br>${item.prompt}`);
 
         // Calculate the similarity between embeddings
         const similarity = [];
@@ -126,36 +151,36 @@ fetch('./output.json')
             .append('line')
             .attr('stroke-width', 1);
 
-        // Create the nodes
-        const node = svg.append('g')
-            .selectAll('circle')
+        // Create nodes
+        const node = svg.append("g")
+            .selectAll("path")
             .data(nodes)
             .enter()
-            .append('circle')
-            .attr('r', 5)
+            .append("path")
+            .attr('d', (d, i) => {
+                
+                return d3.symbol().type(shapes[i]).size(200)(); // Adjust the size as needed
+            })
             .attr('fill', d => d.color)
             .on('mouseover', showLabel)
             .on('mouseout', hideLabel)
             .call(drag(simulation));
+            
 
         // Add labels to the nodes
         const label = svg.append('g')
-            .selectAll('foreignObject')
-            .data(nodes)
-            .enter()
-            .append('foreignObject')
-            .attr('width', '100%')
-            .attr('height', '100%')
-            .attr('class', 'node-label') // Add class to the <foreignObject> element
-            .style('visibility', 'hidden')
-            .style('pointer-events', 'none') // Prevent labels from interfering with mouse events
-            .append('xhtml:div')
-            .attr('class', 'label-content') // Add class to the <div> element
-            .html(d => d.label);
-
-
-
-
+        .selectAll('foreignObject')
+        .data(nodes)
+        .enter()
+        .append('foreignObject')
+        .attr('width', '100%')
+        .attr('height', '100%')
+        .attr('class', 'node-label') // Add class to the <foreignObject> element
+        .style('visibility', 'hidden')
+        .style('pointer-events', 'none') // Prevent labels from interfering with mouse events
+        .append('xhtml:div')
+        .attr('class', 'label-content') // Add class to the <div> element
+        .html(d => d.label);
         // Show label on mouseover
         function showLabel(event, d) {
             label.filter(node => node.id === d.id)
@@ -183,9 +208,12 @@ fetch('./output.json')
                 .attr('x2', d => d.target.x)
                 .attr('y2', d => d.target.y);
 
-            node
-                .attr('cx', d => d.x)
-                .attr('cy', d => d.y);
+            // node
+            //     .attr('cx', d => d.x)
+            //     .attr('cy', d => d.y);
+
+             node.attr("transform", d => `translate(${d.x},${d.y})`);
+
 
             label
                 // .attr('x', d => d.x + 10) // Adjust the x position of the label relative to the node
