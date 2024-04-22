@@ -12,9 +12,9 @@ fetch('./output.json')
             d3.symbolDiamond,
             d3.symbolCircle,
             d3.symbolSquare,
+            d3.symbolTriangle,
             d3.symbolStar,
             d3.symbolCross,
-            d3.symbolTriangle,
             d3.symbolWye,
             d3.symbolX
         ];

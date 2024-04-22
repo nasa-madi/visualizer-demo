@@ -1,0 +1,990 @@
+Prompt,Source,Maturity,Description,Transcript
+How might we leverage AI to enhance personalized learning experiences?,Wicked Wild,Super High,"Artificial Intelligence has the potential to revolutionize education by providing personalized learning experiences tailored to each student's unique needs, abilities, and learning styles. By analyzing data on student performance, engagement, and preferences, AI algorithms could dynamically adapt the content, pace, and delivery of educational materials to optimize learning outcomes. This could involve recommending specific resources, adjusting the difficulty level of assignments, or providing targeted feedback and support. Personalized AI-driven learning could help students stay motivated, address their weaknesses, and excel in their strengths, ultimately leading to improved academic performance and a more fulfilling educational journey.",
+How might we use AI to improve healthcare diagnostics and treatment planning?,GeoEngineering,High,"AI has the capacity to transform healthcare by assisting medical professionals in making more accurate and efficient diagnoses and treatment decisions. Machine learning algorithms can analyze vast amounts of patient data, including medical records, imaging scans, and genetic information, to identify patterns and correlations that may be difficult for humans to discern. This could lead to earlier detection of diseases, more precise diagnoses, and personalized treatment plans based on a patient's specific health profile. Additionally, AI-powered tools could help streamline clinical workflows, reduce medical errors, and provide decision support to healthcare providers, ultimately improving patient outcomes and reducing healthcare costs.",
+How might we employ AI to optimize resource allocation and reduce waste in various industries?,Health & Wellness,Medium,"AI can play a crucial role in optimizing resource allocation and reducing waste across various industries, from manufacturing to agriculture to energy. By analyzing real-time data on production processes, supply chains, and consumer demand, AI algorithms can help businesses make more informed decisions about how to allocate resources efficiently. This could involve predicting equipment failures and scheduling preventive maintenance, optimizing inventory levels to minimize waste, or dynamically adjusting production lines to meet changing market demands. AI-driven resource optimization could lead to significant cost savings, reduced environmental impact, and improved overall operational efficiency for businesses.",
+How might we harness AI to enhance public safety and security?,GeoEngineering,Low,"AI has the potential to significantly enhance public safety and security by enabling more effective monitoring, prediction, and response to potential threats. Computer vision algorithms can analyze video footage from surveillance cameras to detect suspicious activities or individuals, while natural language processing can monitor online communications to identify potential security risks. AI-powered predictive policing tools can analyze crime data to forecast where and when crimes are likely to occur, allowing law enforcement agencies to allocate resources more effectively. Additionally, AI can assist in emergency response by optimizing resource deployment, providing real-time situational awareness, and supporting decision-making in high-pressure situations.",
+How might we utilize AI to foster creativity and innovation in various fields?,Health & Wellness,X1,"While AI is often associated with automation and efficiency, it also has the potential to foster creativity and innovation across various fields, from art and design to scientific research. Generative AI models can be used to create novel designs, artworks, or even musical compositions by learning from existing examples and combining elements in unique ways. In scientific research, AI can help identify promising new avenues for exploration by analyzing vast amounts of data and identifying patterns or correlations that humans might overlook. By providing new tools and inspiration, AI can augment human creativity and accelerate the pace of innovation in various domains.",
+How might we apply AI to promote environmental sustainability and combat climate change?,GeoEngineering,Execution,"AI can be a powerful tool in the fight against climate change and the promotion of environmental sustainability. Machine learning algorithms can analyze satellite imagery and sensor data to monitor deforestation, track wildlife populations, and detect changes in land use patterns. AI can also optimize renewable energy systems by predicting energy demand, optimizing power generation and distribution, and improving the efficiency of energy storage technologies. In agriculture, AI-powered precision farming techniques can help reduce water and pesticide use while maximizing crop yields. By providing insights and optimizations across various sectors, AI can support more sustainable and environmentally friendly practices on a global scale.",
+How might we leverage AI to improve mental health support and treatment?,Health & Wellness,Super High,"AI has the potential to revolutionize mental health support and treatment by making services more accessible, personalized, and effective. Natural language processing algorithms can analyze text-based conversations or voice recordings to identify signs of emotional distress or mental health conditions, allowing for early intervention and support. AI-powered chatbots and virtual therapists can provide 24/7 support and guidance, helping individuals manage their mental health between sessions with human therapists. Machine learning algorithms can also analyze patient data to predict treatment response and optimize medication dosage, enabling more personalized and effective treatment plans. By complementing human expertise and expanding access to mental health resources, AI can help address the growing global mental health crisis.",
+How might we use AI to enhance accessibility and inclusivity for people with disabilities?,GeoEngineering,High,"AI can play a crucial role in enhancing accessibility and inclusivity for people with disabilities by providing assistive technologies and personalized accommodations. Computer vision algorithms can describe images and videos for visually impaired individuals, while speech recognition and natural language processing can enable voice-controlled interfaces and real-time transcription for people with hearing impairments. AI-powered prosthetics and exoskeletons can help individuals with mobility challenges navigate their environment more easily. Additionally, AI can optimize web and app interfaces to accommodate different abilities and preferences, ensuring that digital content is accessible to all users. By leveraging AI to create more inclusive technologies and environments, we can empower people with disabilities to participate fully in society.",
+How might we employ AI to improve disaster response and humanitarian aid efforts?,Health & Wellness,Medium,"AI can significantly improve the effectiveness and efficiency of disaster response and humanitarian aid efforts by providing real-time insights, optimizing resource allocation, and supporting decision-making in complex, rapidly evolving situations. Machine learning algorithms can analyze satellite imagery and social media data to assess the extent of damage and identify areas most in need of assistance. AI-powered predictive models can forecast the spread of infectious diseases or the likelihood of aftershocks following an earthquake, allowing responders to prioritize their efforts. Autonomous vehicles and drones equipped with AI can deliver supplies and conduct search and rescue operations in hazardous or hard-to-reach areas. By harnessing the power of AI, humanitarian organizations can respond more quickly, allocate resources more effectively, and ultimately save more lives in the aftermath of disasters.",
+How might we use AI to foster global collaboration and knowledge sharing?,GeoEngineering,Low,"AI has the potential to foster global collaboration and knowledge sharing by breaking down language barriers, facilitating cross-cultural communication, and enabling the creation of shared knowledge repositories. Machine translation algorithms can provide real-time, accurate translations of text and speech, allowing individuals from different linguistic backgrounds to communicate and collaborate more easily. AI-powered content recommendation systems can help individuals discover relevant research, news, and insights from around the world, exposing them to diverse perspectives and fostering a more global mindset. Additionally, AI can support the creation of collaborative online platforms and virtual workspaces, enabling geographically dispersed teams to work together seamlessly. By harnessing AI to connect people and ideas across borders, we can accelerate innovation, promote cultural understanding, and address global challenges more effectively.",
+How might we minimize crash landing drones and air vehicles?,Wicked Wild,High,"Provide redundant landing capabilities to UAVs to increase safety and public confidence in these systems. This will allow the economy to expand with the capabilities UAVs promise while managing the risks associated with their overflight of valuable assets and humans. We can take the next step to build on the success of Safe2Ditch intelligent landing system by adding backup propulsion and guidance to increase the options for a safe ditching and more precisely control the crash and mitigate damage/injury. Perform a analysis of available electric, pressure, 
+and rocket powered systems that can be added to drones to supplement 
+damaged systems and controlled by the Safe2Ditch system to expand its 
+ability to reduce the danger from ditching UAVs","Today I'd like to propose rails, which is retro assisted intelligent landing study. In the future, UAV's will be used in various environments to accomplish many tasks. These environments will have people present, and this presents at risk because of the risk NASA has developed detecting the void software to recognize unsafe situations and avoid landing in these zones. However, like any other machine, US will eventually fail or malfunction. When this happens, the vehicle has no control over where it lands or crashes.
+So this video shows the test we performed terminating the vehicle mid flight in order to mitigate the risk of an uncontrollable UAV crashing into people, we'd like to propose a device which can steer the vehicle away from people or unsafe crash zones. I think the three steps to this number one, the vehicle will shut up. I'll pulsion so it becomes ballistic and follows a more predictable flight path to the onboard detect and avoid software will determine whether this crash zone is problematic. 3rd the detecting avoid software will determine the safest crash zone and finally a device will deploy to direct the crashing vehicle to the safest crash location. Clearly, the biggest question here is whether a device could be developed to actually affect the trajectory of an out of control vehicle. This will require analysis and testing to determine feasibility of this concept, and it'll be limited to vehicles under 55 pounds. We did investigate propulsion device options that would meet the physical requirements for the small US installation and gather real time or real world data on how much force they can impart for objects of various inertias. So here's our engineering approach. In order to address this problem, we'd like to use the phased engineering approach to solve this problem. Phase one would be hardware testing and data collection. If the results look promising, phase two would follow. Phase two is vehicle simulation using phase one data to assess the impact of propulsive options on the trajectory management of the following vehicles. If results indicate feasible impact to the trajectory analysis of application to risk reduction technologies like grasp and real time risk assessment could be done. If the results look promising, phase two would follow. Face you follow Phase three is validation testing with drop testing of objects with similar inertial characteristics as drones from the gantry with active propulsors to validate simulation runs. We believe this would have significant impacts on industries which require small UIS to integrate with them populated environments. The outcome of this work could inform the FA on beyond visual line of sight flights and rules regarding autonomous systems."
+How might we harvest energy and shield against radiation with melanin?,Wicked Wild,Medium,"Commercial aircraft use about 100 MW of electricity. All that electricity must be generated by the aircraft. This require converting fuel to electricity that results in a reduction of aircraft efficiency. If some portion of that energy could be harvested without the expenditure of fuel that would increase aircraft efficiency. Aircraft operate at high altitudes where UV radiation and cosmic radiation levels are much greater than at ground level. This radiation represents a source of energy that remains unharvested. This free energy could be used to increase the energy efficiency of aircraft while reducing passenger exposure to harmful radiationMelanin is known mostly as a pigment but is a multifunctional material that accels at adsorbing UV and cosmic radiation that make it ideal for energy harvesting applications.  Melanin panels could harvest energy to supplement power. ""Wicked-Wild"" Idea:Investigate the ability of natural and synthetic melanin’s to adsorb energy and produce electricity  for aerospace applications.","bioinspired melanin based energy harvesting pitch. The basic premise behind this proposal is that commercial aircraft are huge consumers of electricity and every single water that electricity has to be generated by the aircraft itself.
+And we know that, you know, whenever we take something like jet fuel and convert it to some other form of energy, like electricity, it's not perfect. There it's, you know, there are losses involved and that comes at the expense of efficiency to the aircraft.
+So is there, you know, some way where we could possibly augment or supplement the energy that is around the aircraft and possibly generate some electricity to help these aircraft become more fuel efficient? Now, one of the things is is that because commercial aircraft, you know, they typically fly at very high altitudes and in clear Sky early because they're they're up above the clouds.
+The UV radiation at altitude is about 100% greater than what we experience here at ground level.
+And cosmic radiation is continuously bombarding earth with about 1 giga electron volts or with energies of about 1 gig electron volts at the rate of about 10,000 per square meter every 2nd. And this happens day and night. So even aircraft flying night time routes or even in cloud clouds, you know, and it's not reliant strictly on on solar energy, but in cosmic energy is is Sir no. So if some portion of that energy, which right now just hits an aircraft and and goes unused, it some part of that could be harvested and converted into electrical energy that could be put back into the aircraft, that would help aircraft. Ohh efficiency. And so you know, how could that be accomplished? Well, you know, the whole idea of energy harvesting isn't new. You know, we have plenty of examples of that currently on Earth, you know, from hydroelectric dams, wind farm, solar farms. All of those take existing energy and harvest it and convert it into electrical energy. One of the things that is our our materials that has been under the radar but is extremely common is melanin. 
+Melanin is simply known, or or mostly known, just as a dark brown or a black pigment, and you know helps give us our skin color and and protect us from sunburn. However, that's not really doing melon and much justice. It really is a biopolymer that is amazingly multifunctional. Uh, and it's a macromolecular material, which is a mouthful to say that excels at transforming uh energy, particularly energy from the electromagnetic spectrum, from an A broad portion of that, all the way from like, near infrared to real short wavelength energy like UV and cosmic energy into electricity. Well and and it and it does it through a two stage process. First, it converts it uh into heat, which is exactly why when we go out into the sunlight and and sunlight feels warm, the melanin in our skin is immediately absorbing that energy, converting it to heat, and then it eventually converts it to electricity. So the idea of this is that melanin it's ideally suited for energy harvesting applications, so if we could, you know, and as I show in a in the PowerPoint here, you know if we could coat the top surface or or part of a fuselage with basically melanin based energy harvesting panels and and convert that energy that impacts on those surfaces kind of like a solar cell for an airplane or a type of thing, then it could go into the electrical system of the aircraft and basically you know we know that you know in commercial aircraft you.
+Know cost of operation and efficiency you know is is tremendous and so. You know the operators of commercial aircraft are looking for, you know, even fractional increases in efficiency. Uh to help generate and and maintain profitability as. So the wicket idea is to basically investigate a proof of concept melanin based energy absorber to produce electricity. The beauty of this concept is it's simplicity in which this can idea can be investigated. At this low TRL level, synthetic and organic melanin are commercially available through readily available sources. You could coat a substrate with a thin film of melanin and expose it to UV light, and then monitor that sample for the generation of electrical signal. Demonstrating some basic proof of concept that would set the stage for more formal research and development of melon and based energy absorbers for aeronautic applications."
+How might we enable trust in AI/ML applications and development,Wicked Wild,Low,"AI/ML was not originally designed for adversarial contexts, yet AI/ML systems are very attractive targets [1]. An IEEE survey from May 2020 found that practitioners report a dire need for better protecting machine learning systems in industrial applications [2]. A 2019 Gartner report found that application leaders must anticipate and prepare to mitigate potential risks of data corruption, model theft, and adversarial samples [3]. AI/ML systems are vulnerable to adversarial attacks across development, deployment, and inference. Enabling technologies: Public-key Encryption, Digital Signatures, Zero-knowledge Proofs, Homomorphic Encryption, etc..
+Characteristics that build trust: AI/ML systems should enforce honest behavior through cryptographic tools while maintaining privacy. Development of verifiable A/ML standards and regulations that rely on cryptographic guarantees to replace trust in companies.
+Use cases:
+Zero-Knowledge Machine Learning (ZKML)
+Problem: How to validate AI/ML accuracy of services on a public data set without exposing model weights and providing assurances related to training data
+Solution: Zero Knowledge proofs
+Proof of Inference
+Problem: How to verify that an AI/ML service provider is running inference on the proper model and not cheaper model 
+(e.g. how to verify openAI is giving you results from chatGPT-4 and not chatGPT-3?) without exposing weights. Implications for 
+AI/ML certification (e.g. how to verify model predictions are from certified model without exposing weights).
+Solution: Zero Knowledge proofs
+Privacy Preserving ML
+Problem: How to train AI/ML models with sensitive data at large data centers while ensuring privacy 
+Solution: Fully Homomorphic Encryption (FHE) enabling compute on encrypted data
+Data Provenance in Pipelines
+Problem: How to ensure that data inputs (e.g. images from a camera) are not compromised from attackers or pipelines
+Solution: Hardware attestation and provenance to ensure the integrity and trustworthiness of hardware components and data
+""Wicked-Wild"" Idea: 
+Cryptographic primitives can be combined with AI/ML development and applications to provide strong guarantees across 
+data pipelines, model development, model validation, and inference while maintaining privacy [1].
+
+Source: [1] ’Constructing Trust (or confirming Distrust) using Cryptographic Paradigms’, Shafi Goldwasser (Director of the Simons Institute for the Theory of Computing, Professor; UC Berkeley).
+Source: [2] Kumar, Ram Shankar Siva, et al. ""Adversarial machine learning-industry perspectives."" 2020 IEEE security and privacy workshops (SPW).
+Source: [3] ‘Anticipate Data Manipulation Security Risks to AI Pipelines’, Gartner Research, Feb 2019.
+","the context for today's presentation is that AI ML was not originally designed for adversarial contexts, yet AIML systems remain very attractive targets for these kind of adversarial attacks. So industry has kind of been looking at this and we I put here some examples where an IEEE survey from May 2020 found that practitioners report a dire need for better protecting machine learning systems in industrial applications. And similarly, a 2019 Gartner report found that application leaders must anticipate and prepare to mitigate potential risks of data corruption, model theft and adversarial examples.
+So the key idea here is that AI ML systems are vulnerable to these adversarial attacks across the entire life cycle of development, deployment and inference. So you know, the idea here is that there's this intersection of AI, ML, and cryptography, and there's many different kind of business sectors that live at this intersection.
+And we can kind of leverage some of these enabling technologies from cryptography such as public key encryption, data signature, zero knowledge proofs, homomorphic encryption. And there's all these other ones as well. And so the idea is that leveraging these kind of cryptographic primitives would enable us to build trust in systems and enforce good behavior as opposed to relying on trusting some entity or company or third party. So characteristics that build trust in these systems are that AI Mel systems should enforce honest behavior through cryptographic tools while maintaining privacy.
+And that's a big key. Their privacy and that, you know, the idea here is that development of verifiable AIML standards and regulations that rely on these cryptographic guarantees can replace trusting companies.
+So some simple examples just to give some intuition behind the ideas here is that you know, everybody's probably used open AI's chat GPT. So when you send a request to chat GPT, how do you know that the answer you get back is from the correct model?
+So say that you're a subscriber to their premium service. You pay $10.00 a month to get access to chat GPT 4 when open AI returns their response. How do you know that they're running inference on chat GPT 4 as opposed to a cheaper model that might be more kind of profitable from a business perspective? Well, the answer is that you don't know you are putting trust in open AI to do the right thing. So some the examples here of different use cases are one that I just talked about here was the 2nd bullet, which is proof of inference. So the idea there is that, you know, you can leverage some of these cryptographic tools to validate or verify that you ran inference on the correct model. Some other use cases are, you know, let's say a company says, hey, I have some machine learning model, it was this accurate. How do you how do you verify that their performance on some data set is what they claim, while in both those situations you can use these cryptographic tools called 0 knowledge proofs?
+There's other tools that you can use, such as fully homomorphic encryption, that enable privacy preserving mill so you can do the idea there is you can encrypt data, send to a large data center, do compute on your encrypted data and get back the answer that you had to begin with. And then now there's some other ideas about kind of by hardware attestation and provenance to ensure integrity of data that are running through your pipelines. So ultimately the wicked wild idea here is that cryptographic primitives can be combined with a aiml development and applications to provide strong guarantees across data pipelines, model development, model validation and inference while maintaining privacy."
+How might we improve airborne communication with Vortex Beam Communication for Interference Mitigation?,Wicked Wild,High,"Opportunity:
+Desirability: We are addressing the spectrum scarcity problem in the context of Advanced Air Mobility (AAM).
+Viability: Our solution makes use of a spatial filtering technique, which we are currently demonstrating in the laboratory under an existing NASA project aimed at low Earth orbit (LEO) to terrestrial communication.
+Feasibility: Adoption of our method will require some changes to communication infrastructure; however, the ability to communicate in the presence of in-band interference could change the paradigm of unmanned aerial vehicle (UAV) communication standards.
+Key Use Cases: Any case involving line-of-sight communication links that cannot take advantage of multiple-input and multiple-output (MIMO) schemes, which rely on multipath propagation.
+Possible Partnerships: Florida International University, University of Akron, Xadite Perceptions, Department of Defense (DoD)
+
+“Wicked-Wild” Idea:
+Exploit the orthogonality of vortex beams to allow for simultaneous usage of specific portions of the radio frequency (RF) spectrum.
+Isolate data channels using spatial-domain filtering techniques as opposed totraditional frequency-filtering techniques.
+Increase data transfer volume by using multiple vortex beams of the same carrier frequency.
+","thank you so advanced air mobility or ATM is the future of air transportation that explores the development of new technologies to revolutionize airspace usage and is a rapidly developing field that will include low altitude passenger transport, cargo delivery and public service capabilities. However, because the radio spectrum is a limited resource to increase of aircraft in the air, space raises concerns about potential interference with aviation communication.
+This increased disruption of critical communication and navigation signals can be caused by a variety of factors, both internal and external, to aviation systems.
+In severe cases, radiofrequency or RF interference caused by unintentional emissions or deliberate jamming can lead to important safety risks.
+Here is how vortex beam communication stands as a promising solution to interference mitigation in the context of AM are are at vortex harnesses, an underutilized property of radio waves.
+Their orbital angular momentum or OEM, the angular momentum of an of an electromagnetic or yam wave is composed of two parts, spin angular momentum corresponding to depolarization of the emwave and orbital angular momentum OAM associated to the spatial distribution of the EM wave. This integer value defines the number of helical terms the wavefront makes around the propagation axis.
+By tailoring the antenna ray to generate a desired oil mode, say plus one, we can transmit a targeted beam.
+Only receiver is equipped to detect the plus one mode will be able to decode the information.
+Now visualized data traveling on an invisible highway for each lane is defined by distinct helical twist in the signal itself.
+This twist, characterized by the OEM, forms the foundation for a powerful technique known as spatial multiplexing, which allows for the transmission of multiple independent data streams on the same frequency.
+By utilizing the spatial domain, we overcome interference limitations inherent to current RF systems.
+The orthogonality of OAM modes unlocks a dramatic increase in data capacity for applications previously limited by bandwidth constraints.
+But beyond share capacity Re Vortex offers unique addressing capabilities.
+Each OEM mode has a specific topological charge acting as its unique identifier or fingerprint.
+Imagine beams with charges, for example plus one and -2.
+
+In crowded environments with many RF signals.
+OEM filtering allows receivers to focus on their specific OEM fingerprint, ignoring irrelevant signals and thus reducing interference while enabling targeted information delivery with high signal to noise ratio and accuracy.
+Overall, encoding data on OEM modes consists of an information signal modulating the electric field of the RF wave.
+By carefully manipulating the phase distribution across the wavefront, thus creating specific OEM modes carrying the encoded data, the then multiple OEM modes carrying different data streams can be superimposed and transmitted together.
+Specialized antenna arrays at the receiving end can then separate these modes based on their unique face patterns, all of which makes this vortex beam communication technology hold the key to reshaping the way the data is transferred and interference mitigated in a soon to be crowded airspace."
+How might we eliminate carbon emissions with High-temperature PEM Fuel Cell for Aviation?,Wicked Wild,High,"Opportunity: 1) To eliminate CO2 emission 2) To triple energy efficiencyCO2 production by hydrocarbon fueled aircraft that contributes to global warming is expected to triple by 2050. Continuing to fuel aircraft with hydrocarbons is not sustainable. 
+Replacing hydrocarbon fuel with H2 eliminates CO2 emission. Joint NACA/NASA - Air Force projects Bee and Suntan successfully flew a B-57B twin-engine bomber using liquid hydrogen (LH2),  and successfully fueled MW-scale aircraft engines (CW J-65 and P&W M304) using LH2 in the 1950s.
+Because LH2 volumetric energy density is 25% of jet fuel, H2 powered aircraft requires a much larger fuel tank. Replacing the combustion process with higher energy efficiency fuel cell electrochemical reaction may offset the lower LH2 energy density. The current PEM fuel cell energy efficiency (~50%) is ~2X an internal combustion engine. The estimated efficiency of high temperature PEM fuel cell (HT PEM FC) is >70%. The DOE is developing HT-PEM technologies for heavy duty vehicles but excludes considerations specific to aviation. 
+""Wicked-Wild"" Idea: Develop HT-PEM technology for aviation
+Using HT-PEM fuel cells to power electric aircraft eliminates CO2 emissions while sustaining timely, long-distance travel capability. 
+Develop HT-PEM fuel cell materials specifically for aviation 
+Focus on membranes, electrodes, and membrane electrode assemblies (MEA)
+Include other stack components as opportunities allow
+Test HT-PEM fuel cell materials, single cells, and cell stacks under aviation load profiles (high-power flight condition for take off and climb, low ambient air temperature and very dry air at high elevation, etc.)
+Demonstrate HT-PEM FC energy efficiency and CO2 emission reductions","the pitch is high temperature PEM Fuel cell for aviation.
+Flying Airplane takes a lot of energy. Burning hydrocarbon fuel is not efficient way of getting the energy.
+It causes pollution and release carbon dioxide into the air, which causes global warming. This presentation tries to address both of the problem, low efficiency of conversion and the global warming, the efficiency of electrochemical energy converging by fuel cell is much higher than any account conversion process for high temperature PCL the efficiency is 3 times of that for combustion engine. Fearing feeling a few cell with hydrogen eliminate carbon dioxide emission and combustion by product that causes air pollution.
+When you hydrogen in a turbine engine can't also power an airplane without carbon dioxide emission.
+However, the efficiency is low and it emits nitrogen oxide.
+The prototype, the volumetric energy density of liquid hydrogen, is about 1/4 of hydrocarbon fuel.
+The low efficiency of burning hydrogen means a much larger fuel tank and or a short flighting distance.
+it is the importance into the air and contributing to global warming, the high energy efficiency of fuel may offset the lower energy density of hydrogen.
+Therefore comparable few compare size of fuel tank can be used for similar flying distance of country airplane. You're placing.
+Engine with a highly efficient fuel cell is a great option.
+It means the size of fuel tank and the frying range of current airplane and also completely eliminated the imaging their causes, global warming and protect air. The Department of Energy is developing high temperature paint fusia for ground transportation, especially for heavy duty vehicle.
+The pitch this piece is for developing the similar technology for aviation.
+The developments are where you focus on material specific for aviation application, such as membranes, electrodes, membrane electrode assembly and other stack components to measure the progress of this activity.
+High temperature pain, fuel cell stacks and system will be tested under the aviation load profile. The result will be used to modify and optimize fuel cell system for aviation application.
+The results are important for the design of future policy system for electrified, electrified airplane."
+How might we cool next gen aircraft?,Wicked Wild,High,"Opportunity:Sustainable aviation is a key initiative for NASA and the world to address climate change and protect the environment. An opportunity is presented to leverage inherent thermal generation in aircraft operation, typically seen as waste, to support electrification efforts and power the next generation of sustainable aviation.
+Key Use Cases: Assist with thermal management, structural health monitoring, lighting systems, and de-icing.
+Possible Partnerships: Boeing, Pratt & Whitney, Rolls-Royce, Joby, FAA, and more.  ""Wicked-Wild"" Idea: 
+Future aircraft will be fully integrated closed-loop systems:
+Wasted energy from thermal, motion, and other energy sources will     
+        be harvested for secondary functions to:
+Enhance electrification and sustainability initiatives
+Demonstrate integrated thermal management systems
+Enable comprehensive structural health management
+Energy harvesting will enable extended operations, reduce cost, reduce strain on systems, provide redundancy, and compliment ongoing sustainability efforts.
+Leverage energy harvesting systems to support aircraft functions, optimize operational and energy efficiency through integrated systems, improve safety, and reduce waste.
+Energy harvesting technologies and advanced materials are available, along with an opportunity to drive change in advanced air mobility and electrified aircraft propulsion.
+","I'm talking about heat generation. That's inherent to any process, and specifically in this context, the excess heat generated throughout an aircraft as NASA and countries around the globe look to sustainable aviation to address greener climate and environmental initiatives, we can also shift our perspective on heat generated by engines, batteries and other aircraft components from being a detriment or a flaw to the generated heat being designed feature. Here we have an opportunity to employ energy harvesting as part of an integrated multifunctional system to support our electrification efforts and power the next generation of sustainable aviation, as well as moving a few degrees closer to closing the loop on sustainability. With that, we can address the desirability, viability and feasibility of taking on this opportunity.
+As for the desirability, or do they want this energy conversion technology, this technologies as a part of an integrated aircraft system is not a new concept. NASA and companies like Boeing have previously demonstrated interest in the area at the bottom right, doctor Arun Malay of Boeing laid out an aircraft system map to demonstrate the potential of a thermal management system to capture and utilize generated heat, and even now with the the electrification, the aviation batteries introduced a significant source of thermal energy. That one harvested could support secondary systems while simultaneously mitigating and preventing thermal runaway and catastrophic damage. Supported systems could further include comprehensive structural health monitoring, lighting and deicing.
+And this all contributes towards energy harvesting, enabling extended operations, reduce costs, reduce strain on systems, providing redundancy and complementing ongoing sustainability efforts. As for viability, or should we do this leveraging integrated energy harvesting? Harvesting systems will support aircraft functions, optimize operational and energy efficiency through integrated systems, improve safety and reduce waste, has for feasibility. Or can we do this? The technologies in advanced materials are available along with an opportunity to drive change in advance air mobility and electrified aircraft propulsion. While they're still in the early stages of development, so with that, though wicked wild idea proposed here is a world where aircraft are multifunctional, fully integrated closed loop systems possibly. Imagine the nervous system of a body completely connected and optimized to regulate temperature and subsystem functions and aviation wasted energy from thermal motion and other energy sources will be harvested for secondary functions to enhance electrification and sustainability initiatives. Demonstrate integrated thermal management systems and enable comprehensive structural health management and we here at NASA have the multidisciplinary expertise needed to solve this challenge and make an impactful change to the state of green aviation.
+
+"
+How might we improve temperature monitoring for electrified vehicles using Optical Fiber?,Wicked Wild,Super High,"Electrified Air Mobility Vehicles can reduce carbon emission currently facing aerospace industry
+Currently Air transportation is around 2% of overall carbon emission
+But since vehicle emit carbon high in the sky, it’s causing 5% of global warming effect
+Two types of electrify vehicle – both has a temperature issue
+Battery-Electric vehicle – traditional battery utilizing Li-Ion based chemistry, where precise battery health (via temperature monitoring) is critical to the vehicle.
+Hydrogen Fuel-Cell Vehicle – By converting on-board hydrogen fuel into electricity via fuel-cell technology, the power-density of such vehicle is greater than battery-electric vehicle
+Temperature distribution across the fuel cell is critical for vehicle health
+Temperature monitoring across LH2 fuel line to ensure no leakage
+Overall temperature monitoring of electric vehicle
+Either battery of fuel-cell generate high current, needed for electric motors to function, and these high current wiring needs active cooling for vehicle safety operation. Wicked Wild Pitch
+Optical Fiber for electric-vehicle temperature sensing
+Completely Optical – Won’t cause or affected by EMI
+High Spatial Density – multiple sensors cascaded onto one fiber for FEM level temperature gradient monitoring","Today I want to propose the idea of using optical fiber for temperature sensing for electric 5 vehicles. Right now I wanna paint the point that air transportation is is a significant amount of carbon emission for for the aerospace industry and aerospace for for aeronautics. Basically, they want to reduce the carbon emission and one of the great ways of doing this is electric file. The aircraft vehicle.
+Uh, but, but in order to do that, transition that into electrified vehicle, there is a lot of obstacles. First of all, the if you are doing a short term, kind of like a short range flight, you're looking at a battery. Electric vehicles, which are traditional using a lithium ion battery chemistry, but then these are different than electrical vehicles. When when you have a a runaway, then on lithium ion battery you can just pull over and get out of the car. But if you are on the middle of a flight, that's that's really not ideal. So so you would want to have a a system to monitor whenever you have a better resell that is not performing well with elevated temperatures you you can have active way to monitoring and now go into the other way if you want to do a long term long haul transportation. One of the ways that that a lot of aerospace company i.e.
+Airbuses is is working on is hydrogen fuel cell vehicle where you use hydrogen as a fuel source and then you use the fuel cell in order to to sustain the the airplane for for long haul transportation.
+Now you now you have a new type of fuel with hydrogen.
+You have to liquefy the hydrogen and you would need some sort of way to have the high spatial density in order to measure the the the the temperature level across the liquid hydrogen and then the the the fuel line of the liquid hydrogen. So so for the future aircraft, we could now you you want to get to a way to to monitor temperature. So the pitch that I wanna make is we already have fiber optic sensing technology that has a high spatial density and good thing about the fiber is completely optical.
+It won't cause or affect by electromagnetic interference that that the X57 team at Armstrong has been experiencing and just the proposal.
+Now you can use these optical fiber to integrate it into your high current wire that gave a lot of heat. So you you can use it to monitor battery.
+You can use it to monitor the wires that you have on to your airplane. So so that you have proof of confidence that you won't have a runaway effect and you would have a new paradigm shift in sensing suite that you instead of doing like a specific discrete point onto some layers of your wire.
+Now you have you you have a temperature distribution every half inch interval across your your airplane."
+How might aviation support or provide regenerative tourism?,GeoEngineering,Low,,
+How might quality of life inprove for senior citizens by self-driving vehicles?,GeoEngineering,Low,,
+"How are prisons and their population susceptible to climate change conditions and if so what are the implications wrt moving them, saving them, etc?",GeoEngineering,Low,,
+In some places/cases Prison Population augment workforce (with their own unique caveats); How would a reduction on said work force impact X?,GeoEngineering,Low,,
+Will these populations be able to adapt in time either by adapting to limited clean water conditions or reversing same conditions?  Or will they then be confronted with a migration or die scenario?  And what impact will an adapting to less clean water available conditions have on the population?,GeoEngineering,Low,,
+"How will urbanization in Africa look different than urbanization on other continents, and what will be the economic and political impact?",GeoEngineering,Low,,
+"How might the rise of trash villages improve economics for ""slum residents"" via innovation in recycling and entreprenuership?",GeoEngineering,Low,,
+"Could (and how) the evolving Africa needs be used as both an incubator and lab for newer, cleaner technologies and methods such that all benefit?",GeoEngineering,Low,,
+Clean Slate US Cities: Can rural areas that currently produce vast amounts of energy become population centers/magenets that utilize locally sourced energy and incentivize net zero CO2 emissions (and air pollutants) and provide products and services for people who move to energy rich regions,GeoEngineering,Low,,
+How might the urban/rural divide post climate-driven migration impact socio-economic and cultural divides in terms of access to cultural and educational centers?,GeoEngineering,Low,,
+Is it about improving our cities (infrastructure etc.) or evolving our models for organizing humans and their enterprise?,GeoEngineering,Low,,
+How might governmental coordination improve environmental outcomes for impacted communities via utilizing incentives and ongoing social comms?,GeoEngineering,Low,,
+How might the engagement of underserved communities impact the sustainability of coastal and urban communities?,GeoEngineering,Low,,
+Federal and state governments need to subsidize cover cropping as a climate change mitigation tactic everwhere in the world.,GeoEngineering,Low,,
+How does climate change and geoengineering impact the priorities of where we have invested in security and where there are gaps that could become higher risk due to these changes?,GeoEngineering,Low,,
+If global coordination of GeoEngineering actions is achieved; What other cooperation opportunities arise creating new alliance blocks?,GeoEngineering,Low,,
+"How might new data technologies enable more democratic participation? Likewise, how might they negatively impact (e.g. AI making it easier to create and disseminate disinformation that destabilizes governance and societies)",GeoEngineering,Low,,
+"Could we in effect develop an economic model in which we pay people to go somewhere and perform some restorative interaction as part of their ""travel""?  At scale? Shifting population around where needed?",GeoEngineering,Low,,
+How might advances in semiconductor technology improve economics via high security quantum computing?,GeoEngineering,Low,,
+"If everybody is a sensor platform (via wearables) and the data is seen as valuable; will the sensor platforms be exploited as ""things"" or will new economic mode arise allowing a sensor platform to negotiate on a similar/equal footing to the data consumers?",GeoEngineering,Low,,
+How might insurance companies invest in geoengineering to mitigate their risks?,GeoEngineering,Low,,
+How might constant health monitoring change behaviors and introduce either risks or benefits to security and civil liberties in ways that impact far beyond the health industry?,GeoEngineering,Low,,
+How might technologies be governed (a la blockchain) to overcome issues of costs/benefits in climate change?,GeoEngineering,Low,,
+Any transition between current state and a future more sustainable technological base will be traumatic to the system.  How can the system shocks be mitigated so as to speed and not stop said transition? (NOTE: the original was in the context of energy economy transition from current to more sustainable),GeoEngineering,Low,,
+How might monitoring improve quality of life factors (like air) to impacted communities under stress?,GeoEngineering,Low,,
+"Will a focus on new environments exploration (before not possible) lead to a micro focus on said environments (further specialization on details of same) or a a more broader technical perspective and discovery phase? (NOTE: original scope was advanced tek allowing for exploration of remote, hostile previously unexplored envs)",GeoEngineering,Low,,
+"How might medical care be facilitated by wearables in a future with a scarce healthcare workforce, or people can't physically get to healthcare facilities?",GeoEngineering,Low,,
+"How might longstanding, intractable collective action problems be solved by economic engineering methods enabled by crypto and other data economic techologies?",GeoEngineering,Low,,
+"As ""Fabs"" become more critical will they be seen and treated like national security resources to be protected as such?  Will the need lead to a semi (or total) militarization of sorts for that industry? (NOTE: original scope expansion of native semiconductor industry)",GeoEngineering,Low,,
+If Fabs proliferate or return how will their negative environmental impact be deal with/ameliorated?  Will it?,GeoEngineering,Low,,
+"How might data technologies incentivize actors across multiple sectors and levels to take on activities that lead to disaster mitigation (e.g. improve building standards, reduce fuels that could feed wildfires, build resiliency into communities and companies)?",GeoEngineering,Low,,
+Can NASA use novel methods to keep the innovation pipeline in industry energized even during cyclic economic times?,GeoEngineering,Low,,
+How does climate change and severe weather events impact the % of airspace that is navigable by aircraft?,GeoEngineering,Low,,
+How are increasing number of tornadoes affecting the need for aerospace vehicles that interact with storms to study them and and potentially alter them by physical disruption through new vehicle designs?,GeoEngineering,Low,,
+How does climate change and severe weather events impact the viability of current military installations from a geographical standpoint?,GeoEngineering,Low,,
+"How might increased monitoring of weather and the environment improve routing models and vehicle design for safer and more reliable transportation via AI, IoT, wearables, etc.?",GeoEngineering,Low,,
+How might weather changes impact the viability of long-range ocean transport e.g. commercial shipping?,GeoEngineering,Low,,
+And by extension - How does climate change and severe weather events impact the viability of current civilian installations(needed infra such as airports) from a geographical standpoint?,GeoEngineering,Low,,
+"How might the coordination of geoengineering efforts across universities, public and private organizations be leveraged to reduce severe weather events?",GeoEngineering,Low,,
+How might oceanic ecosystems be impacted by the unintended consequences of genetically engineered agriculture (for all types of organisms)?,GeoEngineering,Low,,
+How might oceanic ecosystems be impacted by the unintended consequences of fertilization for carbon dioxide removal?,GeoEngineering,Low,,
+How might oceanic ecosystems be impacted by the unintended consequences of genetically engineering humans?,GeoEngineering,Low,,
+How might oceanic ecosystems be impacted by the unintended consequences of genetic programming?,GeoEngineering,Low,,
+How do changing oceanic ecosystems impact food security and transport security?,GeoEngineering,Low,,
+How might weather manipulation (like cloud seeding) reduce ocean acidification and soil degradation?,GeoEngineering,Low,,
+Might bioweapons lead to pathogens that would catastrophically impact oceanic and marine/coastal species and environments?,GeoEngineering,Low,,
+"How might new organisms evolve to fill niches opened because of species decline, oceanic fertilization, or other trends?",GeoEngineering,Low,,
+How might oceanic ecosystems be impacted by the unintended consequences of genetically engineered bioweapons and biosecurity mechanisms?,GeoEngineering,Low,,
+"What changes to oceanic ecosystems may be sustainable and positive in terms of mitigating climate change and supporting human civilizations on the ocean or below the water, and how could these be achieved?",GeoEngineering,Low,,
+Are there potentially catastrophic security risks related to oceanic ecosystems that could result from bioengineering of humans or oceanic/marine/coastal species?,GeoEngineering,Low,,
+"How can the increasing number of earth science databases enable planet-scale earth system management coordination through aviation via monitoring, sampling, and active modification?",GeoEngineering,Low,,
+How might increased use of wearables and decreasing digital privacy concerns improve the available data for geoengineering planners via big data processing techniques?,GeoEngineering,Low,,
+How might private enterprise (e.g. consumer packaged goods) drive policy change around climate and the adoption of standards for climate accounting and climate credit trading?,GeoEngineering,Low,,
+How might conductivity research improve access to power for public consumers via alleviating utility costs?,GeoEngineering,Low,,
+How will the scarcity of drinkable water become a driver for climate-related migration?,GeoEngineering,Low,,
+How will the impact to current power suppliers be managed (change management) so as to minimize negatives and streamline adoption to new state?,GeoEngineering,Low,,
+How will the scarcity of drinkable water impact the liveability of future MegaCities?,GeoEngineering,Low,,
+How might we use the technology standards process to establish international agreements around Climate Change?,GeoEngineering,Low,,
+"Could this result in new architectural designs for power grids (more scalable, more resilient etc.) regardless of power source?",GeoEngineering,Low,,
+How could climate change be a forcing function for adopting measurement and accounting standards for climate change credits including carbon and other types of credits (e.g. credits for lithium battery recycling?),GeoEngineering,Low,,
+How might carbon be captured usefully at scale (e.g. trees)?,GeoEngineering,Low,,
+"How might new organisms be engineered to fill niches opened because of species decline, oceanic fertilization, or other trends, and provide benefits to the environment and society?",GeoEngineering,Low,,
+How will food security issues impact the viability of high-density population centers?,GeoEngineering,Low,,
+How will food security issues impact supply chain construction and resiliency?,GeoEngineering,Low,,
+How will food security issues shift priorities for political leaders?,GeoEngineering,Low,,
+"How might exploring the development of vehicles with the capability to travel in air and water (and crossing back and forth a water-air interface) open new economic, social, scientific, and defense opportunities that can contribute to managing the earth system and increasing need to expand human presence in, and use of, the biosphere?",GeoEngineering,Low,,
+"How can we develop better methods (ex. mining, construction) to ameliorate the negative effects of GeoEngineering Interventions?",GeoEngineering,Low,,
+How might ubiquitous energy generation reduce carbon emissions?,GeoEngineering,Low,,
+How might self-replicating autonomous bio-engineered flying things (of any size) be used for geoengineering?,GeoEngineering,Low,,
+"Might bioweapons catastrophically impact food production, and if so, how to prevent or mitigate?",GeoEngineering,Low,,
+"Given the perishability of some food items; Could this lead to a luxury item market dynamic requiring fast transportation of said ""luxury goods"" (ie food) to ""haves"" type communities?",GeoEngineering,Low,,
+Could there be a creation of a food driven economy/trade market? (Romans with ice in summer),GeoEngineering,Low,,
+"How might genetically engineering, or other, technology meant for CO2 capture disrupt other portions of the ecosystem.",GeoEngineering,Low,,
+COuld nanotechnologies be designed to mitigate climate change be altered to pass from the air into the blood stream of humans?,GeoEngineering,Low,,
+"How, and who decides, does genetically engineered  technology get introduced into environment, marketplace, or commercially? How is it done now?",GeoEngineering,Low,,
+Will the need/desire for certain types of information cause a valuation (viewpoint) favoring some populations over others?,GeoEngineering,Low,,
+How might monitoring improve equity of Climate Change outcomes?,GeoEngineering,Low,,
+How might we improve the equity of participation of LMIC communities impacted by Climate Change?,GeoEngineering,Low,,
+How to avoid the Big Brother effect?  Is the provided (perceived) benefit enough to overcome said effect? (NOTE: original context was in the scope of constant monitoring and sensing),GeoEngineering,Low,,
+How might AI improve the equity of welfare or economic attainment across borders and regions?,GeoEngineering,Low,,
+How might TinyML improve adoption of wearables by the underprivileged for early detection and warning of disasters via economies of scale?,GeoEngineering,Low,,
+How might AI analysis and predictions improve environmental outcomes for underprivileged communities via utilizing distributed data management?,GeoEngineering,Low,,
+"How might the increase of AAM and drone players in the aviation space impact medical supply & delivery chain (more availability, more small actors, lower reporting standards, more auditing, more gaps)?",Health & Wellness,Medium,"Sub-problem 
+How might we democratize the Medical Supply chain through aviation? 
+How might we regulate drones/democratized aviation in the future medical supply chain? 
+Why is this a problem? 
+The use of drones, or unmanned autonomous vehicles (UAVs), in supply chain management (SCM) and logistics has a range of potential strengths: (1) support of humanitarian logistics, (2) reduced delivery time, (3) reduced cost, (4) improved flexibility, and (5) increased sustainability. However, large numbers of drones may affect other aircraft operating in the same local airspace, the infrastructure for the introduction of a significant number of drone systems does not exist, and there are significant number of regulatory and safety issues involved. Lack of technical expertise within regulating bodies on these subjects. And, there are a couple of real technological barriers that are wicked hard and nobody has tackled them [REF - The Big Case for Small UAS Access to the National Airspace System.pdf (sharepoint.com)]. 
+What capabilities may be needed to address the problem? 
+UTM (Unmanned aerial system Traffic Management) system is being developed by NASA and FAA to safely and efficiently integrate drone operations into the national airspace system where other vehicles also fly. Increasing the capability of individual drones towards more complete on-board situational awareness to avoid safety hazards or impact to the airspace can shift the problem from one of centralized management to one of self-managed systems that do not require human intervention. SBIR (GH). 
+What trends might enable problem exploration and solution? 
+More advanced management capabilities of the air space will allow improved safety and efficiency. Technology development of drone and vehicle artificial intelligence, autonomy, internal/external vehicle situational awareness can impact drone capabilities on an individual level. Overall, the introduction of drones into the air space will change the nature of the airspace and begin the early phase of addressing these individual drone operational challenges 
+Reach - How many people, communities are going to be impacted or are impacted by the problem? 
+The broad introduction of drones into the air space not only near airports but across vast regions of the country impacting supply management changes the nature of commerce on the broad level. This ranges from employment in new areas of aviation technical support to the availability of medical supplies in hospitals across the country. 
+more availability: Rural access – how many people? Some 46 million Americans — 15 percent of the U.S. population — currently live-in rural areas 
+more small actors: Potential for accidents, interference with electronics, aesthetics… 
+Economic impacts: 
+lower reporting standards 
+more auditing 
+more gaps
+Impact - What is the scale of the impact? 
+High 
+more availability, more small actors, lower reporting standards, more auditing, more gaps 
+Confidence - How confident are we in the impact and reach determinations? 
+High. The possible impact of drone systems on the air space is already an identified challenge being addressed in ARMD/FAA 
+Effort – what is the effort/scale needed to address? Wickedness? CAS-ARMD/NASA aligned? 
+This particular problem is a subset of a more significant and broad challenge related to introduction of drones into the air space, their economic and social impact, and the associated legal and regulatory issues involved. The broader problem of introduction to drones into the airspace is a notably Wicked problem limited aspects of which are already being addressed presently in NASA ARMD programs that specially related to air space management.",
+"How might aviation integrate into personal, community and global lifecycles to ensure physical and mental wellness? Aviation for fractal wellness",Health & Wellness,Medium,"Why is this a problem? 
+Aviation contributes to stress, feeling of ‘other’, separation due to classes, does not accommodate diversity. 
+Positive aviation impact on wellness is limited 
+Medical supply chain (including human organ delivery) 
+Emergency air transport 
+Medical tourism 
+What capabilities may be needed to address the problem? 
+Mass production and economies of scale for smaller aircraft (HiCaM) 
+Find more positive wellness roles for aviation 
+What trends might enable problem exploration and solution? 
+Increasing autonomy facilitates connecting with family and other people and less interaction with unfamiliar passengers and airline, and airport staff. 
+Democratization makes aviation more accessible 
+Increasing drone delivery of medical supplies to remote areas 
+Reach - How many people, communities are going to be impacted or are impacted by the problem? 
+Low 
+Impact - What is the scale of the impact? 
+Medium 
+Confidence - How confident are we in the impact and reach determinations? 
+High 
+Effort – what is the effort/scale needed to address? Wickedness? CAS-ARMD/NASA aligned? 
+Medium: some aspects might be initially addressed at small scale, and are wicked and CAS-aligned 
+",
+"How might the entire aviation experience be restructured to reduce its risk as a vector of pathogen transmission? (reducing unnecessary contact, etc.)",Health & Wellness,Medium,"Why is this a problem? 
+The drive to reduce human interaction in aviation has at least 2 influencing factors: The attempt to safeguard public health from the spread of contagions; and an economic drive towards automation to decrease staffing and expense associated with airline and the airport employees. However, this can lead to the depersonalization of air travel and, depending on the efficiency of the automation, potential inefficiencies in handling customer complaints/problems as well as removing a public face representing and individual airline company. 
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7134995/ 
+https://scholarship.law.wm.edu/cgi/viewcontent.cgi?article=1223&context=wmblr 
+If the aviation industry is a major vector for pathogen transmission, it will continue to generate global pandemics as strict border control will be more porous than otherwise. 
+What capabilities may be needed to address the problem?
+At the very least, the interactions of automated system should be at least as efficient as human based customer service. This implies improved artificial intelligence be implemented so that either unexpected events can be addressed or quickly re-routed to human staffing.
+Additional interfaces need to be designed to be pathogen resistant in case cleaning is less effective or skipped.
+Standard, practiced changes to routing and operations if pathogens are detected or a higher risk of transmission.
+Additional changes to cabin design to mitigate risk.
+Airport redesign to reduce transmission while waiting in line, etc.
+Deployable pathogen detection inside airports and airplanes (i.e. next gen temperature guns, mid-flight pathogen testing).
+Personal Pods for breathing to keep passengers safe from other passengers Hyundai’s AV pod concepts promise better living through modularity - CNET 
+What trends might enable problem exploration and solutioning?  
+(Worker to Passenger vectors) Automated check-in and self-serve kiosks have already become a standard aspect of flight service. This drive to minimize staffing and increase automation in customer service is already happening across multiple industries. Increasing automation and autonomous systems may result in airports in which the process is fully automated and one does not have to interact with a member of the airline or airport staff in order to board the plane. 
+(Passenger to Passenger) Use of masks and availability of sanitizing wipes or fluids, post COVID, will set cultural norms to reduce P2P transmission.  
+(Passenger to Worker) The current staffing shortages and union fights for airline staff may drive additional investments in safety technology to keep pilots and flight attendants healthy and safe.  
+Personal transportation pods (land-based) may offset the need for air transport. Personal Rapid Transit: Driverless Pods of the (Retro) Future | by Alex Beyman | DataDrivenInvestor  
+Remote work may reduce the need for air transport regardless. 
+Reach - How many people, communities are going to be impacted or are impacted by the problem? 
+Score: 6 (1 Billion) 
+4.5 B passengers fly per year globally. The percentage of people get sick from 1st or 2nd order connection to flying is really hard to find. There is moderate consensus around the 2-row rule on commercial crafts at a 13% infectivity rate for COVID, but not generally for all pathogens. Our research confirms that more research is needed. At a minimum we believe the population is 100M, but could be 1B. 
+The reach of this trend will be extensive and affecting two sets of communities: 
+The whole of the traveling public 
+Airport/airline personnel who at greater risk of becoming ill by virtue of their exposure 
+Facts regarding population sizes: 
+4.5 Billion passengers fly globally annually 
+502 mi avg flight or ~1-2hrs 
+133 minutes on average in the airport from arrival to boarding. 
+One day in 2022, 1/3 of United Airlines staff at Newark were out sick. 3000 total across United on that day. 
+There are few studies around how many passengers get sick from travel and they have widely differing results. In “What proportion of international travelers acquire a travel-related illness? A review of the literature”, a 2018 paper the actual quote shows the limitations and variability of attempting to bracket this number: - “All studies collected data through either extraction from the medical record, weekly diaries, or pre- and post-travel questionnaires. Data collection timeframes varied by study. Between 6–87% of travelers became ill across all studies. Four studies provided the best estimate: between 43–79% of travelers who frequently visited developing nations (e.g. India, Tanzania, and Kenya) became ill” https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5825178/ 
+Impact - What is the scale of the impact?
+Score: 2.5 - 2.5 (2-3)
+Given the impact of most pathogens is not life threatening, but the impact to the economy, plus the percentage of life threatening or deadly outcomes is nontrivial. 
+Confidence - How confident are we in the impact and reach determinations? 
+2.5 (2-3) The impact of most pathogens is not life threatening, but the impact to the economy, plus the percentage of life threatening or deadly outcomes is also nontrivial. 
+Wickedness? CAS-worthy?
+This may be a technological progression that will first be implemented in the range of other industries before it reaches aviation. This may not be CAS-worthy problem because the market is already addressing automation (for costs).
+But from the pathogen side and from the in-the-tube spread, automation doesn’t account for all interactions and may not even shield people from the most common mechanisms of pathogen transmission (because we don’t know what they are). From that perspective, CAS may have an valid entry point. There may be aircraft design and technology investments specific to the aircraft that may be worthwhile IF the pathogen transmissions is validated as a big problem. (See Capabilities list). ",
+How might the aviation industry work with medical researchers on clinical trial representation and equity?,Health & Wellness,Medium,"Sources: 
+National Academies of Sciences, Engineering, and Medicine. 2022. Improving Representation in Clinical Trials and Research: Building Research Equity for Women and Underrepresented Groups. Washington, DC: The National Academies Press. https://doi.org/10.17226/26479. National Academies of Sciences, Engineering, and Medicine: Improving Representation in Clinical Trials and Research: Building Research Equity for Women and Underrepresented Groups 
+https://www.statista.com/statistics/272181/world-pharmaceutical-sales-by-region/ 
+When will clinical trials finally reflect diversity? (nature.com) 
+2015-2016 Global Participation in Clinical Trials Report (fda.gov) 
+https://www.forbes.com/sites/matthewherper/2011/03/23/the-most-innovative-countries-in-biology-and-medicine/?sh=412675a01a71 
+Why is this a problem? 
+Large portions of the US population, particularly those with the greatest health challenges, do not participate in clinical research studies and thus do not benefit from those discoveries. Low accrual issues overall are the cause of 55% of terminated clinical trials. This lack of representation compromises generalizability, hinders innovation, impacts trust in the medical system, and compounds health disparities of communities without access. 
+What capabilities may be needed to address the problem? 
+Often, clinical trials are centered around academic or research institutions limiting participation by a broader sampling of the population. Capabilities to address this problem revolve around improving the ability for patients to participate, or, effectively, bringing the clinical trial to the patients. 
+For example, travel impacts out-of-pocket costs to patients, typically driving remote patients out of studies. Distance as a driver of disparity has been specifically established as a cause of lack participation by rural communities. 
+Thus, one capability to improve participation would be to increase the accessibility to transportation in rural communities. 
+Further, telemedicine and virtual or localized trial treatments may broaden the geographic diversity. 
+While some aspects of this transformation are more related to overall trends in health care technology, the ability to provide well equipped mobile airborne laboratories could impact the ability to increase participation in clinical trials in rural communities. 
+Beyond issues related to location, there is in general a lack of participation by racial and ethnic minority populations for a variety of socio-economic reasons. Specific outreach may be required to these populations, so investment in greater capabilities in community coordination. 
+What trends might enable problem exploration and solution? 
+A broadening of capabilities in aviation to allow more democratized transportation and the ability to bring more comprehensive health care capabilities, including clinical trial participation, no I don’t to remote regions; 
+Increasing level of capabilities due to technical advances allowing more localized and effective health care. 
+The trend in cost of flying will dictate further difficulties in equity. Cost has decreased over multiple decades, but may be stabilizing now (need to confirm). Is the cost reduction impacting all communities or is it simply cheaper to fly from urban to urban centers or tourist destinations? Are airline hubs co-located with medical research centers? The Cost of Flying Has Decreased in the Last 20 Years (businessinsider.com) https://www.wsj.com/articles/why-airfare-has-barely-budged-in-25-years-11628600401 
+Complexity of medical research (tighter comparative results mean harder statistical thresholds to overcome). 
+Gene-based medicines may require much more research to validate or may very expressly not apply to certain unvalidated populations.
+TO-DO – Add source on gene-therapy based drug study results (and the ethical issues) Villarrubia, James A. (HQ-EP000)[Presidential Innovation Fellow]  
+Reach - How many people, communities are going to be impacted or are impacted by the problem? 
+Very High - 1 Billion 
+US Participation was 28% of the total representation in global Clinical trials in 2015. The problem in the US is also then a global representation problem. With personalized genetic mods, medicine, this will become worse. With Climate change, disease and medical impacts will also worsen in the most distressed areas and populations (not currently studied). Specific rural communities are impacted by this problem already within the US. For example, distance as a driver of disparity has been specifically established for Native Hawaiian and Pacific Islander populations who are more likely to live far away from research centers. 
+Academic centers conduct 55% of the NIH extramural research and operate 98% of the cancer centers. Participation in these activities is biased by the proximity to these centers. However, more broadly, effective clinical trials as a method for improved treatment and drug development has an impact on the population as a whole. Limiting the effectiveness of these trials because of a lack of participation by significant population subgroups narrows the trial’s impact and reduces benefits to society beyond the immediate drug and research. 
+Impact - What is the scale of the impact? 
+Score: 4 
+More disease due to climate change. Growing disparity in access and research participation. More hospital consolidation leads to more illness in rural areas, where people are less likely to participate in studies to begin with. 
+Confidence - How confident are we in the impact and reach determinations? 
+Score: 3.5 
+The limitations in broad participation in clinical studies can be referenced from multiple sources. We are confident in the reach of this problem. But we can only estimate the first order impact of the problem, given its complexity and the nature of the follow-on effects. 
+Effort – what is the effort/scale needed to address? Wickedness? CAS-ARMD/NASA aligned? 
+The aspect of participation in clinical trials is a subset of broader challenges related to access to healthcare in rural regions and amongst racial and ethnic minorities. 
+While technical improvements may reduce the pain of this problem, it can be solved with current technologies and appropriate coordination and incentives. Technology can be only one path to a solution. ",
+"Assuming that the commercial trend towards hospital consolidation and specialization continues and patients are farther away from advanced treatments, how might aviation impact accessibility of healthcare? (See: medical staffing, changes in healthcare business models, Direct-to-consumer health apps, travel nurses, etc.)",Health & Wellness,Medium,"Sources: 
+https://www.youtube.com/watch?v=jtIZZs-GAOA 
+https://rockhealth.com/insights/q1-2022-digital-health-funding-staying-the-course-in-choppy-waters/ 
+https://rockhealth.com/insights/2021-year-end-digital-health-funding-seismic-shifts-beneath-the-surface/ 
+https://www.aha.org/system/files/media/file/2021/11/2022-Environmental-Scan.pdf. 
+Problem Scoping: 
+Two divergent Healthcare Scenarios: 
+Medical treatments become cost-effective enough to move to or stay in local hospitals, lessening the need for travel. 
+Medical treatments become less cost-effective (or some do) to the point that treatment centers consolidate and are farther away from patients on average. This is the more likely scenario given the trends in health-apps, investing, travel nurses, minute-clinics, hospital funding problems. 
+Given scenario (2), there are two Aviation Scenarios: 
+Personal Air mobility or commercial aviation drops in cost sufficiently to counter the increased cost of healthcare. 
+Medical treatment (tools/supplies) become small enough and cheap enough to ship TO the patient, possibly by air (air hospital?) and counter the increased cost of healthcare. 
+Sub Problems: 
+Does the shift to outpatient clinics reduce the availability of hospitals offering complex procedures and put greater need on air travel for the critically ill? 
+Population is more distributed (remote work), so will more people be farther away from centralized services that cannot be financially solvent in closer facilities? 
+Will the advancement or cost-efficiency of treatments drop enough to distribute healthcare to local clinics? 
+Why is this a problem? 
+As medical health care technology becomes more advanced, the cost of health care more expensive, and population more widely distributed, aviation may have an increasing effect on the accessibility of health care. 
+What capabilities may be needed to address the problem? 
+Aviation can provide services in the future that are presently either centralized or provided by a range of other transportation. The challenge will be to right-size and optimize the aviation capability to the needs of the health care problem. 
+Transportation of medicine via UAVs with appropriate temperature/atmosphere/humidity control which can provide timely delivery, 
+Airborne ambulances that can transport while providing care. 
+Transportation of medical equipment to remote areas (on a rotation? As part of a pre-planned schedule?). 
+Miniaturization of health tech 
+More temp-stable medical goods that can survive rougher transport. 
+What trends might enable problem exploration and solution? 
+A broadening of capabilities in aviation ranging from the advent of personalized air vehicles to package delivery UAVs allowing a series of options for both human and package delivery; 
+Increasing level of capabilities due to technical advances allowing more localized and effective health care. These trends are counterbalanced by ever increasing healthcare costs that may limit patient access. 
+Telehealth – making people more comfortable with remote healthcare 
+Robotic Telehealth – letting doctors stay where they are but keep robots local for surgery, etc. 
+Cheaper diagnostics - reducing the need for travel to find out if you have a problem, reserving travel to treatment.’ 
+Medical Tourism – will the cost and accessibility of medical tourism counterbalance the need for rural access. 
+Reach - How many people, communities are going to be impacted or are impacted by the problem? 
+This is ANOTHER way that discrepancies between rural vs urban healthcare is mitigated by aviation. We scoped this to 100M because we believe that smaller procedures will become more accessible/local, but not ALL procedures. So globally, we believe that 100M people will be impacted or make decisions about treatment and safety based on access and cost. 
+Impact - What is the scale of the impact? 
+Score: 4-5 Majority 4 (given the costs and advanced nature of the treatments), but small percentage will be 5s, where care is absolutely critical to immediate survival. 
+Confidence - How confident are we in the impact and reach determinations? 
+We are assuming that the geographic consolidation of healthcare continues to the point that access is reduced. If that trend continues, we are confident aviation will be a greater player in access. If not, the question is moot. 
+Effort – what is the effort/scale needed to address? Wickedness? CAS-worthy? 
+It is suggested that this is a CAS-worthy problem. It is Wicked covering technical, political, societal, economic, and legal issues. It directly involves aerospace across the spectrum of vehicles. The range of technical challenges related to this topic are formidable spanning the range of NASA technologies. Other players in the market may influence parts of the system, but no one technology or solution can mitigate the entire issue of rural access. ",
+"How might aviation mitigate growth of drug resistant bacteria due to heavy metal manufacturing and usage? (advanced manufacturing, airport safety protocols, and aircraft design)",Health & Wellness,Medium,"Sibling Question: 
+How will aviation mitigate growth of drug resistant bacteria due to increased usage of antimicrobials in response to COVID-19? (airport safety protocols, and aircraft design) 
+Why is this a problem?
+Drug resistant bacteria is propagated by the use of heavy metals (lead, mercury, and silver) because of mining and transportation usage. Bacteria have evolved to resist the presence of these heavy metals, producing traits that also shield them from antibiotics. 
+Normally heavy metals are lethal to bacteria because of the free emission of ions that disrupt cell functions. 
+Antimicrobial resistance (AMR) is a global health and development threat. It requires urgent multisectoral action in order to achieve the Sustainable Development Goals (SDGs). 
+WHO has declared that AMR is one of the top 10 global public health threats facing humanity. 
+Misuse and overuse of antimicrobials are the main drivers in the development of drug-resistant pathogens. 
+Lack of clean water and sanitation and inadequate infection prevention and control promotes the spread of microbes, some of which can be resistant to antimicrobial treatment. 
+The cost of AMR to the economy is significant. In addition to death and disability, prolonged illness results in longer hospital stays, the need for more expensive medicines and financial challenges for those impacted. 
+Without effective antimicrobials, the success of modern medicine in treating infections, including during major surgery and cancer chemotherapy, would be at increased risk. 
+“The site contained a strain of bacteria resistant to 70 percent of antibiotics tested against it.” heavy metal toxicity. Ultrasound was needed for the diagnosis of obstetric and intra-abdominal conditions. Further, screening for a ride range of cancers needs to be increased notably."" 
+Heavy Metal Induced Antibiotic Resistance in Bacterium LSJC7 - PMC (nih.gov) 
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3113373/ 
+https://www.epa.gov/caddis-vol2/metals 
+What capabilities may be needed to address the problem? 
+Monitoring & reporting of heavy metal usage in the industry 
+Pollution attribution for the heavy metal sources in the supply & delivery chain 
+Alternative materials for aircraft production 
+Testing for alternative materials and revised products 
+Retrofitting? 
+Recycling and end-of-use tracking 
+What trends might enable problem exploration and solution? 
+Most of the work seems to be driven by cleaning up pollution 
+Manufacturing standards seem to be improving because of downstream reporting demands and consumer awareness 
+Miniaturization hopefully means less resource usage 
+Companies already working with manufacturers to reduce usage of heavy metals 
+https://www.ri.se/en/what-we-do/expertises/substitution-of-lead-and-heavy-metals 
+Global monitoring of pathogens might drive awareness. 
+US industry largely had to adapt to EU standards (so first movers are changing the ecosystem) 
+Compliance FAQs: RoHS | NIST 
+Reach - How many people, communities are going to be impacted or are impacted by the problem? 
+Score: 3 (1M) 
+In 2019, 1.27 Million deaths were attributable to bacterial AMR, making AMR a leading cause of death around the world, most directly impacting low-resources settings, where data is also least available. 
+https://www.healthdata.org/news-release/latest-estimates-global-anti-microbial-resistance-show-urgent-policy-action-needed-save#:~:text=An%20estimated%204.95%20million%20people,young%20children%20are%20particularly%20affected. 
+Impact - What is the scale of the impact? 
+Score: 5 – Critical to life because people are dying 
+Confidence - How confident are we in the impact and reach determinations? 
+Score: 2 - (Heavy Metals) Reduced confidence because the research is newer and the % attributable aviation’s heavy-metal usage is not clear. 
+Score: 5 – (Antimicrobials) Extremely confident because we know we are using them and we know that AMR is a critical problem. ",
+How might the aviation industry improve the medical cold chain?,Health & Wellness,Medium,"Super problem(s): 
+How might aviation improve medical supply transport? 
+How might aviation improve cold chain related losses in food, water, medicine? The air cargo community should collaborate to create its own supply chain standards for perishables in order to tackle a disconnected and fragmented chain, where one third of all food produced is wasted and achieve a common goal of reducing waste by at least 10% by the year 2025. This would represent 250,000 tons of savings, or about $1bn in value and 1m fewer tons of emissions, including CO2 and other greenhouse gasses. 
+Sub-problem(s) 
+How might the aviation industry improve the temperature excursion rate for medical supply transport? 
+How might the aviation industry improve the temperature excursion rate for medical supply transport? 
+Will a more democratized ecosystem help or hurt the rate of medical supply loss? 
+What are the risks to poor monitoring or regulation of temperature-based transport in a future of AAM and drones? 
+What if there were more players in this space? 
+Why is this a problem? 
+ 
+8,000 cargo jets needed to transport Covid-19 vaccines, says IATA | CNN Travel 
+Improper cold chain handling - 50% of all temp excursions due to airport handling – drive medical costs 
+Lost opportunity for aviation industry to participate in the medical products transport chain. Lack of standardization across the aviation industry has seen the medical cargo transportation sector losing out to other modes of transportation, such as road and sea. 
+This can be addressed by restoring reliability and safety across the medical cargo supply chain. 
+The primary issue is the difficulty of handling temperature-sensitive medical cargo across the entire supply chain in a safe and secure manner. 
+The whole supply chain in the air cargo industry involves a lot of handling points of the cargo. 
+There are a lot of different stakeholders that handle the cargo and each individual link in the chain needs to be up to standard, otherwise the whole quality of the supply chain can be lost. 
+https://www.aircargonews.net/sectors/pharma-logistics/failures-in-temperature-controlled-logistics-cost-biopharma-industry-billions/ 
+$35 Billion in Temperature Excursion loss (IQVIA) 
+25% of vaccines reaching their destination have degraded efficacy due to failures to maintain the cold-chain 
+20% of the all temperature sensitive pharmaceuticals are damaged or exposed during transport 
+https://blog.vrr.aero/the-role-of-cold-chain-logistics-in-the-pharmaceutical-industry/ 
+According to the International Air Transport Organization (IATA), air cargo share of global pharma transport declined from 17% in 2000 to 11% in 2013. In 2018, 0.5 million tonnes of pharmaceutical goods were flown while 3.5 million tonnes were shipped. 
+https://www.who.int/docs/default-source/coronaviruse/act-accelerator/covax/costs-of-covid-19-vaccine-delivery-in-92amc_08.02.21.pdf 
+The cost of temperature excursions in the pharmaceutical industry https://www.coretex.com/company/blog/the-cost-of-temperature-excursions-in-the-pharmaceutical-industry/ January 26, 2021 
+“Prior to the COVID-19 global pandemic, every year over $15 Billion worth of product was lost in the pharmaceutical industry due to temperature excursions. If you add costs such as damage analysis and replacement product, this cost will come to over $35 Billion.” 
+https://www.faa.gov/sites/faa.gov/files/2022-06/Vaccine%20Distribution%20Engagement%20Meeting%20Survey%20Results.pdf 
+The FAA was able to reduce dry-ice sublimation during transport of COVID-19 vaccines to 0.38% from 2%. Dry-Ice sublimation makes transport dangerous. 
+FAA was able to coordinate to reduce product loss. 
+Flying pharma: how the industry handles medical cargo https://www.airport-technology.com/analysis/featureflying-pharma-how-the-industry-handles-medical-cargo-5710907/ Jan 8 2017 
+But despite an increasing demand for transporting medicine worldwide, the sector has been falling behind other modes of transportation such as shipping or road, due to a lack of compliance, standardization, accountability and transparency across the supply chain. The air cargo share of global pharma products transport has declined from 17% in 2000 to 11% in 2013, the International Air Transport Association (IATA) notes. 
+The reason behind the decline is the difficulty of handling temperature-sensitive cargo across the entire supply chain in a safe and secure manner. 
+Over 50% of all temperature excursions occur while products are in the hands of airlines and airports, according to IATA, which renders the products worthless or even dangerous for patients. 
+However, according to the Seabury Group, just 0.5 million tonnes of pharmaceutical products are transported by air every year, compared to 3.5 million tonnes by sea. 
+Annual product losses associated with these problems range from $2.5-$12.5bn, a figure that IATA describes as “unacceptably high in a $300 billion a year market”.** _ 
+The World Health Organization estimates that up to 50% of vaccines are wasted globally every year; a large part because of lack of temperature control and the logistics to support an unbroken cold-chain. 
+At the scale of COVID-19, this spoilage rate could waste potentially a billion vaccines, which, even if valued at a non-profit cost of around $10 a vaccine, represents a staggering wasted investment. 
+Cracking the cold chain challenge is key to making vaccines ubiquitous (theconversation.com) 
+The vaccine against diphtheria, tetanus and pertussis, is often used as the key metric for global vaccination coverage because it is a good indicator for access to routine immunization services. 13.5 million children were not vaccinated in 2018. 
+out of 135 million under-one-year-olds more than 19 million did not receive full immunization 
+ 
+What capabilities may be needed to address this problem? 
+Development and adoption of best practices and procedures for cold chain handling at airports. 
+Drone Delivery of Cold Chain Medical Supplies Viability and Efficacy 
+What trends might enable problem exploration and solution? 
+Substantially higher demand to rapidly transport temperature-sensitive vaccines. Increased capability may enable distribution of new classes of vaccines and cargo. 
+Use of drones in clinical microbiology and infectious diseases: current status, challenges and barriers 
+Reach: 
+Score: Moderate-scope opportunity to increase aviation’s market share for medical transport business._ 
+Millions reached by the immediate access 
+Billions reached with second order impacts(environmental, death, cost…, vaccines, medicines) 
+Impact: 
+Score: Medium, based on qualitative judgment. 
+Millions dying (1.5M) 
+Billions cost – lifestyle impact 
+Confidence: 
+Low ",
+"How might medical ethics (Bodily Autonomy, Beneficence, Non-Maleficence, Justice) conflict with aviation/transportation autonomy, distributed monitoring and services?",Health & Wellness,Medium,"Rewording Option: 
+Something like: How will medical ethics need to change/adapt/evolve (if needed) in order for (medical related?) services such as autonomous aerial transport, distributed monitoring (over area, inside vehicle) to be accepted and deployed? 
+Will current medical ethics (if remain unchanged) help or hinder the development/adoption of medical related aviation services such as autonomous transport (of goods or patients), and healthcare delivery and monitoring? 
+Sub Problems: 
+How does autonomy impact healthcare? How does autonomy of an aviation-based transport conflict with medical ethics? 
+How will medical ethics interface with advancements in aviation (PAM, AAM, distributed monitoring/services, autonomous drones, etc?) 
+Why is this a problem? 
+This is a subset of a broader set of problems associated with the introduction of new technology and it’s impact on patient health. This scenario is different from conventional usage of air transportation that traditionally involves significant human in the loop interactions. Rather, to the extent that autonomous and automated systems become an aspect of health care, a new set of medical ethics concerns arise. Patient monitoring is necessary during medical transport. If this involves an autonomous or automated transportation system, then That patient information resides with in that autonomous or automated system and it needs to be handled appropriately. Timely delivery of supplies and services by whatever means is a core foundation of health care. If an autonomous or automated system fails in its designated function, that failure just impacts individual health care and an understanding of responsibility or liability is needed_. Broadly speaking, issues involved are: 
+Privacy 
+Local regulations, laws 
+Decision making 
+Medical transport 
+Liability 
+Maximizing patient care 
+What capabilities may be needed to address the problem? 
+There are two aspects of this problem. The first is technical regarding the capability of an autonomous or automated system the carry out its function in an optimized fashion minimizing impact to patient health. The second is the framework of legal and societal restrictions that impose upon the autonomous or automated system a layer of functionality that, for example, ensures confidentiality of patient information or appropriate response in emergency condition. 
+What trends might enable problem exploration and solution? 
+One trend is that health care on a local level is becoming increasingly more distributed and advanced. The complexity of health care provided by, for example, emergency air evacuation services has increased over the years. The overall trend is that more can be done locally rather than in a centralized hospital setting. A second trend is changes in the air transportation system is envisioned over time to allow new forms of both personal air transport_ as well as also delivery of supply and materials. A third trend is the advancement of artificial intelligence and data handling systems that may be able to not only allow new types of vehicle operations, but also an ability to handle information in a more complex and situationally appropriate manner. 
+Reach - How many people, communities are going to be impacted or are impacted by the problem?. 
+The overall impact varies depending on the type of transport. Related to emergency transport and care, the population may be limited and more concentrated in rural areas. However other forms of medical transport are much more common. For example, professional transport a patient from one health care facility to another is a relatively common occurrence within parameters dictated by legal and health insurance regulations. Further, if air transportation and medical supplies using, for example, autonomous or automated drones becomes a common occurrence, then the impact on the overall health care system on the performance of these technologies can be significant and broad based. 
+Impact - What is the scale of the impact? (high, medium, low) 
+Score: High (depending on the application) 
+Confidence - How confident are we in the impact and reach determinations? 
+Score: _Medium 
+This assessment depends upon the development and implementation of technologies still in their formation stage and have not established a economic foothold in the market. 
+Effort – what is the effort/scale needed to address? Wickedness? CAS-ARMD/NASA aligned? 
+The technical aspects of this problem are within NASA’s domain and are specific application in the healthcare field of evolving air transportation autonomous and automated systems. The legal and societal aspects of this transformation that might be addressed by technological advances, but in general are more dependent on economic factors in the health care system beyond NASA’s purview. ",
+How might aviation support the medical needs for the emerging space economy (10-20 years)?,Health & Wellness,Medium,"Why is this a problem? 
+Limited access to raw materials impacted personal protective equipment costs which rose 2000-6000% in early weeks of the pandemic. Supply chain risk is high given the consolidation of vendors and sources. 
+The space economy will bring with it new health and wellness issues both in space and on earth. There will be additional challenges to transporting and distributing drugs, monitoring and screening for pathogens. 
+More humans and cargo will be exposed to radiation 
+The space economy will initially be reliant on earth and atmospheric transport will be key to getting goods to and from in-space assets. 
+People will need to be trained to perform new roles. Aviation may play a role in training. 
+Critical materials for the medical industry may be sourced from space. 
+ 
+What capabilities may be needed to address the problem? 
+Integration with space launch (Space data integrator) 
+DRF 
+Medical advancements to account for in-space transport (equivalent of shipping containers on earth). What is the ‘standard’? 
+Biomimetics for hygiene, packing efficiency, multifunctionality 
+Reentry, hypersonics 
+What trends might enable problem exploration and solution? 
+Asteroid mining companies 
+Space tourism 
+Growing wealth and income inequality 
+Climate change 
+Reach - How many people, communities are going to be impacted or are impacted by the problem? 
+Who is impacted by the space economy? 
+by 2061, millions of people may well have gone to space, and thousands may be living there, experts say. 
+People moving to space to find opportunities (poor conditions on earth) 
+Terrestrial assets and people due to collisions, emissions, psychological impacts. 
+Economic - Space economy worth over $420 billion, weathering COVID crisis: report (cnbc.com) 
+Space docks and space ports 
+What is the predicted growth rate? 
+Rapid but highly uncertain 
+The successful trip means Virgin Galactic is one step closer to letting civilian flights begin with the first flights departing in early 2022. So far, the company reports 600 active reservations , with each ticket selling between $200,000 and $250,000. Space Travel Updates: When Will We Be Able To Travel To Space? (forbes.com) 
+Impact - What is the scale of the impact? 
+What kinds of impacts? 
+Health – radiation, gravity and psychological impacts will be immense, accidents 
+Aesthetic 
+Space Radiation: The Number One Risk to Astronaut Health beyond Low Earth Orbit - PMC (nih.gov) 
+Confidence - How confident are we in the impact and reach determinations? 
+Confidence in reach – Medium 
+Confidence in impact – High 
+Data showing investments in commercial space increasing, interest in space tourism, asteroid mining, academic institutions developing programs 
+Effort – what is the effort/scale needed to address? Wickedness? CAS-ARMD/NASA aligned? ",
+"How might personal air mobility enable democratized monitoring, treatment of medically underserved and high-risk patients? (Moving people in personal air vehicles, air ambulance, air taxis, etc. Moving person to materials, not materials to person)",Health & Wellness,Medium,"Why aviation as a medical service? 
+“By 2025, the U.S. is estimated to have a shortage of approximately 446,000 home health aides, 95,000 nursing assistants, 98,700 medical and lab technologists and technicians, and more than 29,000 nurse practitioners, according to a 2021 report conducted by industry market analytic firm” https://www.usnews.com/news/health-news/articles/2022-07-28/staff-shortages-choking-u-s-health-care-system 
+Labor shortage – need for medical services in rural areas, among underserved communities, globally due to labor shortage https://www.ruralhealthinfo.org/topics/health-care-workforce 
+“More than 2B people worldwide lack access to essential medical products like blood and vaccines due to poor infrastructure (poor roads, transport links)” - Paul Hunt and Rajat Khosla, “The human right to medicines”, SUR 8 (2008), accessed May 31, 2022, https://sur.conectas.org/en/human-right-medicines/ 
+Access to and affordability of airport and transport infrastructure are key contributors to poor health and wellness. 
+Rural communities, developing world and ageing population are at highest risk. 
+What capabilities as a medical service? The what – notional concepts 
+On-board diagnostics 
+On-board treatment 
+On-board therapy – aviation therapy 
+On-board stabilization tools & support 
+Aviation as filter 
+How might this be realized? 
+Miniaturization of Healthcare Tech - Generational trends toward openness and connectivity - Automation - Localization - Micro-factories 
+Reach 
+Score: 5 (100M) 
+NOTE: There was significant disagreement in the potential reach here. 
+This would benefit large numbers of people in rural/remote areas. In 2014, many deaths among rural Americans were potentially preventable, including 25,000 from heart disease, 19,000 from cancer, 12,000 from unintentional injuries, 11,000 from chronic lower respiratory disease, and 4,000 from stroke. The percentages of deaths that were potentially preventable were higher in rural areas than in urban areas. 
+Some 46 million Americans — 15 percent of the U.S. population — currently live-in rural areas. 
+Social Determinants of Health Series: Transportation and the Role of Hospitals | AHA 
+World Bank and WHO: Half the world lacks access to essential health services, 100 million still pushed into extreme poverty because of health expenses 
+Some 400 million lack healthcare worldwide: WHO and World Bank | Reuters 
+Impact 
+Score: 3.5 
+Widespread, cost-effective availability of PAM transportation would improve the quality of life for millions of medically underserved people 
+Confidence 
+Score: 3.6 
+Medium, based on qualitative judgement. We do not believe that the root cause is really transportation related and that PAM will ultimately be the solution to this problem, so second-order problems then become moot. 
+IF PAM becomes a reality and widespread, then yes it could have a significant impact on this problem. But we do not have confidence that PAM will become widespread enough (democratized) enough to be viable path for mitigation relative to other efforts. ",
+"Given its possible role in overall public health, what regulations/restrictions may be imposed on aviation in the future? ",Health & Wellness,Medium,"Why is this a problem? 
+As new pandemics arise, they will likely impact aviation in a negative way, e.g., new restrictions to slow the spread of the pathogens, resulting in a loss of revenue (fewer passengers flying) and additional operational costs (mitigation measures). 
+What capabilities may be needed to address the problem? 
+Real-time monitoring of air and passengers to detect pathogens, as well as enhanced filtering of air flows. 
+What trends might enable problem exploration and solution? 
+Spread of new variants of COVID and new pathogens will motivate/incentivize problem solution. 
+Reach - How many people, communities are going to be impacted or are impacted by the problem? 
+Billions of passengers per year, all around the world. 
+Impact - What is the scale of the impact? (high, medium, low)?
+High impact, given the extensive reach and importance of aviation to the global economy. 
+Confidence - How confident are we in the impact and reach determinations? 
+Medium. 
+Effort – what is the effort/scale needed to address? Wickedness? CAS-ARMD/NASA aligned? 
+Large effort to solve this big problem, which has a strong aeronautics connection; hence CAS-worthy. 
+Part of broader conversation to regulate aviation to reduce negative impacts - TSP_AVIATION-2050_SYNTHESE_ENG.pdf (theshiftproject.org) 
+Smaller companies get away with more but do more damage. 
+How does oligopoly impact regulation? ",
+How might the development of vehicles with the capability to routinely travel from manufacturing facilities in low earth orbit expand the commercial sector and provide customers on Earth just in time delivery services of in-space manufactured goods?,GeoEngineering,Medium,"Prompt:
+How might the development of vehicles with the capability to routinely travel from manufacturing facilities in low earth orbit expand the commercial sector and provide customers on Earth just in time delivery services of in-space manufactured goods?
+
+Sources:
+
+https://www.nasa.gov/mission_pages/station/in-space-production-applications/in-spa-news/
+What is the problem or need?
+
+Better ways to quantify /manage water consumption (e.g. water credits system)? 
+sources of fresh water / potable water worldwide as sea level rises
+Need: Aerospace vehicles that can deliver products made in orbit to customers all over the Earth
+Need: payload lockers to fit in the aerospace vehicles that meet physical and biological requirements of products
+Need: space to earth traffic management system
+<Trends>
+When does the problem come to a head?
+Time: need is now but may not become reality until 30 to 50 years when orbital manufacturing becomes routine
+Rate: <Decreasing impact, steady state, linearly increasing impact, exponentially increasing impact>
+<Reasoning>
+What capabilities may be needed to address the problem?
+
+Future Capability: More amphibious and multi-modal vehicles / transition from flight to sea to flight
+Future Capability:  multi-modal vehicles with capability to rapidly move from orbital facilities to anywhere on Earth
+What trends are driving this capability or need that may influence the problem or solution space?
+
+Growing number of companies developing in space manufacturing capablities and increasing amounts donated to establish space-based research capability
+Trend relationship: Growing number of companies developing in space manufacturing capablities and increasing amounts donated to establish space-based research capability
+Trend: increasing number of companies developing business plans to manufacture products in space
+Trend: increasing number of space based factories (space stations)
+https://today.ucsd.edu/story/150-million-gift-takes-stem-cell-research-to-new-heights
+https://www.cnbc.com/2021/07/29/varda-space-raises-over-50-million-to-build-space-factories.html
+Who would best know about this problem or solution? Who are the stakeholders?  (Can be specific or general.  Try to list as many as possible)
+Actors: NASA, academia, commercial space sector (Spacex, blue origin, lockheed, boeing (etc)), philanthropists, FDA, customers worldwide
+Reach - How many people, communities are going to be impacted or are impacted by the problem in a given year across the globe?
+Size: Billions. All people with ability to utilize/receive health care services.
+Impact - What is the degree of the impact on a per-person basis?
+
+Score: (Pick 1)
+<1 - Minor improvement to social/community well-being OR critical improvement to Esteem/Emotional well-being>
+<2 - Minor improvement to safety/finances/stability OR moderate improvement to social/community well-being>
+<3 - Minor improvement to biological needs (water/food/air) OR moderate improvement to safety/finances/stability OR slight improvement to social/community well-being>
+<4 - Moderate improvement to biological needs (water/food/air) OR critical improvement to safety/finances/stability>
+<5 - Critical improvement to biological needs (water/food/sleep/air)>
+<Reasoning>
+What is the relationship between the Problem and Aviation?
+Type: (Pick 1+)
+Problem Creator - biomedical researchers have discovered that microgravity enables improved manufacturing capabilities and speeds up some kinds of biological research/drug discovery
+Sole Resolver - NASA ARMD is squarely needed to solve the operational challenges from traveling from orbital locations to point-of-service delivery capability. How: leverage and combine existing UTM systems, atmosphereic entry systems, and UAV into singular vehicle.
+What is the nature of the gap or whitespace around the problem?
+Type: (Pick 1+)
+Known current problem, insufficiently addressed
+ability to operate vehicles that bring mass or products from low earth orbit to point of service delivery locations on Earth's surface.
+Known current problem, unaddressed
+Known future problem, insufficiently addressed
+Known future problem, unaddressed
+Potential current problem, not fully understood
+Potential future problem, not fully understood
+<Reasoning>
+Confidence - How confident are you in the impact and reach determinations?
+Score: (Pick 1)
+<4 - The numbers are based on some direct and indirect data, with reasoned guesses or unit conversions>
+<Reasoning>
+it is reasonably expected that customers worldwide will adopt pharmaceuticals and biomedical products manufactured in space once this capability has been demonstrated (analogous to adoption of new products and services produced on the ground). All people of earth willing to accept and who can receive/purchase these products will be potential future customers.",
+How will food security issues impact the viability of high-density population centers?,GeoEngineering,Medium,"Prompt:
+How will food security issues impact the viability of high-density population centers?
+
+How will food security issues impact supply chain construction and resiliency?
+
+How will food security issues shift priorities for political leaders?
+
+Might bioweapons catastrophically impact food production, and if so, how to prevent or mitigate?
+
+How do changing oceanic ecosystems impact food security and transport security?
+
+<How might Z be impacted by changes to ZZZ in aviation? (i.e. aviation as creator or contributor)>
+Sources:
+
+https://news.un.org/en/story/2021/03/1087682
+https://www.npr.org/sections/money/2021/06/08/1003982733/squalor-behind-the-golden-gate-confronting-californias-homelessness-crisis
+https://www.forbes.com/sites/forbesbusinesscouncil/2021/08/19/regenerative-agriculture-the-next-trend-in-food-retailing/?sh=28ffc3cc2153
+https://www.nature.com/articles/s41538-018-0018-4
+https://marincarbonproject.org/what-is-carbon-farming/#what-is-carbon-farming
+https://www.unep.org/interactive/six-sector-solution-climate-change/
+https://www.frontiersin.org/articles/10.3389/fsufs.2021.685801/full
+https://www.mdpi.com/1660-4601/16/18/3493
+https://www.dni.gov/index.php/gt2040-home/gt2040-deeper-looks/future-of-water
+https://www.foodbusinessnews.net/articles/21212-food-waste-is-top-of-mind-for-climate-conscious-shoppers
+https://lomi.com/blogs/news/biggest-sources-excess-food-waste-across-america
+https://www.sciencedirect.com/science/article/abs/pii/S0301421513009701?via%3Dihub
+https://www.thebalancemoney.com/top-usa-future-economic-trends-3305666
+https://kpmg.com/xx/en/home/insights/2013/10/resource-stress.html
+<Source>
+What is the problem or need?
+
+Future Need: a National or Global Agspace akin to national airspace that manages the global agriculture system.
+Future Need: food security, Relationship: A lack of water can lead to decreased crop yields and food shortages (as well as increased diseases).
+
+Future Need: available energy and public health. Relationship: energy and health require dams and reservoirs, as well as the development of water storage and distribution systems. 
+
+Future Need: infrastructure and biodiversity. Relationship:  A lack of water can create a need for improved infrastructure development, aquatic ecosystems and wildlife
+
+Need: Risk assessments when using gene editing techniques to avoid unintended consequences and long-term harm to ecosystems.
+Need: Local resilience measures, including emergency planning, green infrastructure, and sustainable building practices, help communities better withstand environmental and economic disruptions.
+Future Need: rapid advancement of biological understanding of human dependencies on biodiversity at micro and macro scale, e.g. microbiome functionality and sequencing, pollination dependencies for food supplies
+Future Need: minimize or eliminate environmental impacts that degrade health, space and available resources for species. (Ecosystem impacts, ongoing decline of multiple sources of natural resources for medicine, food, environmental hygeine.)
+<Problem Context>
+When does the problem come to a head?
+Time: Now  and into the indefinitely future <Now, 5yrs, 10yrs, 15yrs, 20yrs, 30yrs>
+Rate: continuing increasing impacts <Decreasing impact, steady state, linearly increasing impact, exponentially increasing impact>
+<Reasoning>The increasing needs of a growing population continue to stress infrastructure and the global system
+
+What capabilities may be needed to address the problem?
+
+<Description of existing or future tech, industry, committee, team, agreement, policy 
+Future Capability: Efficient Climate Friendly/Neutral mode for transporting large amounts of goods
+
+Future Capability: water management industries and software methods. Relationship: Solving these problems short-term will allow people to create marketable tools for collection, treatment, monitoring, irrigation, recycling and reuse. 
+
+Future Capability: Crops that are severe weather tolerant and disease resistant. Agriculture benefits from growth zone specific bioengineered crops that reach maximum efficiencies
+
+Future Capability: jobs and local economic dev initiatives that prioritize the use of renewable energy, sustainable agriculture, and other climate-nice practices
+Future Capability: Strengthening abilities/connectivity of smallholder farmers to global supply chains to advance resiliency of food systems in the face of weather disruptions
+<Change in existing technology> diversity of bioengineered organisms becomes very wide ranging
+blue foods appear to have less stressors on the environment
+How: Technologies that establish food security, climate mitigation, and healthy environments within megacities e.g. vertical farming
+<New technology> Alternative to salts  silver iodide (cloud seeding) can be toxic to marine organisms &  accumulate in food chains:
+<Agreement between stakeholders / Multilateral policy change>
+<Unilateral policy change>
+<New Research or statistical/scientific understanding>
+<Investment or funding>
+What trends are driving this capability or need that may influence the problem or solution space?
+
+Trend: Surge in interest and practice of regenerative agriculture / indigenous and ancient agriculture techniques, including potential for RegenAg at scale as a countermeasure to climate pressure and food security/resilience
+Trend: Upcoming Urbanization of Africa could significantly increase GHG (greenhouse gas?) in the atmosphere. Relationship: If based on Fossil Fuels Africa's Urbanization can significantly impact Climate Change for the worse and reinforce negative trends OR negative aspects of trends.
+
+Trend: Geoengineering of aquatic environments via biologic mechanisms
+Trend: Limited access to clean water and thirsty populations 
+Trend: Rise of pollution and restricted clean water resources among larger populations
+Trend: Debate over the regulation of gene editing in agriculture, particularly in the context of genetically modified organisms (GMOs) and consumer attitudes towards food safety and transparency.
+Trend: Low-carbon economy opportunities for renewable energy, sustainable agriculture, and climate-friendly practices driven by government policies, tech advancements, and consumer preferences.
+Trend: Gene editing in agriculture (for all types of organisms): Gene editing techniques will lead to unintended consequences, such as resistant organisms, introducing negative impacts on ecosystems and further interventions.
+
+Trend: Rapid development and adoption of gene editing technologies in agriculture, with potential environmental and economic consequences.
+Trend: costs of production agriculture are increasing
+Trend: Agriculture continues to be the largest consumer of water through 2050
+Trend: ""The U.S. climate is changing as a result of global warming caused by increased greenhouse gases. As the country experiences more hot days, food prices rise.""
+<Every year X increased by Z>
+<Since 2000, B has grown by 15%>
+<By the year 2045, G will be the leading cause of H>
+Who would best know about this problem or solution? Who are the stakeholders?  (Can be specific or general.  Try to list as many as possible)
+people all over the world, farmers, ranchers, agriculture businesses, farm/ranch supply vendors, NASA, US Department of Agriculture, CA Department of Food and Agriculture
+Actor: entire food supply chain, biofuel plants, power generators
+Food distribution (grocery stores, restaurants, transport)
+Governments and legal systems
+Reach - How many people, communities are going to be impacted or are impacted by the problem in a given year across the globe?
+Size: all of humanity, Billions <10k, 100k, 1M, 10M, 100M, 1B>
+<Reasoning>cascading effect on terrestrial and marine food webs (including fish and other seafood humans eat)
+Impact - What is the degree of the impact on a per-person basis?
+
+Score: (Pick 1)
+<4 - Moderate improvement to biological needs (water/food/air) OR critical improvement to safety/finances/stability>
+<Reasoning> the impact on a per-person basis is very high - as food security is altered, or availability of food is limited the world's population is 4 meals away from total anarchy.
+What is the relationship between the Problem and Aviation?
+Type: (Pick 1+)\
+Partial Resolver - Aviation is one of the ways the problem is or could be mitigated (even if scale is poor or cost is high).  Aviation could have a greater role in mitigating the problem
+Influencer - Aviation/NASA has a role in how the problem could be mitigated, but does not directly touch the problem.  (e.g. upstream mftg pollution, local zoning around airports).
+<Reasoning> aviation contributes to climate change via exhaust and CO2, which affects directly affects agriculture. As a partial resolver, aviation has the ability to contribute to food security by improving food distribution, agricultural monitoring, cloud seeding, and coordination/management of aerial and robotic assets directly involved in agriculture operations.
+What is the nature of the gap or whitespace around the problem?
+Type: (Pick 1+)
+Known current problem, insufficiently addressed
+<Reasoning> Food waste in many areas vs famine in others point to imbalances in food distribution and availability
+Confidence - How confident are you in the impact and reach determinations?
+Score: (Pick 1)
+<5 - The numbers are based on direct data addressing the problem.>
+<Reasoning> One-third of the world’s food produced is never eaten. By reducing consumption of meat,  loss and waste, we can reduce the need for land and resources used to produce food as well as the greenhouse gases released in the process.",
+"Given the perishability of some food items; Could this lead to a luxury item market dynamic requiring fast transportation of said ""luxury goods"" (ie food) to ""haves"" type communities?",GeoEngineering,Medium,"Prompt:
+
+
+Given the perishability of some food items; Could this lead to a luxury item market dynamic requiring fast transportation of said ""luxury goods"" (ie food) to ""haves"" type communities?
+
+Could there be a creation of a food driven economy/trade market? (Romans with ice in summer)
+Sources:
+
+https://news.un.org/en/story/2021/03/1087682
+https://www.npr.org/sections/money/2021/06/08/1003982733/squalor-behind-the-golden-gate-confronting-californias-homelessness-crisis
+https://www.forbes.com/sites/forbesbusinesscouncil/2021/08/19/regenerative-agriculture-the-next-trend-in-food-retailing/?sh=28ffc3cc2153
+https://www.nature.com/articles/s41538-018-0018-4
+https://marincarbonproject.org/what-is-carbon-farming/#what-is-carbon-farming
+https://www.unep.org/interactive/six-sector-solution-climate-change/
+https://www.frontiersin.org/articles/10.3389/fsufs.2021.685801/full
+https://www.mdpi.com/1660-4601/16/18/3493
+https://www.dni.gov/index.php/gt2040-home/gt2040-deeper-looks/future-of-water
+https://www.foodbusinessnews.net/articles/21212-food-waste-is-top-of-mind-for-climate-conscious-shoppers
+https://lomi.com/blogs/news/biggest-sources-excess-food-waste-across-america
+https://www.sciencedirect.com/science/article/abs/pii/S0301421513009701?via%3Dihub
+https://www.thebalancemoney.com/top-usa-future-economic-trends-3305666
+https://kpmg.com/xx/en/home/insights/2013/10/resource-stress.html
+<Source>
+What is the problem or need?
+
+Future Need: minimize or eliminate environmental impacts that degrade health, space and available resources for species. (Ecosystem impacts, ongoing decline of multiple sources of natural resources for medicine, food, environmental hygeine.)
+<Problem Context>
+Problem: Food waste contributes to 11% of global greenhouse gas emissions. Food waste is top of mind for climate conscious shoppers
+Problem: ""Each day in the United States approximately one pound of food per person is wasted.""
+Current and future need: a rational/resonable population growth management policy
+<Trends>
+When does the problem come to a head?
+Time: Now  and into the indefinitely future <Now, 5yrs, 10yrs, 15yrs, 20yrs, 30yrs>
+Rate: continuing increasing impacts <Decreasing impact, steady state, linearly increasing impact, exponentially increasing impact>
+<Reasoning>The increasing needs of a growing population continue to stress infrastructure and the global system
+
+What capabilities may be needed to address the problem?
+
+<Agreement between stakeholders / Multilateral policy change>
+A guaranteed market for all food producers so that food isn't dumped or destroyed because it isn't ecominically worth it.
+<Auditing capability>
+<Unilateral policy change>
+<New Research or statistical/scientific understanding>
+<Investment or funding>
+What trends are driving this capability or need that may influence the problem or solution space?
+
+Trend: costs of production agriculture are increasing
+Trend: Agriculture continues to be the largest consumer of water through 2050
+Trend: ""The U.S. climate is changing as a result of global warming caused by increased greenhouse gases. As the country experiences more hot days, food prices rise.""
+<Every year X increased by Z>
+<Since 2000, B has grown by 15%>
+<By the year 2045, G will be the leading cause of H>
+Who would best know about this problem or solution? Who are the stakeholders?  (Can be specific or general.  Try to list as many as possible)
+people all over the world, farmers, ranchers, agriculture businesses, farm/ranch supply vendors, NASA, US Department of Agriculture, CA Department of Food and Agriculture
+Actor: entire food supply chain, biofuel plants, power generators
+Food distribution (grocery stores, restaurants, transport)
+Governments and legal systems
+Reach - How many people, communities are going to be impacted or are impacted by the problem in a given year across the globe?
+Size: all of humanity, Billions <10k, 100k, 1M, 10M, 100M, 1B>
+<Reasoning>cascading effect on terrestrial and marine food webs (including fish and other seafood humans eat)
+Impact - What is the degree of the impact on a per-person basis?
+
+Score: (Pick 1)
+<4 - Moderate improvement to biological needs (water/food/air) OR critical improvement to safety/finances/stability>
+<Reasoning> the impact on a per-person basis is very high - as food security is altered, or availability of food is limited the world's population is 4 meals away from total anarchy.
+What is the relationship between the Problem and Aviation?
+Type: (Pick 1+)\
+Partial Resolver - Aviation is one of the ways the problem is or could be mitigated (even if scale is poor or cost is high).  Aviation could have a greater role in mitigating the problem
+Influencer - Aviation/NASA has a role in how the problem could be mitigated, but does not directly touch the problem.  (e.g. upstream mftg pollution, local zoning around airports).
+<Reasoning> aviation contributes to climate change via exhaust and CO2, which affects directly affects agriculture. As a partial resolver, aviation has the ability to contribute to food security by improving food distribution, agricultural monitoring, cloud seeding, and coordination/management of aerial and robotic assets directly involved in agriculture operations.
+What is the nature of the gap or whitespace around the problem?
+Type: (Pick 1+)
+Known current problem, insufficiently addressed
+<Reasoning> Food waste in many areas vs famine in others point to imbalances in food distribution and availability
+Confidence - How confident are you in the impact and reach determinations?
+Score: (Pick 1)
+<5 - The numbers are based on direct data addressing the problem.>
+<Reasoning> One-third of the world’s food produced is never eaten. By reducing consumption of meat,  loss and waste, we can reduce the need for land and resources used to produce food as well as the greenhouse gases released in the process.",
+"In a world with ubiquitous sensing, how is it decided who or what does the sensing, and who makes the decision? Who receives the benefits of the data that is collected?",GeoEngineering,Medium,"Prompt:
+How can equity be enabled or preserved in the face of changing conditions such as climate change, AI advances, and increasing surveillance capabilities at both a macro and micro level?
+In a world with ubiquitous sensing, how is it decided who or what does the sensing, and who makes the decision? Who receives the benefits of the data that is collected?
+How to avoid a surveillance security state (e.g., Orwell's Big Brother)?  Is the provided (perceived) benefit enough to overcome said effect? (NOTE: original context was in the scope of constant monitoring and sensing). Will the need/desire for certain types of information cause a valuation (viewpoint) favoring some populations over others,
+How might we improve the equity of various socioeconomic, regional, and or ethnic groups whose welfare is impacted by ongoing ubiquitous sensing or improved monitoring?
+Is there a need for broad access to be monitored given possible benefits? Alternatively what impacts will these groups undergo for lack of monitoring availability to their environment
+How might TinyML improve adoption of wearables by the underprivileged for early detection and warning of disasters via economies of scale?
+How might devices, like wearables, enable citizen scientists to increase safety for populations in an equitable way?
+How might monitoring improve equity of Climate Change outcomes?
+How might AI improve the equity of welfare or economic attainment across borders and regions?
+How might AI analysis and predictions improve environmental outcomes for underprivileged communities via utilizing distributed data management?
+ Sources:
+
+The questions above have limited sources on the mural or direct extension from the mural text. However, from the Confluence Ethics page, there are generally relevant sources: 
+Metatrend #9: Trillion-Sensor Economy: The Ability to Sense and Know Anything, Anytime, Anywhere (diamandis.com)
+https://www.jstor.org/stable/26644936?read-now=1#page_scan_tab_contents
+Exploring the Ethics of Long-Term Research Engagement With Communities in Low- and Middle-Income Countries on JSTOR
+The Implications of Climate Change on Health among Vulnerable Populations in South Africa: A Systematic Review - PMC (nih.gov)
+Noncontact Vital Sign Detection With UAV-Borne Radars: An Overview of Recent Advances | IEEE Journals & Magazine | IEEE Xplore
+Research Efforts in Unmanned Aerial Vehicle Vital Sign Monitoring Systems – DSIAC
+https://www.washingtonpost.com/world/2023/08/31/china-floods-beijing-rain/
+https://www.simplilearn.com/challenges-of-big-data-article
+https://www.iarpa.gov/research-programs/smart-epants
+https://www.cultofmac.com/806788/researchers-explore-frontiers-of-heart-health-with-apple-watch/?utm_source=twitter
+https://safed.vtti.vt.edu/projects/development-of-a-connected-smart-vest-for-improved-roadside-work-zone-safety/and published results PDF
+https://safed.vtti.vt.edu/wp-content/uploads/2021/06/Safe-D-Final-Report-Smart-Vest-04-104-Final-Updated-FixedV1.pdf
+https://www.sciencedirect.com/science/article/pii/S2093791120303024
+https://www.cultofmac.com/807027/secret-apple-watch-glucose-monitoring-project-makes-gains/
+https://www.insiderintelligence.com/insights/wearable-technology-healthcare-medical-devices/
+https://rmets.onlinelibrary.wiley.com/doi/10.1002/joc.7391
+https://martech.org/4-areas-of-martech-with-ethical-concerns/
+https://www.washingtonpost.com/technology/2022/06/21/facebook-doj-discriminatory-housing-ads/ 
+https://medium.com/@JamesGrimmelmann/illegal-unethical-and-mood-altering-8b93af772688
+What is the problem or need?
+
+Ubiquitous Sensing
+Technology advances generate an environment of ubiquitous monitoring both on a personal and societal level. 
+Personal health monitoring: watches, phones and XR allow users to be informed regarding their heart rate, oxygen level, stress level. Privacy concerns arise related to use of personal information
+Wearables hacking - how can we trust the data and protect the users?
+There are also remote medical sensing technologies that could be as ubiquitous as CCTV, and even drone-mounted.
+NASA's Aeronautics technologies can enable persistent, wide-area coverage of climate-related parameters and NASA's Earth observing satellites add to the data gathering.
+Such sensing capabilities enable new opportunities to provide actionable information, detect problems and improve life, while at the same time imply severe ethical issues if misused.
+Big Data management and processing, including timing and synchronization, in an equitable manner resulting in high quality results is a major technical challenge.
+When does the problem come to a head?
+Time: Now to 15yrs
+Rate: Linearly to exponentially increasing impact
+The technology and infrastructure for ubiquitous sensing is already available or being established with some populations presently participating and impacted. The economic and societal drivers for their implementation are expected to generate broader implementation in the nearer term.
+What capabilities may be needed to address the problem?
+
+Ubiquitous Sensing
+System architectures and business models that allow incorporation of equity management mechanisms
+Use of democratized data gathering for early warning systems impacting safety and welfare
+AI, IoT, Wearables will allow people to create routing models and recommendations for vehicles
+Relationship: watches, phones and XR allow users to be informed regarding their heart rate, oxygen level, stress level.
+Spreading (Seeding?) of micro sensors to blanket areas in addition to mining wearable sensing data to cover the environment
+Monitoring climate change impacts: wearables may allow real time reports of climate impacts
+PAVs, UAVs, balloons, spacecraft integrating data for micro weather as well as macroweather
+Develop and deploy sensors and AUVs for studying ocean acidification and its impacts on ecosystems, as well as Carbon Capture & Storage (CCS) and ocean-based renewable energy technologies
+Improved sensing capabilities in & above the water / ice caps.
+Implementation of Big Data management of the ubiquitous sensing networks in an equitable manner resulting in high quality results.
+What trends are driving this capability or need that may influence the problem or solution space?
+
+Ubiquitous Sensing
+Technology advances that allow ubiquitous monitoring, combined with Big Data processing and communications, means that the infrastructure structure for Ubiquitous Sensing both on a personal and societal level already exists.
+Economic drivers are moving towards use of monitoring technologies to drive specific outcomes, not necessarily for the benefit of the population.
+Privacy concerns are declining among younger generations: decline in need for privacy with respect to certain areas of life may allow wearables to be used to communicate more broadly as part of IoT using cloud
+TinyML may enable wearables to be powerful computers, recommendation engines
+Broad sensing system capabilities are both becoming more pervasive and more easily implemented enabling a new level of monitoring and surveillance.
+Who would best know about this problem or solution? Who are the stakeholders?  (Can be specific or general.  Try to list as many as possible)
+Mixture of ethicists, legal scholars, corporate interests, international organizations, and technologists
+The stakeholders include those being monitored perhaps without their knowledge or permission, as well as those who benefit from the resulting data.
+Reach - How many people, communities are going to be impacted or are impacted by the problem in a given year across the globe?
+Size:  1B
+The ethical impact of climate change, AI, and ubiquitous sensing is a world wide issue
+Impact - What is the degree of the impact on a per-person basis?
+
+Score: (Pick 1)
+Changed to 1 after whole list reconciliation
+<3 - Minor improvement to biological needs (water/food/air) OR moderate improvement to safety/finances/stability OR critical improvement to social/community well-being>
+The ethical impact of climate change, AI, and ubiquitous sensing is significant and world changing.
+What is the relationship between the Problem and Aviation?
+Type: (Pick 1+)
+Partial Resolver - Aviation is one of the ways the problem is or could be mitigated (even if scale is poor or cost is high).  Aviation could have a greater role in mitigating the problem
+Influencer - Aviation/NASA has a role in how the problem could be mitigated, but does not directly touch the problem.  (e.g. upstream mftg pollution, local zoning around airports).
+Aviation has a minor role in causing climate change and use of AI. It could have a notable role in weather monitoring and mitigation, as well as personal and community surveillance, as well as the safe use of AI.  providing a platform for ubiquitous mobile sensing able  to go where desired without existing infrastructure.
+What is the nature of the gap or whitespace around the problem?
+Type: (Pick 1+)
+Known future problem, unaddressed
+Potential current problem, not fully understood
+Potential future problem, not fully understood
+ The possible ethical impact of climate change, AI and ubiquitous sensing are generally well known as in Big Brother concerns.  The overall impact of these evolving fields is unknown, esp. revolving around what is ethical to be monitored and whose information is it when monitoring occurs.
+Confidence - How confident are you in the impact and reach determinations?
+Score: (Pick 1)
+Changed to 2 after whole list reconciliation
+4 - The numbers are based on some direct and indirect data, with reasoned guesses or unit conversions
+Understanding the possible ethical impact of climate change and AI are well known, but the impact of these evolving fields is unknown  of ubiquitous sensing is at an early stage and will evolve in line with the understanding of the impact of increasingly more complex and pervasive technologies. 
+Scenario - Is there a simple scenario or narrative that can better explain this problem?  This is helpful for downstream readers who will not have the benefit of fully engaging the source material.
+<Scenario>
+(gpt-4) 
+In the not-so-distant future, we find a world grappling with the consequences of climate change, the advancement of artificial intelligence (AI), and the increasing capabilities of surveillance technology. These global challenges and opportunities touch everyone, yet they disproportionately impact communities in low- and middle-income countries (LMICs), which often bear the brunt of climate change effects and are least equipped to adapt to or influence AI and surveillance technologies.
+
+Imagine a coastal community in one such LMIC. The rising sea levels, a direct consequence of climate change, threaten their homes and livelihoods. However, their voices are often unheard in international climate policy discussions. Their limited resources and access to technology make it hard for them to adapt to these changes or participate in mitigation efforts.
+
+Meanwhile, the world around them is becoming increasingly digital. AI systems are transforming economies, Surveillance technologies are becoming ubiquitous, and wearable devices that could help detect and warn of disasters are out of their reach due to economic constraints. These communities are at risk of being left behind or, worse, exploited as the world around them transforms.
+
+This scenario is not just a possibility but a reality for many communities around the world today. The ethical impact of these changes is significant and global, affecting billions of people. The aviation industry is uniquely positioned to influence these challenges, from contributing to climate change mitigation to leveraging AI for weather monitoring and disaster prediction.
+
+However, there are significant gaps in understanding and addressing these problems. For instance, we need to ensure that the benefits of AI and surveillance technologies are equitably distributed and do not infringe on human rights. We also need to involve the most affected communities in climate change solutions and ensure their voices are heard.
+
+The potential impacts of these issues are well known, but the specific outcomes and how they will evolve are uncertain. As we navigate this future, we must be proactive in addressing these ethical considerations and strive for a world that is not only technologically advanced but also equitable and inclusive.",
+How will the scarcity of drinkable water become a driver for climate-related migration?,GeoEngineering,Medium,"Prompt:
+How will the scarcity of drinkable water become a driver for climate-related migration?
+
+How will the scarcity of drinkable water impact the liveability of future MegaCities?
+
+Sources:
+
+Are We Running Out of Water? | Earth.Org
+Future global urban water scarcity and potential solutions | Nature Communications
+5 innovative methods to harvest water and tackle scarcity | World Economic Forum (weforum.org)
+10 Critical Water Scarcity Facts We Must Not Ignore – World Water Reserve
+What is the problem or need?
+
+<Problem Context>
+Trend: Rise of megacities
+Need: sources of fresh water / potable water worldwide as sea level rises
+Need: Better ways to quantify /manage water consumption (e.g. water credits system)?
+Need: Green Technology & Industry Base
+Relationship: An industrial and technological framework that allows for modernization and benefits to population while limiting negative impacts to the environment
+Need: (How) Develop an industrial and technological framework that allows for modernization and growth while limiting negative impacts to the environment
+When does the problem come to a head?
+Time: <Now, 5yrs, 10yrs, 15yrs, 20yrs, 30yrs>
+Rate: <Decreasing impact, steady state, linearly increasing impact, exponentially increasing impact>
+<Reasoning>
+What capabilities may be needed to address the problem?
+
+Rise of natural and artificial waterways
+Future Capability: Desalination technologies that consume less energy / are more environmentally friendly
+Future Capability: More amphibious and multi-modal vehicles / transition from flight to sea",
