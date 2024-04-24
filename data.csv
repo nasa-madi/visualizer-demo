@@ -107,6 +107,18 @@ The pitch this piece is for developing the similar technology for aviation.
 The developments are where you focus on material specific for aviation application, such as membranes, electrodes, membrane electrode assembly and other stack components to measure the progress of this activity.
 High temperature pain, fuel cell stacks and system will be tested under the aviation load profile. The result will be used to modify and optimize fuel cell system for aviation application.
 The results are important for the design of future policy system for electrified, electrified airplane."
+"Hydrogen Fuel Aerogel Storage Tanks (HyFAST)",Wicked Wild,High,"Current challenges to (zero carbon) Hydrogen Aircraft fuel storage development often becomes a materials science/engineering issue. Hydrogen poses challenges related to material compatibility, as it can cause hydrogen embrittlement in certain metals used for cryotanks. This can impact the structural integrity of components over time, necessitating the development of materials that can withstand prolonged exposure to hydrogen. Also, hydrogen is highly flammable, and safety is a paramount concern, especially in the aviation industry. In addition to these materials issues, hydrogen storage also creates a challenge for volume occupation and transport safety.
+What if…we could accelerate beyond hydrocarbon fuels by
+ improving hydrogen fuel storage, aircraft safety, and efficiency using lightweight polymer aerogels
+Utilize porous polymer aerogels as a host system for safer, more efficient hydrogen fuel storage
+Incorporate aerogels into the construction of external hydrogen storage tanks for structural enhancement, vibration damping, and fire retardancy
+","So with this concept, we were looking at a greener, cleaner, more sustainable environment and a lot of times that equates to lowering carbon emissions. And one of the biggest focuses for lowering carbon emissions would be alternative fuels, and hydrogen has gotten.
+It's a tremendous amount of attention throughout arrow and commercial industries, and so some of the current challenges to using 0 carbon hydrogen are it's fuel storage capabilities. And so the development often becomes a material science and engineering issue, and having a background in polymer science, I I believe that this could be maybe remedied through some kind of material capable compatibility. Currently, when you're using hydrogen, because of the pressures and temperatures that you have to keep it at, you can often cause embrittlement in certain materials, especially metals that they're currently using for cryo tanks.
+So obviously this impacts the structural integrity of the components over time and now you need a you need materials that can withstand prolonged exposure to hydrogen. In addition, some of the other issues with hydrogen high flammability, which is obviously creates a safety concern and also the storage because of the volume occupation. That's necessary pressures and and and everything that involves keeping hydrogen in its liquid form in order for transport.
+This created transport safety issue. So what if you could accelerate beyond hydrocarbon fuels by improving hydrogen fuel storage, aircraft safety and efficiency, and to remedy to be a partial remedy for some of these problems that are obvious in in aeronautics, we suggest using lightweight polymer aerogels for storage.
+
+Now one of the biggest reasons why is because if you utilize a porous polymer in especially a porous polymer aerogel as a host system for liquid hydrogen, you create a safer, more efficient hydrogen fuel storage. And also you can incorporate aerogels into the construction of external hydrogen storage storage tanks, which is a big focus for NASA. And you can create a higher structural integrity and enhanced vibration damping and also incorporate certain polymers for fire retardant seem. what you're looking at now is the potential for some multifunction material like aerogels that not only addresses thermal resistance and and chemical capability, but it could offer energy absorption, vibration damping and lightweight structural reinforcement. And especially with external fuel storage and tanks or pads, this can help remedy the volume requirements for storage, especially with transport which is which is an issue, the polymer aerogels just to quickly let you know if if you're that person out there that doesn't know what ardella is, it's a it's a 3 dimensional structure comprised of a network of of self assembled polymer, which results in a very high porosity which we target over 95% large internal surface areas.  it's a nanoscale pore size, which anywhere from 10 to 20 nanometers the actual the picture, which with the fuel tank is the background is an actual error. low density, low thermal conductivity and excellent wedding and storage capabilities and just very quickly.
+You can see that it pairs well with liquid propellants that have with these chemically and thermally resistant polymers. The high porosity and nanoscale pore sizes give the advantage of housing a liquid propellant in a way that it can encase it so that it actually appears as a handles like a solid. So no slashing and low boil off, and again the structural integrity of the error gels which we see over 200 megapascal compressive modulus within the external storage tanks can reduce the overall weight and also improve efficiency and safety while expanding volume capability and the range limits of the craft."
 How might we cool next gen aircraft?,Wicked Wild,High,"Opportunity:Sustainable aviation is a key initiative for NASA and the world to address climate change and protect the environment. An opportunity is presented to leverage inherent thermal generation in aircraft operation, typically seen as waste, to support electrification efforts and power the next generation of sustainable aviation.
 Key Use Cases: Assist with thermal management, structural health monitoring, lighting systems, and de-icing.
 Possible Partnerships: Boeing, Pratt & Whitney, Rolls-Royce, Joby, FAA, and more.  ""Wicked-Wild"" Idea: 
@@ -227,7 +239,7 @@ How to avoid the Big Brother effect?  Is the provided (perceived) benefit enou
 How might AI improve the equity of welfare or economic attainment across borders and regions?,GeoEngineering,Low,,
 How might TinyML improve adoption of wearables by the underprivileged for early detection and warning of disasters via economies of scale?,GeoEngineering,Low,,
 How might AI analysis and predictions improve environmental outcomes for underprivileged communities via utilizing distributed data management?,GeoEngineering,Low,,
-"How might the increase of AAM and drone players in the aviation space impact medical supply & delivery chain (more availability, more small actors, lower reporting standards, more auditing, more gaps)?",Health & Wellness,Medium,"Sub-problem 
+"How might the increase of AAM and drone players in the aviation space impact medical supply & delivery chain (more availability, more small actors, lower reporting standards, more auditing, more gaps)?",Health and Wellness,Medium,"Sub-problem 
 How might we democratize the Medical Supply chain through aviation? 
 How might we regulate drones/democratized aviation in the future medical supply chain? 
 Why is this a problem? 
@@ -251,7 +263,7 @@ Confidence - How confident are we in the impact and reach determinations?
 High. The possible impact of drone systems on the air space is already an identified challenge being addressed in ARMD/FAA 
 Effort – what is the effort/scale needed to address? Wickedness? CAS-ARMD/NASA aligned? 
 This particular problem is a subset of a more significant and broad challenge related to introduction of drones into the air space, their economic and social impact, and the associated legal and regulatory issues involved. The broader problem of introduction to drones into the airspace is a notably Wicked problem limited aspects of which are already being addressed presently in NASA ARMD programs that specially related to air space management.",
-"How might aviation integrate into personal, community and global lifecycles to ensure physical and mental wellness? Aviation for fractal wellness",Health & Wellness,Medium,"Why is this a problem? 
+"How might aviation integrate into personal, community and global lifecycles to ensure physical and mental wellness? Aviation for fractal wellness",Health and Wellness,Medium,"Why is this a problem? 
 Aviation contributes to stress, feeling of ‘other’, separation due to classes, does not accommodate diversity. 
 Positive aviation impact on wellness is limited 
 Medical supply chain (including human organ delivery) 
@@ -273,7 +285,7 @@ High
 Effort – what is the effort/scale needed to address? Wickedness? CAS-ARMD/NASA aligned? 
 Medium: some aspects might be initially addressed at small scale, and are wicked and CAS-aligned 
 ",
-"How might the entire aviation experience be restructured to reduce its risk as a vector of pathogen transmission? (reducing unnecessary contact, etc.)",Health & Wellness,Medium,"Why is this a problem? 
+"How might the entire aviation experience be restructured to reduce its risk as a vector of pathogen transmission? (reducing unnecessary contact, etc.)",Health and Wellness,Medium,"Why is this a problem? 
 The drive to reduce human interaction in aviation has at least 2 influencing factors: The attempt to safeguard public health from the spread of contagions; and an economic drive towards automation to decrease staffing and expense associated with airline and the airport employees. However, this can lead to the depersonalization of air travel and, depending on the efficiency of the automation, potential inefficiencies in handling customer complaints/problems as well as removing a public face representing and individual airline company. 
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7134995/ 
 https://scholarship.law.wm.edu/cgi/viewcontent.cgi?article=1223&context=wmblr 
@@ -312,7 +324,7 @@ Confidence - How confident are we in the impact and reach determinations?
 Wickedness? CAS-worthy?
 This may be a technological progression that will first be implemented in the range of other industries before it reaches aviation. This may not be CAS-worthy problem because the market is already addressing automation (for costs).
 But from the pathogen side and from the in-the-tube spread, automation doesn’t account for all interactions and may not even shield people from the most common mechanisms of pathogen transmission (because we don’t know what they are). From that perspective, CAS may have an valid entry point. There may be aircraft design and technology investments specific to the aircraft that may be worthwhile IF the pathogen transmissions is validated as a big problem. (See Capabilities list). ",
-How might the aviation industry work with medical researchers on clinical trial representation and equity?,Health & Wellness,Medium,"Sources: 
+How might the aviation industry work with medical researchers on clinical trial representation and equity?,Health and Wellness,Medium,"Sources: 
 National Academies of Sciences, Engineering, and Medicine. 2022. Improving Representation in Clinical Trials and Research: Building Research Equity for Women and Underrepresented Groups. Washington, DC: The National Academies Press. https://doi.org/10.17226/26479. National Academies of Sciences, Engineering, and Medicine: Improving Representation in Clinical Trials and Research: Building Research Equity for Women and Underrepresented Groups 
 https://www.statista.com/statistics/272181/world-pharmaceutical-sales-by-region/ 
 When will clinical trials finally reflect diversity? (nature.com) 
@@ -347,7 +359,7 @@ The limitations in broad participation in clinical studies can be referenced fro
 Effort – what is the effort/scale needed to address? Wickedness? CAS-ARMD/NASA aligned? 
 The aspect of participation in clinical trials is a subset of broader challenges related to access to healthcare in rural regions and amongst racial and ethnic minorities. 
 While technical improvements may reduce the pain of this problem, it can be solved with current technologies and appropriate coordination and incentives. Technology can be only one path to a solution. ",
-"Assuming that the commercial trend towards hospital consolidation and specialization continues and patients are farther away from advanced treatments, how might aviation impact accessibility of healthcare? (See: medical staffing, changes in healthcare business models, Direct-to-consumer health apps, travel nurses, etc.)",Health & Wellness,Medium,"Sources: 
+"Assuming that the commercial trend towards hospital consolidation and specialization continues and patients are farther away from advanced treatments, how might aviation impact accessibility of healthcare? (See: medical staffing, changes in healthcare business models, Direct-to-consumer health apps, travel nurses, etc.)",Health and Wellness,Medium,"Sources: 
 https://www.youtube.com/watch?v=jtIZZs-GAOA 
 https://rockhealth.com/insights/q1-2022-digital-health-funding-staying-the-course-in-choppy-waters/ 
 https://rockhealth.com/insights/2021-year-end-digital-health-funding-seismic-shifts-beneath-the-surface/ 
@@ -387,7 +399,7 @@ Confidence - How confident are we in the impact and reach determinations?
 We are assuming that the geographic consolidation of healthcare continues to the point that access is reduced. If that trend continues, we are confident aviation will be a greater player in access. If not, the question is moot. 
 Effort – what is the effort/scale needed to address? Wickedness? CAS-worthy? 
 It is suggested that this is a CAS-worthy problem. It is Wicked covering technical, political, societal, economic, and legal issues. It directly involves aerospace across the spectrum of vehicles. The range of technical challenges related to this topic are formidable spanning the range of NASA technologies. Other players in the market may influence parts of the system, but no one technology or solution can mitigate the entire issue of rural access. ",
-"How might aviation mitigate growth of drug resistant bacteria due to heavy metal manufacturing and usage? (advanced manufacturing, airport safety protocols, and aircraft design)",Health & Wellness,Medium,"Sibling Question: 
+"How might aviation mitigate growth of drug resistant bacteria due to heavy metal manufacturing and usage? (advanced manufacturing, airport safety protocols, and aircraft design)",Health and Wellness,Medium,"Sibling Question: 
 How will aviation mitigate growth of drug resistant bacteria due to increased usage of antimicrobials in response to COVID-19? (airport safety protocols, and aircraft design) 
 Why is this a problem?
 Drug resistant bacteria is propagated by the use of heavy metals (lead, mercury, and silver) because of mining and transportation usage. Bacteria have evolved to resist the presence of these heavy metals, producing traits that also shield them from antibiotics. 
@@ -427,7 +439,7 @@ Score: 5 – Critical to life because people are dying
 Confidence - How confident are we in the impact and reach determinations? 
 Score: 2 - (Heavy Metals) Reduced confidence because the research is newer and the % attributable aviation’s heavy-metal usage is not clear. 
 Score: 5 – (Antimicrobials) Extremely confident because we know we are using them and we know that AMR is a critical problem. ",
-How might the aviation industry improve the medical cold chain?,Health & Wellness,Medium,"Super problem(s): 
+How might the aviation industry improve the medical cold chain?,Health and Wellness,Medium,"Super problem(s): 
 How might aviation improve medical supply transport? 
 How might aviation improve cold chain related losses in food, water, medicine? The air cargo community should collaborate to create its own supply chain standards for perishables in order to tackle a disconnected and fragmented chain, where one third of all food produced is wasted and achieve a common goal of reducing waste by at least 10% by the year 2025. This would represent 250,000 tons of savings, or about $1bn in value and 1m fewer tons of emissions, including CO2 and other greenhouse gasses. 
 Sub-problem(s) 
@@ -485,7 +497,7 @@ Millions dying (1.5M)
 Billions cost – lifestyle impact 
 Confidence: 
 Low ",
-"How might medical ethics (Bodily Autonomy, Beneficence, Non-Maleficence, Justice) conflict with aviation/transportation autonomy, distributed monitoring and services?",Health & Wellness,Medium,"Rewording Option: 
+"How might medical ethics (Bodily Autonomy, Beneficence, Non-Maleficence, Justice) conflict with aviation/transportation autonomy, distributed monitoring and services?",Health and Wellness,Medium,"Rewording Option: 
 Something like: How will medical ethics need to change/adapt/evolve (if needed) in order for (medical related?) services such as autonomous aerial transport, distributed monitoring (over area, inside vehicle) to be accepted and deployed? 
 Will current medical ethics (if remain unchanged) help or hinder the development/adoption of medical related aviation services such as autonomous transport (of goods or patients), and healthcare delivery and monitoring? 
 Sub Problems: 
@@ -512,7 +524,7 @@ Score: _Medium
 This assessment depends upon the development and implementation of technologies still in their formation stage and have not established a economic foothold in the market. 
 Effort – what is the effort/scale needed to address? Wickedness? CAS-ARMD/NASA aligned? 
 The technical aspects of this problem are within NASA’s domain and are specific application in the healthcare field of evolving air transportation autonomous and automated systems. The legal and societal aspects of this transformation that might be addressed by technological advances, but in general are more dependent on economic factors in the health care system beyond NASA’s purview. ",
-How might aviation support the medical needs for the emerging space economy (10-20 years)?,Health & Wellness,Medium,"Why is this a problem? 
+How might aviation support the medical needs for the emerging space economy (10-20 years)?,Health and Wellness,Medium,"Why is this a problem? 
 Limited access to raw materials impacted personal protective equipment costs which rose 2000-6000% in early weeks of the pandemic. Supply chain risk is high given the consolidation of vendors and sources. 
 The space economy will bring with it new health and wellness issues both in space and on earth. There will be additional challenges to transporting and distributing drugs, monitoring and screening for pathogens. 
 More humans and cargo will be exposed to radiation 
@@ -551,7 +563,7 @@ Confidence in reach – Medium
 Confidence in impact – High 
 Data showing investments in commercial space increasing, interest in space tourism, asteroid mining, academic institutions developing programs 
 Effort – what is the effort/scale needed to address? Wickedness? CAS-ARMD/NASA aligned? ",
-"How might personal air mobility enable democratized monitoring, treatment of medically underserved and high-risk patients? (Moving people in personal air vehicles, air ambulance, air taxis, etc. Moving person to materials, not materials to person)",Health & Wellness,Medium,"Why aviation as a medical service? 
+"How might personal air mobility enable democratized monitoring, treatment of medically underserved and high-risk patients? (Moving people in personal air vehicles, air ambulance, air taxis, etc. Moving person to materials, not materials to person)",Health and Wellness,Medium,"Why aviation as a medical service? 
 “By 2025, the U.S. is estimated to have a shortage of approximately 446,000 home health aides, 95,000 nursing assistants, 98,700 medical and lab technologists and technicians, and more than 29,000 nurse practitioners, according to a 2021 report conducted by industry market analytic firm” https://www.usnews.com/news/health-news/articles/2022-07-28/staff-shortages-choking-u-s-health-care-system 
 Labor shortage – need for medical services in rural areas, among underserved communities, globally due to labor shortage https://www.ruralhealthinfo.org/topics/health-care-workforce 
 “More than 2B people worldwide lack access to essential medical products like blood and vaccines due to poor infrastructure (poor roads, transport links)” - Paul Hunt and Rajat Khosla, “The human right to medicines”, SUR 8 (2008), accessed May 31, 2022, https://sur.conectas.org/en/human-right-medicines/ 
@@ -580,7 +592,7 @@ Confidence
 Score: 3.6 
 Medium, based on qualitative judgement. We do not believe that the root cause is really transportation related and that PAM will ultimately be the solution to this problem, so second-order problems then become moot. 
 IF PAM becomes a reality and widespread, then yes it could have a significant impact on this problem. But we do not have confidence that PAM will become widespread enough (democratized) enough to be viable path for mitigation relative to other efforts. ",
-"Given its possible role in overall public health, what regulations/restrictions may be imposed on aviation in the future? ",Health & Wellness,Medium,"Why is this a problem? 
+"Given its possible role in overall public health, what regulations/restrictions may be imposed on aviation in the future? ",Health and Wellness,Medium,"Why is this a problem? 
 As new pandemics arise, they will likely impact aviation in a negative way, e.g., new restrictions to slow the spread of the pathogens, resulting in a loss of revenue (fewer passengers flying) and additional operational costs (mitigation measures). 
 What capabilities may be needed to address the problem? 
 Real-time monitoring of air and passengers to detect pathogens, as well as enhanced filtering of air flows. 
@@ -988,3 +1000,99 @@ What capabilities may be needed to address the problem?
 Rise of natural and artificial waterways
 Future Capability: Desalination technologies that consume less energy / are more environmentally friendly
 Future Capability: More amphibious and multi-modal vehicles / transition from flight to sea",
+"AEROcAST - Advanced Exploration of Reliable Operation in Low Altitude Meteorology, Simulation, and Technology",CAS Execution,High,"Create a weather sensing, modeling, and reasoning framework for enabling weather tolerant operations
+Make urban spaces friendlier to flight where architecture of large structures in cities are known to create turbulent wind flows
+Enhanced safety and efficiency of AAM in adverse weather conditions
+More efficient vertiport operations
+Improved navigation and decreased turbulence in urban environments
+Filling the gap of weather observations in the atmospheric boundary layer and better understanding of wind flows in the urban environment
+Improved weather forecasts for many applications",
+BEAM - Wireless Beamed Energy for Advance Air Mobility,CAS Execution,High,"• Build, test, and characterize a prototype 'power- beaming' system intended for aerial wireless power transfer, collection, conversion, and storage of 10 GHz RF to DC energy within the vertiport and Advanced Air Mobility (AAM) airspace.
+• Evaluate detrimental impacts, potential benefit to the aircraft system, and functionality.
+Does beamed energy impact other systems or
+people in a detrimental way (human exposure,
+reflected RF interference...)
+Is the system scalable and does it provide a net
+benefit (cost, operations, safety...)
+Can GHz energy be converted efficiently and at
+a high enough power to offset on-aircraft energy storage requirements?",
+AENode - Airports as Energy Nodes,CAS Execution,Medium,"• Determine how airports can prepare for the future aviation and community energy needs that are
+Land area available at thousands of airports for renewable energy harvesting, storage, and/or conversion
+Little increase in power distribution infrastructure despite large increase in airport electric power use
+Less total energy needed, greatly reduced local emissions
+highly uncertain in both timing and energy mix 
+• Energy system must be able to provide energy to future aviation users (of which the energy mix is unknown) and local community (whose energy needs and types are evolving)
+• Energy must be provided to users at affordable cost to enable adoption with low emissions to reduce environmental impact locally and globally
+• Airport energy system upgrade path must be in place at critical locations prior to aviation users arriving, resulting in long payback periods with little/no return
+• Airport energy harvesting and distribution must comply with uncertain future regulatory framework
+• Airport upgrade path must remain viable with uncertainty in number of aircraft served, preferred energy product, and timing, while also navigating regulatory uncertainty and maintaining positive community impact",
+Digital Flight,CAS Execution,Medium,"Explore a potential new operating mode that uses digital data, processing, and cooperation to empower aviation’s growth. We call it digital flight.
+Enabling increasing diversity of flight operations, including highly automated flight
+Scaling to high tempos and densities
+Improving flight flexibility and predictability
+Increasing airspace access and growth with safe operations at scale, digital flight could lead to greater efficiencies, new mission capabilities, and emergent markets for aviation to serve the public.
+",
+Data & Reasoning Fabric,CAS Execution,Super High,"create an information infrastructure that can help assemble useful data and reasoning services to provide in-time information to autonomous aircraft for decision making. The intent is to form a connected, interwoven “fabric” of intelligence that sends aircraft specific, tailored information, wherever they are. This infrastructure would enable the vision of a “smart” city and airspace. While this project is focused on future autonomous systems, DRF could even be applied to traditional transport systems. ",
+SABERS - Solid-state Architecture Batteries for Enhanced Rechargeability and Safety,CAS Execution,Super High,"Develop a solid-state bipolar battery stack based on novel Li-S/Se chemistry and a non- flammable solid state electrolyte (SSE) to produce a battery which satisfies the system level needs of urban air mobility (UAM) concepts including: safety (non flammable), energy density, discharge rate, packaging design, and scalability.",
+SPARRCI - Sensor-based Prognostics to Avoid Runaway Reactions & Catastrophic Ignition,CAS Execution,Super High,"Improve safety of existing batteries + accelerate adoption of next- generation batteries
+Battery Failure Analysis
+• Off-nominal material morphology studies
+• In-situ imaging for fault precursor
+• Post-cycling analysis to correlate sensor/NDE results
+Sensor Development
+• Embedded miniature sensors for real-time state-of-health monitoring within cells
+• Multifunctional parameter measurements
+Nondestructive Evaluation
+• In-situ and off-line monitoring techniques
+• Battery health data without damage
+• Advanced modeling & analysis
+Fault Algorithms & Machine Learning
+• Multiphysics modeling for off-nominal operation
+• Fault algorithm + failure prognostics
+• “Smart” battery management
+• Advanced state-of-health and hazard detection
+ •Actionable warnings during off-nominal events to prevent catastrophic
+failures
+•Improved aircraft performance & enhanced reliability
+",
+SUSAN - Subsonic Single Aft Engine,CAS Execution,Super High,"The  SUSAN Electrofan Aircraft is a subsonic regional jet transport aircraft concept which utilizes Electrified Aircraft Propulsion (EAP) to enable propulsive and aerodynamic benefits to reduce fuel usage, emissions, and cost.  
+Transformative concept: single engine transport aircraft.  Five decades later we still have not achieved single engine transport
+The target market is the regional low cost carrier airline with mission specification: 180 passenger, design range of 2500 miles, economic range of 750 miles, speed of Mach 0.78.
+Additionally develop the capability to accelerate ground and flight demonstration through workforce development and Small Business Innovation Research",
+SWIFT - Accelerating and Enabling Novel Flight Research,CAS X1,High,"How can NASA conduct flight research more often and more cost effectively? 
+What new research can be enabled by high risk flight test opportunities? 
+Can we save on cost and schedule with a modular and reusable architecture that utilizes flight proven hardware and software?
+A cost-effective, aircraft research architecture that enables rapid flight research and has a flexible risk posture to evaluate novel technologies
+",
+MISTRAL - Multiscale Intelligent System for TRAcking & Localization of Emissions,CAS X1,Medium,"Persistent monitoring and localization radically curtails release of GHG at large oil-and-gas production sites and other focused release areas because many emissions are due to failure in equipment, such as leaks and undetected cessation of burn-off.
+Inform emittersand enable optimal solution to GHG emission: prevention at the source.
+Dynamic: No expensive ground installations; no cost of dismantling; in place on time.
+Versatile: Handle a broad range of emitters, human-made and natural; operate at optimal proximity; autonomous system uses state-of-the-art components. Develop affordable, ecologically sustainable, persistent, multiscale, autonomous airborne system for monitoring and localization of emissions over large areas of heterogeneous emitters, with primary focus on oil and gas production sites, such as the Permian Basin, with the area of 86,000 mi2.
+
+",
+SPRUCE - Sustainably-powered Planetary RejUvenation via Carbon Entrapment,CAS X1,Medium,"Enabling a sustainably powered scalable GHG sequestration system that can be implemented onto aircraft for direct air capture
+• Sustainably capture C using renewable energy.
+• Use renewable energy, minimal water, and sunlight to generate a beneficial product
+• Solution can be implemented quickly and in stages achieving fast impact
+• Address stationary, dynamic, and emergent emitters including those that arise from
+human-made or natural disasters.",
+SUMAC - Sustainable Manufacturing of Aircraft,CAS X1,Medium,"Aircraft manufacturers need sustainably-derived thermoplastic composites in order to build environmentally-friendly aircraft considering full lifecycle so that the environmental impact of commercial air transport is reduced.
+Identify candidate fiber materials
+Determine environmental impact of agricultural burden
+Identify target application space
+Define best qualified organizations to perform each research thrust
+",
+AirMed,CAS X1,Medium,"Over 75% of all Medicare Air Transports are in rural communities but patients can wait sometimes days for interfacility transfer and transportation. Transient healthcare specialists in urban centers routinely spend more than 4 hours of ""windshield"" time getting to rural areas to see patients. In X1, AirMed is exploring how aviation can improve patient and provider transportation in rural areas. We are hoping to collaborate with a broad range of stakeholders from Tribal Nations, Pueblos, and municipalities in NW and central New Mexico. Possible solutions currently being explored with stakeholders include:
+Integrated Smart System for Patient Transfer and Transportation
+AAM Vehicle Design to Support Medical Needs
+Remote Monitoring & Diagnostic Assessment of Patients
+Preparation for and Application of AAM in NW New Mexico
+
+",
+Aerial AID,CAS X1,High,"Emergency medical responders are overburdened and lack situational awareness of medical scenes. Scene descriptions are limited and often reduced to a “game of telephone” between the caller, the dispatcher, and the response personnel. ​Develop nominal data set and corresponding perception engine for medical UAS use-cases, informed by government and industry partners​
+
+Develop framework for state-of-the-art perception capabilities to be successfully applied to emergency medical UAS use-cases, including transfer learning to enhance state of the art object detection tools​
+
+Integrate cutting-edge assurance research into framework for edge case detection and runtime monitoring​
+
+​",
