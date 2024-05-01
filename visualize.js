@@ -28,16 +28,26 @@ fetch('./output.json')
 
         // Define a color scale based on maturity levels
         const colorScale = {
-            'Low': '#90c4a2',
-            'Medium': '#41b6c4',
-            'High': '#2c7fb8',
-            'Super High': '#253494'
+            'batteries': '#90c4a2',
+            'contrails': '#41b6c4',
+            'electrification': '#2c7fb8',
+            'propulsion': '#253494',
+            'hydrogen': '#52318f',
+            'structure': '#763f96',
+            'materials': '#8f3f96',
+            'emissions': '#963f7c'
+
+
         };
         const sourceList = {
-            'Low': '#90c4a2',
-            'Medium': '#41b6c4',
-            'High': '#2c7fb8',
-            'Super High': '#253494'
+            'batteries': '#90c4a2',
+            'contrails': '#41b6c4',
+            'electrification': '#2c7fb8',
+            'propulsion': '#253494',
+            'hydrogen': '#52318f',
+            'structure': '#763f96',
+            'materials': '#8f3f96',
+            'emissions': '#963f7c'
         };
 
         // Map maturity levels to colors

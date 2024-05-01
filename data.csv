@@ -1,6 +1,6 @@
 Prompt,Source,Maturity,Description,Transcript
-Battery Pack Modelling,TTT Green Aviation,,"Battery Pack Modelling Proposal Electro-Chemical & Structural-Thermal pack modelling proposal for TTT / Green Aviation Call, 2023 1) Problem, Objectives, Approach, and Anticipated Benefits: Many of novel aircraft concepts include some degree of electrification to reduce carbon footprint. To date, the battery models that have been able to be incorporated into NASA aircraft preliminary design studies such as the quadrotor0F 1 have been cell-level models1F 2, with knockdown factors for pack-level effects. There is an interest from EPFD, TTT, AATT, and other projects, in being able to more accurately model and optimize pack-level structural and thermal effects in addition to the cell-level effects. However, to date, there was no clear path on how this could be accomplished while still being compatible with cutting edge gradient-based aircraft optimization tools like OpenMDAO2F 3 and Aviary3F 4. The objective of this research proposal is to create an open-source battery pack model that includes cell electro-chemical effects as well as pack-level structural-thermal effects. The resulting model will be differentiable to ensure compatibility with OpenMDAO and Aviary. Our approach is to create a multi-center team and use open-source tools that we are already familiar with to create a system-level battery pack design. Figure 1 shows an Extended Design Structure Matrix (XDSM) diagram that details of how each of the component disciplines fits together to make the overall battery-pack model. In Figure 1, Discharge curves from cell-tests are input into the cell electro-chemical model which allows for the configuration of the parameters of the cell and later analysis. The cell electro-chemical effects based on models from ProgPy4F 5. A CAD model of the pack (multiple cells) is then created and imported along with the number of packs into the structural-thermal model TACS5F 6. The TACS software performs structural analysis to evaluate the mass of the pack as well as configure parameters for use later in the analysis. At this point the battery pack will be run through a sample mission which will primarily consist of pulling a specified quantity of amps at a particular voltage from the system over a given amount of time. During the mission, the cell electro-chemical model will keep track of the state of charge and voltage of the cells. TACS will keep track of the temperature throughout the pack subject to the heat produced by each cell and a assuming a constant cooling flow. Figure 2 (left) shows an example compliant battery pack designed and (right) a TACS structural-thermal pack model. Both of these models were designed by team members on this proposal. 1 E. Hendricks, E. Aretskin-Hariton, D. Ingraham, J. Gray, S. Schnulo, J. Chin, R. Falck, and D. Hall, “Multidisciplinary Optimization of an Electric Quadrotor Urban Air Mobility Aircraft,” in Aiaa 2020 aviation forum, 2020. 2 J. C. Chin, E. Aretskin-Hariton, D. Ingraham, D. Hall, S. L. Schnulo, J. S. Gray, and E. Hendricks, “Battery Evaluation Profiles for X-57 and Future Urban Electric Aircraft,” in Aiaa propulsion and energy forum, , 2020. 3 J. S. Gray, J. T. Hwang, J. R. R. A. Martins, K. T. Moore, and B. A. Naylor, “OpenMDAO: An Open-Source Framework for Multidisciplinary Design, Analysis, and Optimization,” Structural and Multidisciplinary Optimization, 2019. 4 Aviary will be a preliminary design tool for aircraft capable of modeling traditional and novel designs. This tool is built on top of OpenMDAO and will be Open Source and will provide easy-to-follow examples that will support both analysis and optimization. Aviary is scheduled for public release in December of 2024. 5 C. Teubert, K. Jarvis, M. Corbetta, C. Kulkarni, P. Banerjee, M. Daigle, ProgPy Python Prognostics Packages, v1.5, May 2023. URL nasa/progpy. doi: 10.5281/ZENODO.8097013 6 Kennedy, G. J. and Martins, J. R. R. A, ""A parallel finite-element framework for large-scale gradient-based design optimization of high-performance structures"", Finite Elements in Analysis and Design, 2014, doi:http://dx.doi.org/10.1016/j.finel.2014.04.011 Figure 1, XDSM of Battery Pack Subsystems Figure 2, LEFT: CAD pack model, RIGHT: TACS Structural-Thermal Pack Model Benefits of this work would include creating a higher-fidelity battery pack model that can be used in aircraft system-level optimization by AATT, EPFD, TTT and other projects. This will enable better understanding of the trade-space for electrified aircraft studies. Additionally, by open sourcing the model and publishing a paper on it, this will provide other researchers in government, academia and industry with an understanding of how they can use the same methods to create their own higher fidelity battery pack models. 2) Milestones and how to Evaluate Success: • January 2024 – CAD Battery pack model completed • April 2024 – Cell electro-chem model input constraints narrowed to decrease multimodality of solution space. • April 2024 – Demonstrate TACS successfully ingesting CAD pack model and producing weights. • July 2024 – Overall pack subsystem linked together, and first optimization / analysis run. Preliminary paperwork filed for open-source release. SciTech 2025 abstract submitted. • September 2024 – Battery pack optimization completed. Optimization will vary wall thickness in one or more parts of the pack model. The optimization objective will be minimum mass while completing the mission objective based on a pre-determined voltage and amperage draw. Repository is released open source. 3) Next Steps and Areas for Transition: Completion of this work through open-source code release and publishing in SciTech 2025 would immediately enable TTT, AATT, and EPFD projects to use the pack-level model created to investigate specific battery pack and cell chemistries for electrified aircraft studies like the TTBW. This is a higher level of fidelity than they can currently achieve with the cell-only models that currently exist. Additionally, academic partners like U. Michigan, Georgia Tech, and Iowa State, could immediately take the models created from this work and integrate them into their electrified aircraft studies that they perform on an ongoing basis using simplified battery models. Further work would need to be performed in order to parameterize the pack-model into something that could handle changing the number of cells inside the pack without engineer input. CAD modelling of the pack, while useful for an initial design, is a time-consuming process that parametrization should help to simplify. Additionally, parameterization enables the optimizer to trade battery pack design for other aspects of the aircraft like thermal system mass and wing volume. 4) Challenge Scenario In the case where a subset of the analysis was infeasible, (i.e. if ProgPy was not capable of supplying the cell electro-chemical models but the other aspects of the thermal-structural analysis were working well,) we would use one of our other cell models or create a new cell model as a substitute. This scenario has happened multiple times in the past with other projects and we have been successful at finding substitute models. In the case where the entire approach was invalid, we could shift our focus to leveraging an already working battery cell model and enhancing it with better pack-level estimates for weight. While this would not be as thorough as analyzing the full structural-thermal system, it would still provide for increased fidelity which will provide useful for aircraft design studies. Regardless of what challenges appear before the team during this work, the entire team will be involved in the decision-making process of how to pivot and still create useful advancements in battery pack modelling for electrified aircraft design.",
-Effects of Atmospheric Conditions and Sustainable Fuels on Contrail Radiative Forcing,TTT Green Aviation,,"1
+Battery Pack Modelling,GREEN AVIATION 2023,batteries,"Battery Pack Modelling Proposal Electro-Chemical & Structural-Thermal pack modelling proposal for TTT / Green Aviation Call, 2023 1) Problem, Objectives, Approach, and Anticipated Benefits: Many of novel aircraft concepts include some degree of electrification to reduce carbon footprint. To date, the battery models that have been able to be incorporated into NASA aircraft preliminary design studies such as the quadrotor0F 1 have been cell-level models1F 2, with knockdown factors for pack-level effects. There is an interest from EPFD, TTT, AATT, and other projects, in being able to more accurately model and optimize pack-level structural and thermal effects in addition to the cell-level effects. However, to date, there was no clear path on how this could be accomplished while still being compatible with cutting edge gradient-based aircraft optimization tools like OpenMDAO2F 3 and Aviary3F 4. The objective of this research proposal is to create an open-source battery pack model that includes cell electro-chemical effects as well as pack-level structural-thermal effects. The resulting model will be differentiable to ensure compatibility with OpenMDAO and Aviary. Our approach is to create a multi-center team and use open-source tools that we are already familiar with to create a system-level battery pack design. Figure 1 shows an Extended Design Structure Matrix (XDSM) diagram that details of how each of the component disciplines fits together to make the overall battery-pack model. In Figure 1, Discharge curves from cell-tests are input into the cell electro-chemical model which allows for the configuration of the parameters of the cell and later analysis. The cell electro-chemical effects based on models from ProgPy4F 5. A CAD model of the pack (multiple cells) is then created and imported along with the number of packs into the structural-thermal model TACS5F 6. The TACS software performs structural analysis to evaluate the mass of the pack as well as configure parameters for use later in the analysis. At this point the battery pack will be run through a sample mission which will primarily consist of pulling a specified quantity of amps at a particular voltage from the system over a given amount of time. During the mission, the cell electro-chemical model will keep track of the state of charge and voltage of the cells. TACS will keep track of the temperature throughout the pack subject to the heat produced by each cell and a assuming a constant cooling flow. Figure 2 (left) shows an example compliant battery pack designed and (right) a TACS structural-thermal pack model. Both of these models were designed by team members on this proposal. 1 E. Hendricks, E. Aretskin-Hariton, D. Ingraham, J. Gray, S. Schnulo, J. Chin, R. Falck, and D. Hall, “Multidisciplinary Optimization of an Electric Quadrotor Urban Air Mobility Aircraft,” in Aiaa 2020 aviation forum, 2020. 2 J. C. Chin, E. Aretskin-Hariton, D. Ingraham, D. Hall, S. L. Schnulo, J. S. Gray, and E. Hendricks, “Battery Evaluation Profiles for X-57 and Future Urban Electric Aircraft,” in Aiaa propulsion and energy forum, , 2020. 3 J. S. Gray, J. T. Hwang, J. R. R. A. Martins, K. T. Moore, and B. A. Naylor, “OpenMDAO: An Open-Source Framework for Multidisciplinary Design, Analysis, and Optimization,” Structural and Multidisciplinary Optimization, 2019. 4 Aviary will be a preliminary design tool for aircraft capable of modeling traditional and novel designs. This tool is built on top of OpenMDAO and will be Open Source and will provide easy-to-follow examples that will support both analysis and optimization. Aviary is scheduled for public release in December of 2024. 5 C. Teubert, K. Jarvis, M. Corbetta, C. Kulkarni, P. Banerjee, M. Daigle, ProgPy Python Prognostics Packages, v1.5, May 2023. URL nasa/progpy. doi: 10.5281/ZENODO.8097013 6 Kennedy, G. J. and Martins, J. R. R. A, ""A parallel finite-element framework for large-scale gradient-based design optimization of high-performance structures"", Finite Elements in Analysis and Design, 2014, doi:http://dx.doi.org/10.1016/j.finel.2014.04.011 Figure 1, XDSM of Battery Pack Subsystems Figure 2, LEFT: CAD pack model, RIGHT: TACS Structural-Thermal Pack Model Benefits of this work would include creating a higher-fidelity battery pack model that can be used in aircraft system-level optimization by AATT, EPFD, TTT and other projects. This will enable better understanding of the trade-space for electrified aircraft studies. Additionally, by open sourcing the model and publishing a paper on it, this will provide other researchers in government, academia and industry with an understanding of how they can use the same methods to create their own higher fidelity battery pack models. 2) Milestones and how to Evaluate Success: • January 2024 – CAD Battery pack model completed • April 2024 – Cell electro-chem model input constraints narrowed to decrease multimodality of solution space. • April 2024 – Demonstrate TACS successfully ingesting CAD pack model and producing weights. • July 2024 – Overall pack subsystem linked together, and first optimization / analysis run. Preliminary paperwork filed for open-source release. SciTech 2025 abstract submitted. • September 2024 – Battery pack optimization completed. Optimization will vary wall thickness in one or more parts of the pack model. The optimization objective will be minimum mass while completing the mission objective based on a pre-determined voltage and amperage draw. Repository is released open source. 3) Next Steps and Areas for Transition: Completion of this work through open-source code release and publishing in SciTech 2025 would immediately enable TTT, AATT, and EPFD projects to use the pack-level model created to investigate specific battery pack and cell chemistries for electrified aircraft studies like the TTBW. This is a higher level of fidelity than they can currently achieve with the cell-only models that currently exist. Additionally, academic partners like U. Michigan, Georgia Tech, and Iowa State, could immediately take the models created from this work and integrate them into their electrified aircraft studies that they perform on an ongoing basis using simplified battery models. Further work would need to be performed in order to parameterize the pack-model into something that could handle changing the number of cells inside the pack without engineer input. CAD modelling of the pack, while useful for an initial design, is a time-consuming process that parametrization should help to simplify. Additionally, parameterization enables the optimizer to trade battery pack design for other aspects of the aircraft like thermal system mass and wing volume. 4) Challenge Scenario In the case where a subset of the analysis was infeasible, (i.e. if ProgPy was not capable of supplying the cell electro-chemical models but the other aspects of the thermal-structural analysis were working well,) we would use one of our other cell models or create a new cell model as a substitute. This scenario has happened multiple times in the past with other projects and we have been successful at finding substitute models. In the case where the entire approach was invalid, we could shift our focus to leveraging an already working battery cell model and enhancing it with better pack-level estimates for weight. While this would not be as thorough as analyzing the full structural-thermal system, it would still provide for increased fidelity which will provide useful for aircraft design studies. Regardless of what challenges appear before the team during this work, the entire team will be involved in the decision-making process of how to pivot and still create useful advancements in battery pack modelling for electrified aircraft design.",
+Effects of Atmospheric Conditions and Sustainable Fuels on Contrail Radiative Forcing,GREEN AVIATION 2024,contrails,"1
 TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT
 FY24 GREEN AVIATION PROPOSAL
 Title: Effects of Atmospheric Conditions and Sustainable Fuels on Contrail Radiative Forcing
@@ -139,7 +139,7 @@ formation flight. PhD thesis, Universite Catholique de Louvain, 2020.
 [4] Unterstrasser, S. and Gierens, K.: Numerical simulations of contrail-to-cirrus transition – Part 1: An extensive parametric study, Atmos.
 Chem. Phys., 10, 2017–2036, 2010.
 [5] Voigt, C., Kleine, J., Sauer, D. et al. Cleaner burning aviation fuels can reduce contrail cloudiness. Commun Earth Environ 2, 114, 2021. ",
-True Zero Emission Closed Turbogenerator For A Universal Electric Aircraft Powertrain,TTT Green Aviation,,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT
+True Zero Emission Closed Turbogenerator For A Universal Electric Aircraft Powertrain,GREEN AVIATION 2024,electrification,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT
 FY24 GREEN AVIATION PROPOSAL TEMPLATE
 RESPOND TO PROMPTS BELOW
 Title: True Zero Emission Closed Turbogenerator For A Universal Electric Aircraft Powertrain
@@ -211,7 +211,7 @@ details can be found in our recent publication, AIAA 2023-3987.
 
 Figure 4. Acoustic Turbine Cooling
 Figure 5. Compressor and Turbine",
-"Improved Propulsion Airframe Integration (PAI) Simulations for Design, Analysis and Optimization of Both Airframe and Propulsor",TTT Green Aviation,,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT 
+"Improved Propulsion Airframe Integration (PAI) Simulations for Design, Analysis and Optimization of Both Airframe and Propulsor",GREEN AVIATION 2024,propulsion,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT 
 
 FY24 GREEN AVIATION PROPOSAL TEMPLATE 
 
@@ -332,7 +332,7 @@ Mark L. Celestina and Mary J. Long-Davis, “Large-scale Boundary Layer Ingestin
 Heinlein, Gregory & Chen, Jenping & Bakhle, Milind. (2020). Aerodynamic Behavior of a Coupled Boundary Layer Ingesting Inlet – Distortion Tolerant Fan. 10.2514/6.2020-3780. 
 
 Sharma, Mayank and Mark G. Turner, “Continuous Modified NACA Four-Digit Thickness Distribution for Turbomachinery Geometries,” AIAA Journal, Vol 59, No. 4, April 2021, https://doi.org/10.2514/1.J060023. ",
-Technical and economic trade study on using Photo-and-Photovoltaic-Batteries in Tandem with conventional or novel LH2 for long-haul (inter-continental) flights.,TTT Green Aviation,,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT
+Technical and economic trade study on using Photo-and-Photovoltaic-Batteries in Tandem with conventional or novel LH2 for long-haul (inter-continental) flights.,GREEN AVIATION 2024,electrfication,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT
 FY24 GREEN AVIATION PROPOSAL TEMPLATE
 INSTRUCTIONS
 Please do not include your name or other contact information in this form or in the file name.
@@ -431,7 +431,7 @@ https://doi.org/10.5281/ZENODO.5659151.
 [4] R.K. Iyer, J.C. Kelly, Updated Production Inventory for Lithium-Ion Battery Anodes for the
 GREET® Model, and Review of Advanced Battery Chemistries, (2022).
 https://doi.org/10.2172/1891640.",
-Photovoltaics for Energy Augmentation of Electric Aircraft,TTT Green Aviation,,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT 
+Photovoltaics for Energy Augmentation of Electric Aircraft,GREEN AVIATION 2024,electrification,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT 
 
 FY24 GREEN AVIATION PROPOSAL TEMPLATE 
 
@@ -502,7 +502,7 @@ If, three months into this work, I discovered that our lamination technique was 
 [5]	S. P. Dunfield et al., “Curtailing Perovskite Processing Limitations via Lamination at the Perovskite/Perovskite Interface,” ACS Energy Lett., vol. 3, no. 5, pp. 1192–1197, May 2018, doi: 10.1021/acsenergylett.8b00548. 
 
  ",
-Hydrogen Powered Aviation Through Sustainable Manufacturing and Repair of Carbon Fiber Reinforced Thermoplastic Composite Cryotanks.,TTT Green Aviation,,"Title: Hydrogen Powered Aviation Through Sustainable Manufacturing and Repair of Carbon Fiber
+Hydrogen Powered Aviation Through Sustainable Manufacturing and Repair of Carbon Fiber Reinforced Thermoplastic Composite Cryotanks.,TTT Green Aviation,hydrogen,"Title: Hydrogen Powered Aviation Through Sustainable Manufacturing and Repair of Carbon Fiber
 Reinforced Thermoplastic Composite Cryotanks.
 1. Provide a description of the work: The current use of fossil fuels within the aviation industry
 contributes more to global warming than is generally appreciated because of the mix of climate
@@ -631,7 +631,7 @@ Perspectives”, Polymers 2021, 13, 320.
 5. Grogan, D.M, et.al., “Damage Characterization of Cryogenically Cycled Carbon Fibre/PEEK laminates”,
 Composites Part A: Applied Science and Manufacturing, Vol. 66, 2014.
 6. https://www.compositesworld.com/articles/demonstrating-composite-lh2-tanks-for-commercialaircraft",
-Robust Repair and Refurbishment Technologies Enabling Reusability and Life Extension of Ceramic Matrix Composites Propulsion Components,TTT Green Aviation,,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT 
+Robust Repair and Refurbishment Technologies Enabling Reusability and Life Extension of Ceramic Matrix Composites Propulsion Components,GREEN AVIATION 2024,propulsion,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT 
 
 FY24 GREEN AVIATION PROPOSAL TEMPLATE 
 
@@ -686,7 +686,7 @@ References
 8. M. Singh and Tarah Schpargel, Glenn Refractory Adhesive for Bonding and Exterior Repair (GRABER) 
 
 Technology Given 2005 R&D 100 Award, NASA R&T report, 2005, Page 99-100. ",
-Performance Enhancement of Proton Exchange Membrane Fuel Cell Components with Machine Learning for Electric Aircraft Propulsion,TTT Green Aviation,,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT 
+Performance Enhancement of Proton Exchange Membrane Fuel Cell Components with Machine Learning for Electric Aircraft Propulsion,GREEN AVIATION 2024,electrification,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT 
 
 FY24 GREEN AVIATION PROPOSAL TEMPLATE 
 
@@ -769,7 +769,7 @@ The products of this foundational work would be integrated into existing aircraf
 PI Scenario 
 
 This scenario does not apply to this process as ML modeling is inherently an iterative process that utilizes the “fail early, fail often, but always fail forward” (J.C. Maxwell) approach. The ML model matures with each iteration and provides valuable insights into the poly-dimensional space under investigation. There exist multiple tools that can be used should one fail and there exists a great deal of data to mine that could be temporarily supported by synthetic data until credible empirical data became available. Implementing FC power and propulsion systems in a carbon-free electric aircraft includes many challenges available for ML modeling. There are many components, sub-systems, and interfaces that require additional performance data and development prior to integrating into an electric aircraft. Should resources become available, conducting experiments to close any identified data gaps would improve data quality.  ",
-Maximizing the Efficiency of Advanced Air Mobility with Formation Flight,TTT Green Aviation,,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT 
+Maximizing the Efficiency of Advanced Air Mobility with Formation Flight,GREEN AVIATION 2024,air mobility,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT 
 
 FY24 GREEN AVIATION PROPOSAL 
 
@@ -848,7 +848,7 @@ Analyzing the overall safety of formation flight and, especially, convincing the
 Address the following scenario from your perspective as PI. Hypothetical situation:  Three months into this work, your team of subject matter experts determines that the initial proposed approach is not feasible technically.  You still have 9 months of funding remaining, how do you pivot?  What alternative approaches or methods would you pursue?  
 
 If initial results show insufficient benefit, pivoting to consideration of vehicle design for increasing the benefit of formation flight is a possibility. This might include the design of wing-tip modifications, use of variable camber flaps, or even the optimized design of a specialized unmanned lead vehicle that allows passenger carrying vehicles to fly behind it with maximized efficiency. ",
-Sensor System Study for Health Management of Sustainable Aviation Based on Electric Propulsion,TTT Green Aviation,,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT
+Sensor System Study for Health Management of Sustainable Aviation Based on Electric Propulsion,GREEN AVIATION 2024,propulsion,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT
 FY24 GREEN AVIATION PROPOSAL
 Title: Sensor System Study for Health Management of Sustainable Aviation Based on Electric
 Propulsion
@@ -975,7 +975,7 @@ _DSimon_v2.pdf
 7. NASA Advanced Air Vehicles Program, Advanced Air Transport Technology Project, Power and
 Propulsion Subproject
 8. NASA’s Meeting on Cryogenic Fuel Systems for Aircraft, NASA Glenn Research Center, Sept. 2022.",
-Additive Manufacturing of Polyimde Composites for Battery Packaging,TTT Green Aviation,,"Additive Manufacturing of Polyimde Composites for Battery Packaging 
+Additive Manufacturing of Polyimde Composites for Battery Packaging,TTT Green Aviation,batteries,"Additive Manufacturing of Polyimde Composites for Battery Packaging 
 
 Introduction  
 
@@ -1100,7 +1100,7 @@ Technology Infusion or Transition Plan:
 4) Contingency Project Plan: 
 
 In a hypothetical instance that the proposed fused powder fabrication (FPF) method was not successfully in demonstrating the technology advance after 4-month of trying, the team always has a fall back plan of 3D-printing the battery packs by laser sintering of RTM385-SLS polyimide resin with h-BN fillers, which has demonstrated its feasibility in the introduction section of this proposal. ",
-Modeling and mitigation of hydrogen embrittlement of GRX-810 alloy for hydrogen propulsion storage tanks,TTT Green Aviation,,"Title: < Modeling and mitigation of hydrogen embrittlement of GRX-810 alloy for hydrogen propulsion storage tanks > 
+Modeling and mitigation of hydrogen embrittlement of GRX-810 alloy for hydrogen propulsion storage tanks,TTT Green Aviation,hydrogen,"Title: < Modeling and mitigation of hydrogen embrittlement of GRX-810 alloy for hydrogen propulsion storage tanks > 
 
      Cryogenic hydrogen fueled aircraft (under development at NASA GRC, Airbus, etc.) is one of the options to slash CO2 emissions related to air transportation. The main issue with using hydrogen in aircraft is its very low density [1]. Storing hydrogen in its liquid state (at cryogenic temperature) is one of the methods to increase the density. Liquid hydrogen storage tank needs to be resistant to hydrogen embrittlement and capable of structurally withstanding the temperatures of liquid hydrogen. Hydrogen embrittlement is a reduction in the ductility of the structural material (metal alloy) due to absorbed hydrogen. The main goal of this proposal is to investigate the effects of hydrogen absorption on ductility of the alloy GRX-810 [2], that is under development at NASA GRC. GRX-810 is a new breakthrough 3D-printable alloy with remarkable high temperature properties, e.g., creep. It is an oxide dispersion-strengthened alloy with a Ni-Co-Cr matrix. Preliminary tests of this alloy at cryogenic temperatures also show promising results (Yield Strength (YS) T®77K ~ 0.9 GPa, Elongation to Failure (EF), or ductility T®77K ~ 40%). We note that recently developed Ni-Co-Cr-based Medium Entropy Alloys (MEAs) in general demonstrate exceptional mechanical properties at cryogenic temperatures, e.g., a remarkable increase in strength accompanied by a simultaneous increase in ductility (YS T®77K ~ 0.7 GPa, EF T®77K ~ 90%, FT T®77K ~ 280 MPa×m1/2), with decreasing deformation temperature from Room Temperature (RT) to cryogenic temperatures [3]. The diffusivity of hydrogen (e.g., along the grain boundaries), its segregation at lattice defects and the corresponding effects on deformation behavior (e.g., ductility) have not been quantified in the literature for Ni-Co-Cr-based MEAs, in general, and GRX-810 alloy, in particular. Atomistic modeling and simulations are perfectly suited to study the mechanisms of hydrogen embrittlement in full atomic detail and provide recommendations for novel alloy compositions that improve deformation behavior at cryogenic temperatures. Our proposed effort will be leveraged by the capabilities we already have. In particular, the Density Functional Theory- (DFT) informed simulation potential for Ni-Co-Cr, recently developed in our group, will be used for this project, along with the state-of-the-art atomistic simulation techniques (including ab-initio, molecular dynamics, kinetic Monte Carlo, and their combinations) [4, 5]. 
 
@@ -1143,7 +1143,7 @@ References:
 [5] V.V. Borovikov, M.I. Mendelev, T.M. Smith, J.W. Lawson, Molecular dynamics simulation of twin nucleation and growth in Ni-based superalloys, International Journal of Plasticity  (2023) 103645. 
 
  ",
-"Energy Efficient, Out-of-Autoclave Manufacturing of Thermoplastic Composites for Aircraft Structures",TTT Green Aviation,,"Title: Energy Efficient, Out-of-Autoclave Manufacturing of Thermoplastic Composites for
+"Energy Efficient, Out-of-Autoclave Manufacturing of Thermoplastic Composites for Aircraft Structures",TTT Green Aviation,manufacturing,"Title: Energy Efficient, Out-of-Autoclave Manufacturing of Thermoplastic Composites for
 Aircraft Structures.
 Background: Industry enthusiasm around thermoplastic composites (TPCs) is seeing a
 resurgence due to the potential for rapid manufacture of large aerospace structures. TPC
@@ -1236,7 +1236,7 @@ University, 2012.
 3. Cromer, A., et. al., “Consolidation of Braided Carbon Fiber/ Thermoplastic Tubes by
 Induction Heating”, The Composites and Advanced Materials Expo (CAMX) Conference,
 Atlanta, GA. 2023",
-High Lift High Load LPT Blade for Hybrid Engine,TTT Green Aviation,,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT
+High Lift High Load LPT Blade for Hybrid Engine,GREEN AVIATION 2024,electrification,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT
 FY24 GREEN AVIATION PROPOSAL TEMPLATE
 Title: High Lift High Load LPT Blade Design for Hybrid Turbine Engines
 Problem Statement
@@ -1350,7 +1350,7 @@ NASA/CP-1998-206958.
 4. Clark, J.P., Paniagua, G. and Cukurel, B., 2023, June. On the Development of High Lift, High Work Low-Pressure
 Turbines. In Turbo Expo: Power for Land, Sea, and Air (Vol. 87097, p. V13BT30A029). American Society of
 Mechanical Engineers.",
-Dual Hydrogen-Jet Fuel Aircraft - a path to zero emissions,TTT Green Aviation,,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT FY24 GREEN AVIATION PROPOSAL
+Dual Hydrogen-Jet Fuel Aircraft - a path to zero emissions,GREEN AVIATION 2024,hydrogen,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT FY24 GREEN AVIATION PROPOSAL
 Title: Dual Hydrogen-Jet Fuel Aircraft – a path to zero emissions
 1. The work will build upon the dual hydrogen-jet fuel aircraft concept first demonstrated
 in 1956 to enable a path to low emissions, which reduced demands on renewable energy and
@@ -1461,7 +1461,7 @@ the story being told in general is that one shifts to line or project management
 developing AI, propulsion, electrical, materials, and other discipline and technology skills almost
 always help develop paths forward so will also be included in the pivot options-perhaps better
 than let the team understand that path forward is unlikely.",
-Computational Design of Superconductors for Superconducting Aircraft Propulsion Motors,TTT Green Aviation,,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT
+Computational Design of Superconductors for Superconducting Aircraft Propulsion Motors,GREEN AVIATION 2024,propulsion,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT
 FY24 GREEN AVIATION PROPOSAL TEMPLATE
 INSTRUCTIONS
 Please do not include your name or other contact information in this form or in the file name.
@@ -1636,7 +1636,7 @@ Information Station, SuperCon: https:// dice.nims.go.jp/services/MDR/ (2011).
 [22] X. Gonze et al. Recent developments in the ABINIT software package. Computer Physics
 Communications 205, 106-131 (2016).
  ",
-Enhanced Aerogel Composites for Lithium-Ion Battery Performance Safety and Efficiency (ECLIPSE),TTT Green Aviation,,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT 
+Enhanced Aerogel Composites for Lithium-Ion Battery Performance Safety and Efficiency (ECLIPSE),GREEN AVIATION 2024,batteries,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT 
 
 FY24 GREEN AVIATION PROPOSAL TEMPLATE 
 
@@ -1738,7 +1738,7 @@ Applications such as Solid-state batteries are particularly promising due to the
 Project Viability 
 
 In the event that the viability of this material does not meet our key performance parameters early on, the possibilities of using alternative chemistries are vast. The structure of the polyimide aerogel that will house the phase change material has been demonstrated through a suite of patents which lends to a high level of confidence for its success. The phase change material can be made from a myriad of chemistries targeting various temperatures. The intention is to perform an optimization study for just this purpose. The study will easily shift to different methods of synthesis or 3D printing if needed.  ",
-Thermal Management System Trade Study and Analysis for Hydrogen Fuel Cell Aircraft,TTT Green Aviation,,"Title: Thermal Management System Trade Study and Analysis for Hydrogen Fuel Cell Aircraft
+Thermal Management System Trade Study and Analysis for Hydrogen Fuel Cell Aircraft,TTT Green Aviation,hydrogen,"Title: Thermal Management System Trade Study and Analysis for Hydrogen Fuel Cell Aircraft
 1. NASA’s Aeronautics Research Mission Directorate (ARMD) recently published their updated Strategic
 Implementation Plan which calls for increasing focus on sustainable aviation and achieving net-zero CO2
 emissions by 2050. Alternative propulsion is an area of specific interest, and one method involves
@@ -1877,7 +1877,7 @@ Concepts,"" AIAA 2020-3571. AIAA Propulsion and Energy 2020 Forum. August 2020.
 x P. A. Hanlon, G. L. Thomas, J. T. Csank and D. J. Sadey, ""A Tool for Modeling and Analysis of Electrified Aircraft Power Systems,""
 2019 AIAA/IEEE Electric Aircraft Technologies Symposium (EATS), Indianapolis, IN, USA, 2019, pp. 1-16, doi: 10.2514/6.2019-
 4403.",
-Commoditization of molecular simulation data for exploration of new aerospace polymers,TTT Green Aviation,,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT 
+Commoditization of molecular simulation data for exploration of new aerospace polymers,GREEN AVIATION 2024,materials,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT 
 
 FY24 GREEN AVIATION PROPOSAL TEMPLATE 
 
@@ -1964,7 +1964,7 @@ The suite of material properties that are predicted can also be expanded. As the
 Address the following scenario from your perspective as PI. Hypothetical situation:  Three months into this work, your team of subject matter experts determines that the initial proposed approach is not feasible technically.  You still have 9 months of funding remaining, how do you pivot?  What alternative approaches or methods would you pursue?  
 
 If the compute resources required to generate a full database are beyond reason, methods to reduce the computational cost can be explored. For example, coarse-grain simulations could be developed. This adds complexity and development costs but could reduce compute resources. ",
-Elastocaloric Cooling: The Missing Link in Green Aviation,TTT Green Aviation,,"Transformational Tools & Technologies Project
+Elastocaloric Cooling: The Missing Link in Green Aviation,GREEN AVIATION 2024,materials,"Transformational Tools & Technologies Project
 FY24 Green Aviation Proposal
 1
 Title: Elastocaloric Cooling: The Missing Link in Green Aviation
@@ -2113,7 +2113,7 @@ Task 3: Understand outlook
 ▪Investigate effect of loading modes/ application areas
 Quarter 1 Quarter 2 Quarter 3 Quarter 4
 Activity",
-Compound Backward-Forward Swept Wing for Improved Aerodynamic Efficiency,TTT Green Aviation,,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT 
+Compound Backward-Forward Swept Wing for Improved Aerodynamic Efficiency,GREEN AVIATION 2024,structure,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT 
 
 FY24 GREEN AVIATION PROPOSAL TEMPLATE 
 
@@ -2159,11 +2159,11 @@ Forward swept wing design has been tested on X-29 aircraft [3]. Advantages and d
 
  
 
-[1]	https://www.ae.utexas.edu/courses/ase333t/past_projects/04spring/ FSW%20Airfoils%20Inc/fsw.htm, Date of Retrieval: October 13, 2023 
+[1]        https://www.ae.utexas.edu/courses/ase333t/past_projects/04spring/ FSW%20Airfoils%20Inc/fsw.htm, Date of Retrieval: October 13, 2023 
 
-[2]	Bisplinghoff, R., Ashley, H., and Halfman, R., Aeroelasticity, Dover Publication, 1996, pp. 481-483 
+[2]        Bisplinghoff, R., Ashley, H., and Halfman, R., Aeroelasticity, Dover Publication, 1996, pp. 481-483 
 
-[3]	Putnam, T. W., X-29 Flight Research Program, AIAA 2nd Flight Test Conference, AIAA-1983-2687, November 1983 
+[3]        Putnam, T. W., X-29 Flight Research Program, AIAA 2nd Flight Test Conference, AIAA-1983-2687, November 1983 
 
  
 
@@ -2204,7 +2204,7 @@ If successful, the immediate next step would involve identifying a potential pro
 Address the following scenario from your perspective as PI. Hypothetical situation:  Three months into this work, your team of subject matter experts determines that the initial proposed approach is not feasible technically.  You still have 9 months of funding remaining, how do you pivot?  What alternative approaches or methods would you pursue?  
 
 One potential scenario of pivoting from the initial proposed approach is to explore alternative approaches. The initial phase of work will involve performing design trade study between aerodynamics, stability, and aeroelasticity. This study may define alternative approaches in addition to initial preferred concepts. One alternative approach could be an actively controlled forward-swept wing tip design to provide limited L/D benefit and improved stall characteristics of the aileron in low-speed operations. Alternative concepts of passive stability augmentation could also be explored by modifying the design of the tail stabilator including the location. Another alternative approach could closely examine the role of structural interaction whereby aero-structural optimization would be performed to better reveal the potential benefit of the compound backward-forward-swept wing design. It is anticipated that further refinement of preferred concepts and alternative approaches could well take up a full year. ",
-Integrating Bio-inspired Multifunctional Structures into QUiet Electric Engines (QUEEN),TTT Green Aviation,,"The electrification of engines for large single-aisle aircraft (~180 passengers) and integration of these engines onto novel airframes, such as the Subsonic Aft Engine (SUSAN) concept aircraft is a formidable challenge. To realize predicted performance benefits, these engines are more tightly integrated into the fuselages than in the past which implies more cooperation between engine and airframe manufacturers. New design and optimization tools are needed, as well as the data to validate these tools.  New aircraft will need to prove flightworthiness, and certification requirements are not yet established for these new configurations, posing financial and technical risks to manufacturers. Since there are international regulations on aircraft noise and emissions, formulated by the International Civil Aviation Organization (ICAO) Committee Aviation Environmental Protection (CAEP) Working Group and adopted by the U. S. Federal Aviation Administration, cleaner and quieter aircraft have a competitive advantage in the global market.  
+Integrating Bio-inspired Multifunctional Structures into QUiet Electric Engines (QUEEN),TTT Green Aviation,structure,"The electrification of engines for large single-aisle aircraft (~180 passengers) and integration of these engines onto novel airframes, such as the Subsonic Aft Engine (SUSAN) concept aircraft is a formidable challenge. To realize predicted performance benefits, these engines are more tightly integrated into the fuselages than in the past which implies more cooperation between engine and airframe manufacturers. New design and optimization tools are needed, as well as the data to validate these tools.  New aircraft will need to prove flightworthiness, and certification requirements are not yet established for these new configurations, posing financial and technical risks to manufacturers. Since there are international regulations on aircraft noise and emissions, formulated by the International Civil Aviation Organization (ICAO) Committee Aviation Environmental Protection (CAEP) Working Group and adopted by the U. S. Federal Aviation Administration, cleaner and quieter aircraft have a competitive advantage in the global market.  
 
 How will a large electric aircraft take-off and land safely, cleanly, and quietly on a hot windy day or a cold snowy day?  Heat exchangers and acoustic absorbers will be need co-located inside the fan duct.  Heat exchangers will be needed to keep the motors and controllers cool or to prevent ice from accumulating in the inlet.  Acoustic absorbers are needed to reduce the noise produced by the fan and motor before it can propagate to the cabin and pollute the environment.  While aircraft engine acoustic liners and inlet anti-icing systems are already packaged into today’s turbofan engine inlets, new heat exchangers that will be part of the electric aircraft thermal management system must now be added.   
 
@@ -2213,7 +2213,7 @@ Traditionally, several components (e.g. rotor, guide vanes, nacelle, liners, hea
 NASA’s patented bio-inspired Broadband Acoustic Absorber (aka ‘bioliner’) has utilized additive manufacturing to rapidly prototype bioliner segments for proof-of-concept experiments.  Data from these experiments demonstrate that structures that resemble bundles of natural reeds can absorb sound over a wide frequency range (400 Hz to 3000Hz), and better than state-of-the-art for frequencies between 400 Hz to 1000 Hz. Thin, lightweight, and durable acoustic absorbers effective over a wide frequency range especially for low frequency sounds below 1000 Hz are needed for a broad range of aerospace, industrial, marine, and architectural noise control applications.  Maturation of the bioliner technology can easily be incorporated into the QUEEN development spirals.  
 
 Since the Quiet Electric Engines being designed for the Subsonic Single Aft Engine (QUEEN) 25% Flight Research Vehicle will need to incorporate a heat exchanger that competes for volume within the nacelle that is also needed by the acoustic liner, multifunctional structures that can transfer heat and absorb sound are required.  The bioliner is one promising candidate for this test bed.  Bench tests of multifunctional structures will be needed to develop thermal and acoustic models so that these multifunctional structures can be optimized in the fan integration. Of vital importance to this compatibly is the bioliner team developing a model for design methodology. This is a necessary requirement to effectively mature the bioliner technology. However, early QUEEN prototypes can provide validation data sets for those models and essential design and manufacturability information.  ",
-Durability of Cryotanks for Aircraft via Flow-forming Technology (DuraCrAFT),TTT Green Aviation,,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT 
+Durability of Cryotanks for Aircraft via Flow-forming Technology (DuraCrAFT),GREEN AVIATION 2024,structure,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT 
 
 FY24 GREEN AVIATION PROPOSAL TEMPLATE 
 
@@ -2283,21 +2283,21 @@ Address the following hypothetical scenario from your perspective as PI: work no
 
 Flow forming offers numerous benefits, including a high manufacturing rate, the ability to fabricate thin, integrally stiffened cylinders (and domes), and cost-effectiveness, thus if the fatigue life is determined to be a showstopper, the issue would be remedied on a material and structural level. On the material level, focusing on understanding the underlying mechanism causing poor performance could give direction on how to mitigate the issue. Some potential options are to perform thermomechanical processing to relieve residual stress or change the underlying microstructure to achieve better performance. If that proves unsuccessful, fabricating parts out of a different alloy using the VUD-600 to achieve adequate properties or from existing extruded integrally stiffened 2195 panels would be pursued. A structural design, possibly including additional secondary structures, could be pursued to further increase the fatigue life. A short trade study would follow to understand the impact from the proposed changes on the weight, volume, manufacturability, and performance of the cryotank. 
 
-​​1. 	Aceves SM, Espinosa-Loza F, Ledesma-Orozco E, Ross TO, Weisberg AH, Brunner TC, Kircher O (2010) High-Density Automotive Hydrogen Storage with Cryogenic Capable Pressure Vessels. Int J Hydrogen Energy 35:1219–1226. 10.1016/J.IJHYDENE.2009.11.069 
+​​1.         Aceves SM, Espinosa-Loza F, Ledesma-Orozco E, Ross TO, Weisberg AH, Brunner TC, Kircher O (2010) High-Density Automotive Hydrogen Storage with Cryogenic Capable Pressure Vessels. Int J Hydrogen Energy 35:1219–1226. 10.1016/J.IJHYDENE.2009.11.069 
 
-​2. 	Verstraete D, Hendrick P, Pilidis P, Ramsden K (2010) Hydrogen Fuel Tanks for Subsonic Transport Aircraft. Int J Hydrogen Energy 35:11085–11098. 10.1016/J.IJHYDENE.2010.06.060 
+​2.         Verstraete D, Hendrick P, Pilidis P, Ramsden K (2010) Hydrogen Fuel Tanks for Subsonic Transport Aircraft. Int J Hydrogen Energy 35:11085–11098. 10.1016/J.IJHYDENE.2010.06.060 
 
-​3. 	Kwon K (2022) Hydrogen: Coming to an Aircraft near You. Aerosp Am 60:22-+ 
+​3.         Kwon K (2022) Hydrogen: Coming to an Aircraft near You. Aerosp Am 60:22-+ 
 
-​4. 	Heydenreich R (1998) Cryotanks in Future Vehicles. Cryogenics (Guildf) 38:125–130. 10.1016/S0011-2275(97)00122-7 
+​4.         Heydenreich R (1998) Cryotanks in Future Vehicles. Cryogenics (Guildf) 38:125–130. 10.1016/S0011-2275(97)00122-7 
 
-​5. 	Sleight DW, Martin RA, Johnson T Structural Design and Sizing of a Metallic Cryotank Concept. In Proceedings of the 54th AIAA/ASME/ASCE/AHS/ASC Structures, Structural Dynamics, and Materials Conference; 2013; p. 1844 
+​5.         Sleight DW, Martin RA, Johnson T Structural Design and Sizing of a Metallic Cryotank Concept. In Proceedings of the 54th AIAA/ASME/ASCE/AHS/ASC Structures, Structural Dynamics, and Materials Conference; 2013; p. 1844 
 
-​6. 	Tayon WA, Rudd MT, Domack MS, Hilburger MW (2022) Development of Advanced Manufacturing Approaches for Single-Piece Launch Vehicle Structures. 
+​6.         Tayon WA, Rudd MT, Domack MS, Hilburger MW (2022) Development of Advanced Manufacturing Approaches for Single-Piece Launch Vehicle Structures. 
 
 ​ ​ ",
-Stator core material development for next generation electric motors,TTT Green Aviation,,"FY24 Green Aviation Proposal (TTT) Title: Stator core material development for next generation electric motors 1. Work Description What problem are you solving? NASA identifies Electrified Aircraft Propulsion (EAP) as a leading strategy to reduce fuel usage and CO2 emissions associated with aviation. Across the competing EAP system topologies, common power density targets have been identified for electric motors (>10 kW/kg) and the associated power electronics (>20 kW/kg) to enable closed designs and compete with existing turbine power densities (~13 kW/kg) [1]. Significant research is focused on the development and demonstration of subsystems and systems that meet the difficult requirements for this application. The current state of the art for aviation rated electric motors is assessed to be 5-7 kW/kg [2], approximately half the target value. This proposal targets improvement in the magnetic material used in electric motor stators to achieve the targeted power density. Power in a motor is given as 𝑃 = 𝜏𝜔, where 𝜏 is the torque and 𝜔 is the rotational speed. Strategies to increase motor power density seek to increase these parameters. Torque is proportional to the strength of the magnetic field between the rotor and stator (airgap flux density), and the radius Maxwell force. Large radii are not preferred for aviation applications due to drag and volume considerations, so that large flux densities are preferred to increase torque. High performance motors typically use FeCo alloys that have saturation flux densities near 𝐵𝑠 = 2.4 T, the highest value of any known bulk industrial material. No known pathways exist to develop bulk ferromagnetic materials with higher flux densities, but superconducting machines offer a possible solution if the necessary cryogenic conditions can be maintained. The rotational speed of aviation propulsion motors is typically 2-3 krpm, limited by tip speed for direct drive connections. Faster motor speeds may be possible with the addition of reduction gearing, that is common in many aircraft applications and has a relatively low impact to the total power density [3]. Other possibilities exist for direct drive use of high-speed motors or engine driven generators that operate near turbine speeds (15-20 krpm). High power motors in this speed range are common for terrestrial applications such as gas compression or fly wheel storage but no demonstrations exist for MW-scale high speed aviation motors[4]. Motor components that produce AC flux (soft magnetic materials and windings) produce heat proportional to the electrical frequency, and thermal management limits the maximum speed a motor can achieve. Improved thermal systems, high temperature materials, and different motor topologies can mitigate these effects but improved magnetic materials that can operate efficiently at high frequency without excess heat production enable power density improvements without contributing to the thermal problem. Given the lack of a research path toward improving torque, we identify the increase of motor speed as the most likely path to achieve the required >2X improvement in non-superconducting aircraft electric motor power density. Many different motor topologies exist, with brushless DC permanent magnet motors currently showing the highest power densities along with promising results from switched reluctance designs that require more complex controls. This can be attributed to the lack of rotor windings and mainly DC rotor flux that does not generate frequency related heat in these topologies. The stator and stator windings of these designs produce the required AC flux and we target the stator for improvement. Due to the variations in motor design, we propose the development of a motor stator capable of flux densities near the current state of the art (>1.5 T) with power losses at high frequency (>2 kHz) less than those produced in current materials at 1 kHz. This sets a performance target and motivates the development of a low loss, high saturation induction magnetic material and a manufacturing process to package this material into a suitable stator. Has this been tried before? Why/why not? Losses in laminated metallic soft magnetic materials have two components; those that are dependent or independent of the excitation frequency. The frequency dependent components are mostly related to eddy currents that are inversely proportional to the lamination. Recent commercial efforts successfully reduced motor stack lamination thickness in bulk crystalline FeCo alloys(Hiperco, Vacoflux, etc…) down to 50 μm [5,6], resulted in a 2X reduction in losses compared to previous lamination thicknesses (Figure 1 left). The measured core loss of ~50 W/kg at 1 kHz is the upper limit of thermal load for a conventional motor design. Therefore, thinner laminations allow for higher excitation frequency for the same thermal load. While this is a significant improvement, the frequency independent component of losses in bulk crystalline alloys are high due to the large grain size and significant magnetostriction. No bulk crystalline materials with saturation induction Bs>1.5 T and zero magnetostriction are currently known. Figure 1: Comparison of core losses (W/kg) vs induction (T) in a bulk crystalline FeCo alloy with 50μm thick laminations to a similar alloy with 6mil (150μm) laminations at 1kHz (left) and a FeSi-based nanocomposite at 5kHz (right). We propose improvements to stator performance beyond what is possible in bulk crystalline stator materials with grain size typically >10 μm. Nanocomposite soft magnetic materials produced from rapidly solidified amorphous ribbon can have significantly lower losses compared to thin crystalline FeCo motor alloys (Figure 1 right). This is due to the small grain size (20ppm) or FeSi-based nanocomposites with low saturation induction (10 W/kg. 2. Milestones The concept described above, through the final demonstration of low losses in a packaged stator, represents a development effort greater than 1 year. The proposed work for this project seeks to assess feasibility and demonstrate a proof of concept: • 3mo - Identify research paths to produce nanocomposite alloys with Bs>1.5 T and low magnetostriction |λs|1.5 T and |λs|",
-Optimization of High Voltage Cables for Electrified Propulsion,TTT Green Aviation,,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT 
+Stator core material development for next generation electric motors,GREEN AVIATION 2024,materials,"FY24 Green Aviation Proposal (TTT) Title: Stator core material development for next generation electric motors 1. Work Description What problem are you solving? NASA identifies Electrified Aircraft Propulsion (EAP) as a leading strategy to reduce fuel usage and CO2 emissions associated with aviation. Across the competing EAP system topologies, common power density targets have been identified for electric motors (>10 kW/kg) and the associated power electronics (>20 kW/kg) to enable closed designs and compete with existing turbine power densities (~13 kW/kg) [1]. Significant research is focused on the development and demonstration of subsystems and systems that meet the difficult requirements for this application. The current state of the art for aviation rated electric motors is assessed to be 5-7 kW/kg [2], approximately half the target value. This proposal targets improvement in the magnetic material used in electric motor stators to achieve the targeted power density. Power in a motor is given as 𝑃 = 𝜏𝜔, where 𝜏 is the torque and 𝜔 is the rotational speed. Strategies to increase motor power density seek to increase these parameters. Torque is proportional to the strength of the magnetic field between the rotor and stator (airgap flux density), and the radius Maxwell force. Large radii are not preferred for aviation applications due to drag and volume considerations, so that large flux densities are preferred to increase torque. High performance motors typically use FeCo alloys that have saturation flux densities near 𝐵𝑠 = 2.4 T, the highest value of any known bulk industrial material. No known pathways exist to develop bulk ferromagnetic materials with higher flux densities, but superconducting machines offer a possible solution if the necessary cryogenic conditions can be maintained. The rotational speed of aviation propulsion motors is typically 2-3 krpm, limited by tip speed for direct drive connections. Faster motor speeds may be possible with the addition of reduction gearing, that is common in many aircraft applications and has a relatively low impact to the total power density [3]. Other possibilities exist for direct drive use of high-speed motors or engine driven generators that operate near turbine speeds (15-20 krpm). High power motors in this speed range are common for terrestrial applications such as gas compression or fly wheel storage but no demonstrations exist for MW-scale high speed aviation motors[4]. Motor components that produce AC flux (soft magnetic materials and windings) produce heat proportional to the electrical frequency, and thermal management limits the maximum speed a motor can achieve. Improved thermal systems, high temperature materials, and different motor topologies can mitigate these effects but improved magnetic materials that can operate efficiently at high frequency without excess heat production enable power density improvements without contributing to the thermal problem. Given the lack of a research path toward improving torque, we identify the increase of motor speed as the most likely path to achieve the required >2X improvement in non-superconducting aircraft electric motor power density. Many different motor topologies exist, with brushless DC permanent magnet motors currently showing the highest power densities along with promising results from switched reluctance designs that require more complex controls. This can be attributed to the lack of rotor windings and mainly DC rotor flux that does not generate frequency related heat in these topologies. The stator and stator windings of these designs produce the required AC flux and we target the stator for improvement. Due to the variations in motor design, we propose the development of a motor stator capable of flux densities near the current state of the art (>1.5 T) with power losses at high frequency (>2 kHz) less than those produced in current materials at 1 kHz. This sets a performance target and motivates the development of a low loss, high saturation induction magnetic material and a manufacturing process to package this material into a suitable stator. Has this been tried before? Why/why not? Losses in laminated metallic soft magnetic materials have two components; those that are dependent or independent of the excitation frequency. The frequency dependent components are mostly related to eddy currents that are inversely proportional to the lamination. Recent commercial efforts successfully reduced motor stack lamination thickness in bulk crystalline FeCo alloys(Hiperco, Vacoflux, etc…) down to 50 μm [5,6], resulted in a 2X reduction in losses compared to previous lamination thicknesses (Figure 1 left). The measured core loss of ~50 W/kg at 1 kHz is the upper limit of thermal load for a conventional motor design. Therefore, thinner laminations allow for higher excitation frequency for the same thermal load. While this is a significant improvement, the frequency independent component of losses in bulk crystalline alloys are high due to the large grain size and significant magnetostriction. No bulk crystalline materials with saturation induction Bs>1.5 T and zero magnetostriction are currently known. Figure 1: Comparison of core losses (W/kg) vs induction (T) in a bulk crystalline FeCo alloy with 50μm thick laminations to a similar alloy with 6mil (150μm) laminations at 1kHz (left) and a FeSi-based nanocomposite at 5kHz (right). We propose improvements to stator performance beyond what is possible in bulk crystalline stator materials with grain size typically >10 μm. Nanocomposite soft magnetic materials produced from rapidly solidified amorphous ribbon can have significantly lower losses compared to thin crystalline FeCo motor alloys (Figure 1 right). This is due to the small grain size (20ppm) or FeSi-based nanocomposites with low saturation induction (10 W/kg. 2. Milestones The concept described above, through the final demonstration of low losses in a packaged stator, represents a development effort greater than 1 year. The proposed work for this project seeks to assess feasibility and demonstrate a proof of concept: • 3mo - Identify research paths to produce nanocomposite alloys with Bs>1.5 T and low magnetostriction |λs|1.5 T and |λs|",
+Optimization of High Voltage Cables for Electrified Propulsion,GREEN AVIATION 2024,propulsion,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT 
 
 FY24 GREEN AVIATION PROPOSAL TEMPLATE 
 
@@ -2356,7 +2356,7 @@ References
  
 
  ",
-Integration of hydrogen fuel tanks in aircraft design - volume study,TTT Green Aviation,,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT 
+Integration of hydrogen fuel tanks in aircraft design - volume study,GREEN AVIATION 2024,hydrogen,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT 
 
 FY24 GREEN AVIATION PROPOSAL TEMPLATE 
 
@@ -2415,7 +2415,7 @@ The above outlined volume trade would be the first step. The next step in thank 
 Address the following scenario from your perspective as PI. Hypothetical situation:  Three months into this work, your team of subject matter experts determines that the initial proposed approach is not feasible technically.  You still have 9 months of funding remaining, how do you pivot?  What alternative approaches or methods would you pursue?  
 
 Fall back on existing aircraft deigns, fit tanks to their outer mold lines and estimate modification impact to passenger capacity, what has been probably already done by industry.  ",
-Initial Study of Airspace Operational Impacts of Airline Contrail Mitigation Actions,TTT Green Aviation,,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT 
+Initial Study of Airspace Operational Impacts of Airline Contrail Mitigation Actions,GREEN AVIATION 2024,contrails,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT 
 
 FY24 GREEN AVIATION PROPOSAL TEMPLATE 
 
@@ -2516,7 +2516,7 @@ The second portion of the proposed effort involves receiving flight plan data wi
 Figure 2. NAS Digital Twin simulation of persistent contrails formed without altitude changes for avoidance. 
 
  ",
-Sustainable bio-aerogels for direct air carbon capture and storage,TTT Green Aviation,,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT 
+Sustainable bio-aerogels for direct air carbon capture and storage,GREEN AVIATION 2024,emissions,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT 
 
 FY24 GREEN AVIATION PROPOSAL TEMPLATE 
 
@@ -2590,7 +2590,7 @@ Upon the successful outcome of this project, the technology can be infused into 
 Project Viability 
 
  Although the confidence for success in this proposed work is high, the potential for redirection of research due to unforeseen failures or other circumstances is a possibility. With this adverse situation in mind, there are measures built into the proposal to avoid such issues. Due to the nature of the research to be attempted, an optimization study will be conducted to first assess viability and baseline properties.  This offers alternative approaches to fabricate various chemistries to best define the optimal methods and materials to make the bio-aerogel. If the initial approach is not feasible, we will adjust the parameters such as chemical precursors, synthesis methods, and chemical composition. ",
-Eco-Friendly Thermal Management Solutions to Enable Green Aviation,TTT Green Aviation,,"Title: Eco-Friendly Thermal Management Solutions to Enable Green Aviation 
+Eco-Friendly Thermal Management Solutions to Enable Green Aviation,TTT Green Aviation,structure,"Title: Eco-Friendly Thermal Management Solutions to Enable Green Aviation 
 
 The aviation industry is a rapidly growing sector with an increasing environmental impact. At just a fraction of the global production, Airbus’s fleet forecast alone projects a 4.1% compounding annual growth rate and over 40,000 new aircraft and freighters to be required over the next 20 years [1]. Consequently, meeting both net zero emissions and sustainability goals requires next generation aircraft to incorporate reusability and recyclability of materials in their design criteria, creating a closed-loop lifecycle, while simultaneously providing performance gains for improved efficiency. 
 
@@ -2647,7 +2647,7 @@ Sixel, William, Mingda Liu, Gregory Nellis, and Bulent Sarlioglu. ""Cooling of w
 Woodworth, Andrew, William Sixel, Tiffany Williams, Witold K. Fuchs, Marisabel Kelly, Diana Santiago, Kristina M. Vailonis, Evan J. Pineda, Baochau N. Nguyen, and Paria Naghipour. ""Scaling Electric Machines to a Megawatt and Material Options."" In AIAA AVIATION 2023 Forum, p. 4507. 2023. 
 
 Mueller Ahlhorn. ""Bobbins for the Electrical Industry."" Accessed October 10, 2023. https://www.mueller-ahlhorn.com/en/products-materials/Products/bobbins-for-the-electrical-industry/ ",
-Integrated Catalytic Converters for Air Vehicle NOx Emission Control,TTT Green Aviation,,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT 
+Integrated Catalytic Converters for Air Vehicle NOx Emission Control,GREEN AVIATION 2024,emissions,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT 
 
 FY24 GREEN AVIATION PROPOSAL TEMPLATE 
 
@@ -2702,7 +2702,7 @@ Address the following scenario from your perspective as PI. Hypothetical situati
 The two main risk predicted for this project are that i), the reaction network for the NOx abatement in generated from combustion of traditional jet fuels becomes overly complex to be properly addressed during the project; and ii), that the more detailed analysis suggests that the amount of abated NOx with the integrated catalytic converter will be insignificant. Both risks can be alleviated by switching to another (simplified) system. In case of i), the reaction system will be reduced to include NO and CO only (leaving the carbohydrates and NO2 aside). This will still allow for extraction of relevant results for the jet engine use case. In case of ii), a future engine design will be considered where the exhaust gas is separated from the jet stream allowing for longer catalyst contact time and enhanced degree of NOx conversion.  
 
 Reference ",
-Health Monitoring for Mechanical and Electrochemical Degradation in Structural Batteries,TTT Green Aviation,,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT 
+Health Monitoring for Mechanical and Electrochemical Degradation in Structural Batteries,GREEN AVIATION 2024,batteries,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT 
 
 FY24 GREEN AVIATION PROPOSAL TEMPLATE 
 
@@ -2782,7 +2782,7 @@ M. Huang, N. Kirkaldy, Y. Zhao, Y. Patel, F. Cegla and B. Lan, ""Quantitative Ch
 M. Webster, E. Frankforter and P. Juarez, ""Evaluation of Ultrasonic Battery Inispection Techniques,"" Proceedings of the SPIE Conference on Smart Structures and Nondestructive Evaluation, 2022.  
 
  ",
-Persistent Solar Power Station,TTT Green Aviation,,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT 
+Persistent Solar Power Station,GREEN AVIATION 2024,electrification,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT 
 
 FY24 GREEN AVIATION PROPOSAL TEMPLATE 
 
@@ -2867,7 +2867,7 @@ If successful, the immediate next step would involve identifying a potential pro
 Address the following scenario from your perspective as PI. Hypothetical situation:  Three months into this work, your team of subject matter experts determines that the initial proposed approach is not feasible technically.  You still have 9 months of funding remaining, how do you pivot?  What alternative approaches or methods would you pursue?  
 
 The proposed work is considered highly challenging. Time constraint will play a major role in the success of the project, but if this constraint is removed, then some measure of success will likely be realized by means of having new tools and capabilities. Thus, the technical risk is likely be driven by the schedule. It is possible that not all objectives as proposed can be realized in the time frame. From the operational perspective, the key is to determine feasibility of the concept in terms of flight dynamics, stability, and control. It is possible that the flight control could be very challenging and success criteria could not be met. If so, resizing the aerodynamic configuration to increase stability and structure to increase rigidity may be required. This could potentially increase the aircraft weight and thereby lead to increased power requirements. The flight control challenge might be reduced but the benefit might decrease as well. ",
-Thrust Generation in Electrified Aircraft Heat Exchanger Ducts,TTT Green Aviation,,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT 
+Thrust Generation in Electrified Aircraft Heat Exchanger Ducts,GREEN AVIATION 2024,electrification,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT 
 
 FY24 GREEN AVIATION PROPOSAL TEMPLATE 
 
@@ -2938,7 +2938,7 @@ References:
 [11] Rasouli, E., Fricke, E., & Narayanan, V. (2022). High efficiency 3-D printed microchannel polymer heat exchangers for air conditioning applications. Science and Technology for the Built Environment, 28(3), 289-306. 
 
  ",
-Ion Propulsion Systems and Advanced Multi-Sensor Perception for Unmanned Aerial Systems: Leveraging Space Exploration Advances for Sustainable Terrestrial Aviation,TTT Green Aviation,,"Ion Propulsion Systems and Advanced Multi-Sensor Perception for Unmanned Aerial Systems: Leveraging Space Exploration Advances for Sustainable Terrestrial Aviation 
+Ion Propulsion Systems and Advanced Multi-Sensor Perception for Unmanned Aerial Systems: Leveraging Space Exploration Advances for Sustainable Terrestrial Aviation,TTT Green Aviation,propulsion,"Ion Propulsion Systems and Advanced Multi-Sensor Perception for Unmanned Aerial Systems: Leveraging Space Exploration Advances for Sustainable Terrestrial Aviation 
 
  
 
@@ -2995,7 +2995,7 @@ References:
 ² Undefined Technologies | Next-Generation Silent Drone | Doral, Fl 
 
 ³ https://news.mit.edu/2018/first-ionic-wind-plane-no-moving-parts-1121 ",
-Design and manufacturing of 3D woven preforms for composite conformal tanks,TTT Green Aviation,,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT 
+Design and manufacturing of 3D woven preforms for composite conformal tanks,GREEN AVIATION 2024,materials,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT 
 
 FY24 GREEN AVIATION PROPOSAL TEMPLATE 
 
@@ -3098,7 +3098,7 @@ Case 1: Initial target application/insertion point is not where the most benefit
 Case 2: Preferred manufacturing approach not fully able to yield the desired component ®Look into the feasibility of a hybrid manufacturing approach with as much of the automation retained as possible to maintain the efficiency/consistency advantages that brings. 
 
 Case 3: Additional material properties required ® Look into combining CNT fibers with conventional reinforcements such as carbon and boron fibers where needed (e.g. boron for very high modulus) ",
-Mission-Optimal Aircraft Trajectories and Simulation Studies with Contrail Mitigation,TTT Green Aviation,,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT 
+Mission-Optimal Aircraft Trajectories and Simulation Studies with Contrail Mitigation,GREEN AVIATION 2024,contrails,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT 
 
 FY24 GREEN AVIATION PROPOSAL  
 
@@ -3185,7 +3185,7 @@ Address the following scenario from your perspective as PI. Hypothetical situati
 One area where we can always pivot is in using another flight simulation software if BlueSky does not work as intended, and we can then try to integrate Breakthrough Energy’s models or create our own python contrail models based on what is currently published by the research community in scientific journals. The second is related to research and is naturally addressed due to the set-up of the proposal, we aim to investigate several methods for performing trajectory optimization while avoiding creating contrail. We may have to experiment with combining and mixing different flight optimization strategies and possibly consider hypothetical aircraft flight performance specifications to enable certain flight maneuvers. These in turn may provide data or insight into the design of newer aircraft types.  
 
  ",
-Direct Measurement of Charge Transport Mechanisms in Electric Engine Cabling for Coronal Discharge Mitigation and Current Mapping,TTT Green Aviation,,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT
+Direct Measurement of Charge Transport Mechanisms in Electric Engine Cabling for Coronal Discharge Mitigation and Current Mapping,GREEN AVIATION 2024,electrification,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT
 FY24 GREEN AVIATION PROPOSAL TEMPLATE
 INSTRUCTIONS
 Please do not include your name or other contact information in this form or in the file name.
@@ -3306,7 +3306,7 @@ the time trace of the lock-in output at the zero-crossing point of the spin reso
 method applies a square wave modulated external magnetic field of alternating polarity and a histogram
 of the lock-in output time trace is used to determine the standard deviation to calculate the sensitivity.
 These methods would be applied in order.",
-High-speed thermometry tool development to assess alternative propulsion technologies.,TTT Green Aviation,,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT
+High-speed thermometry tool development to assess alternative propulsion technologies.,GREEN AVIATION 2024,propulsion,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT
 FY24 GREEN AVIATION PROPOSAL TEMPLATE
 INSTRUCTIONS
 Please do not include your name or other contact information in this form or in the file name.
@@ -3430,7 +3430,7 @@ of laser pulses at two different wavelengths, while maintaining the overall meas
 different transitions and the other two wavelengths are slightly detuned from their respective peaks.
 The flexibility of the laser system that we propose to use in this work enables one to easily pivot
 towards more technically feasible approaches as the need potentially arises.",
-Solid-State Li-Air Batteries (SLAB): The Holy Grail for Safe and Sustainable Electric Aviation,TTT Green Aviation,,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT 
+Solid-State Li-Air Batteries (SLAB): The Holy Grail for Safe and Sustainable Electric Aviation,GREEN AVIATION 2024,batteries,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT 
 
 FY24 GREEN AVIATION PROPOSAL TEMPLATE 
 
@@ -3491,7 +3491,7 @@ It is envisioned that, with this seedling effort successfully demonstrating the 
 Address the following scenario from your perspective as PI. Hypothetical situation:  Three months into this work, your team of subject matter experts determines that the initial proposed approach is not feasible technically.  You still have 9 months of funding remaining, how do you pivot?  What alternative approaches or methods would you pursue?  
 
 The first key step of the proposed work is to identify a suitable solid electrolyte. The basic requirement is that it is non-flammable. In addition, it will need to be stable within the voltage range (~2 – 4.5V) without decomposition. It will also need to be stable against prolonged exposure to oxygen. If the subject matter expert determines that this is not feasible technically, we could pivot to various non-flammable liquid electrolytes as alternatives. The followed cathode fabrication and cell tests, as well as specific energy projection, could then be adjusted accordingly. ",
-High Efficiency and Low Noise Propeller Design Based on a Minimum Torque Solution,TTT Green Aviation,,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT 
+High Efficiency and Low Noise Propeller Design Based on a Minimum Torque Solution,GREEN AVIATION 2024,structure,"TRANSFORMATIONAL TOOLS & TECHNOLOGIES PROJECT 
 
 FY24 GREEN AVIATION PROPOSAL TEMPLATE 
 
