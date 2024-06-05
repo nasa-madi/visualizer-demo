@@ -16,7 +16,7 @@ fetch('./output.json')
             d3.symbolStar,
             d3.symbolCross,
             d3.symbolWye,
-            d3.symbolX
+            d3.symbolAsterisk
         ];
         // Create an object to map sources to node shapes
         const sourceShapeMap = {};
@@ -31,13 +31,17 @@ fetch('./output.json')
             'Low': '#90c4a2',
             'Medium': '#41b6c4',
             'High': '#2c7fb8',
-            'Super High': '#253494'
+            'Super High': '#253494',
+            'X1': '#41c491',
+            'whitespace': '#942534'
         };
         const sourceList = {
             'Low': '#90c4a2',
             'Medium': '#41b6c4',
             'High': '#2c7fb8',
-            'Super High': '#253494'
+            'Super High': '#253494',
+            'X1': '#41c491',
+            'whitespace': '#942534'
         };
 
         // Map maturity levels to colors
