@@ -15,10 +15,12 @@ client = OpenAI(api_key=openai_api_key)
 MODEL="gpt-4o"
 
 def make_api_call(i, ideas, num_ideas_list):
+  descriptions_df = pd.DataFrame()
+  print('generating keywords...')
   if i == 0:
     message_string1 = f"Hello! Could you use these ideas: {ideas} to pull out {num_ideas_list[i]} distinct key themes or keywords and return them in a json. There should be {num_ideas_list[i]} in the final json output"
   else:
-    message_string1 = f"Hello! Could you use these ideas {ideas} to pull out {num_ideas_list[i]} distinct key themes or related keywords for every idea there. Please return them in a json with only one layer, there should be no sublayer for the idea that it came from. At the end there should be {len(ideas)*num_ideas_list[i]} ideas in the final output with a keyword"
+    message_string1 = f"Hello! Could you use these ideas {ideas} to pull out {num_ideas_list[i]} distinct key themes or related keywords for every idea there. Please return them in a json with only one layer with the heading 'themes', there should be no sublayer for the idea that it came from. At the end there should be {len(ideas)*num_ideas_list[i]} ideas in the final output with a keyword"
   
   completion = client.chat.completions.create(
     model=MODEL,
@@ -33,10 +35,37 @@ def make_api_call(i, ideas, num_ideas_list):
 
   #formatted_output = format_gpt_output(i, keyword_obj)
   keywords = keyword_obj['themes']
+  print(keywords)
+  print(f'generated {len(keywords)} keywords')
 
-  message_string2 = f"Hello! Could you provide a description for each of these keywords: {keywords}. Please return in a json with only one layer, there should be a total of {len(keywords)} descriptions in the output"
-  #need to pull out keywords now
-  completion_descriptions = client.chat.completions.create(
+
+  #batching for description generation to stay below max token output of model
+  batch_size = 50
+  print('generating descriptions...')
+  #make take out loop here
+  if len(keywords) > batch_size:
+    for j in range(math.ceil(len(keywords)/batch_size)):
+      #api call and user message definition
+      message_string2 = f"Hello! Could you provide a description for each of these keywords: {keywords[(j*batch_size):((j+1)*batch_size)]}. Please return in a json with only one layer, there should be a total of {len(keywords[(j*batch_size):((j+1)*batch_size)])} descriptions in the output"
+      
+      completion_descriptions = client.chat.completions.create(
+        model=MODEL,
+        messages=[
+          {"role": "system", "content": "You are an A.I. assistant with expert skill in whitespace analysis and idea generation. "},
+          {"role": "user", "content": message_string2}
+          ],
+        response_format = { "type": "json_object" }
+      )
+
+      #formatting output
+      descriptions_obj = json.loads(completion_descriptions.choices[0].message.content)
+      descriptions_temp = pd.DataFrame([descriptions_obj]).T.reset_index().rename({'index': 'keyword', 0: 'description'}, axis = 1)
+      print(descriptions_temp)
+      descriptions_df = pd.concat([descriptions_df, descriptions_temp]).reset_index().drop(['index'], axis = 1)
+      print(f'generated {len(descriptions_temp)} descriptions in this round')
+
+  else:
+    completion_descriptions = client.chat.completions.create(
       model=MODEL,
       messages=[
         {"role": "system", "content": "You are an A.I. assistant with expert skill in whitespace analysis and idea generation. "},
@@ -45,9 +74,11 @@ def make_api_call(i, ideas, num_ideas_list):
       response_format = { "type": "json_object" }
     )
 
-  descriptions_obj = json.loads(completion_descriptions.choices[0].message.content)
-  descriptions_df = pd.DataFrame([descriptions_obj]).T.reset_index().rename({'index': 'keyword', 0: 'description'}, axis = 1)
+    descriptions_obj = json.loads(completion_descriptions.choices[0].message.content)
+    descriptions_df = pd.DataFrame([descriptions_obj]).T.reset_index().rename({'index': 'keyword', 0: 'description'}, axis = 1)
   
+  print(descriptions_df)
+  print(f'generated {len(descriptions_df)} keywords and descriptions')
   return descriptions_df
 
 
@@ -60,7 +91,7 @@ def update_data(df_new_whitespace, df_old):
 
   full_data = pd.concat([df_old, append_df]).reset_index().drop(['index'], axis = 1)
 
-  #full_data.to_csv('data.csv', index=False)
+  full_data.to_csv('data_temp.csv', index=False)
 
   return full_data
 
@@ -68,8 +99,8 @@ def update_data(df_new_whitespace, df_old):
 
 #reading in data and setting number of iterations and number of initial themes
 data = pd.read_csv('data.csv')
-num_iters = 3 # this includes the inital theme generation
-num_ideas_start = 3
+num_iters = 2 # this includes the inital theme generation
+num_ideas_start = 50
 
 #extracting the prompts from the inputted data to be used for theme generation in stage 1 of whitespace generation
 ideas = data.Prompt.values
@@ -82,7 +113,7 @@ num_ideas_list = [num_ideas_start]
 #might break at 3 - need to do more work on API output standardization and total tokens
 for i in range(num_iters):
   #check to see if themes for this round of iterations were already developed
-  if os.path.exists(./f'themes{i}.csv'):
+  if os.path.exists(f'./themes{i}.csv'):
     data_curr_round = pd.read_csv(f'themes{i}.csv')
 
   #only hits this case if it hasnt already generated ideas for this round
@@ -94,14 +125,13 @@ for i in range(num_iters):
     #with open(f"theme{i+1}.json", "w") as outfile:
       #json.dump(response, outfile)
 
-    #updated number of ideas generated
-    #this needs some updating
-    if i == 0:
-      #pulling out keywords from theme generation above and using those as the idea inputs for the next stage of idea generation
-      num_ideas_list += [int(num_ideas_list[i]/(2))]
+    #updating next number of ideas generated
+  if i == 0:
+    #updating next number of ideas generated
+    num_ideas_list += [int(num_ideas_list[i]/(2))]
 
-    else:
-      num_ideas_list += [num_ideas_list[i]-1]
+  else:
+    num_ideas_list += [num_ideas_list[i]-1]
     
     
     #writing dataframe from each round to csv 
@@ -119,9 +149,8 @@ for i in range(num_iters):
 
 #after loop call write to data function to use for visualizer
 df_updated = update_data(whitespace_generated_df, data)
-print(updated)
+print(df_updated)
 
-#full_data.to_csv('data.csv', index=False)
 
 
 
