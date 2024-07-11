@@ -3,6 +3,9 @@
 document.addEventListener("DOMContentLoaded", function() {
     var currentPath = window.location.pathname;
     console.log("Current Path:", currentPath);
+    if (currentPath.endsWith("/")){
+        currentPath = currentPath.slice(0, -1);
+    }
     buildVisualization(currentPath+"/output.json");
 });
 
