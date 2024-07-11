@@ -31,7 +31,7 @@ const updatedData = await pMap(
         // Make a request to the OpenAI API to create embeddings
         const response = await openai.embeddings.create({
           model: 'text-embedding-ada-002',
-          input: combinedContent
+          input: combinedContent.slice(0, 8000)
         });
 
         // Extract the generated embeddings from the API response

@@ -11,7 +11,14 @@ import { generateHash } from './generateHash.js';
 function processCSVData() {
   const csvData = [];
 
-  fs.createReadStream('./data.csv')
+  // Check if output.json exists, if not create it
+  const outputFilePath = './output.json';
+  if (!fs.existsSync(outputFilePath)) {
+    fs.writeFileSync(outputFilePath, JSON.stringify([], null, 2));
+    console.log('output.json has been created.');
+  }
+  
+  fs.createReadStream('./data-green.csv')
     .pipe(csv())
     .on('data', (row) => {
       csvData.push({
