@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAS Discovery Prompts Clustering</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.9.0/dist/tf.min.js"></script>
+    <script src="https://unpkg.com/tsne-js@1.0.3/build/tsne.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        line {
+            stroke: #3a3a3a29;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            box-sizing: border-box;
+        }
+        h1 {
+            text-transform: uppercase;
+            text-align: center;
+            color: #2c7fb8;
+            border-bottom: 1px solid gray;
+            padding: 20px;
+            margin: 0 50px;
+            font-size: x-large;
+        }
+        .label-content .maturity {
+            font-weight: bold;
+        }
+        .label-content .source {
+            font-style: italic;
+            color: rgb(91, 91, 91);
+        }
+        .label-content {
+            background-color: white;
+            border: 1px solid rgb(91, 91, 91);
+            padding: 7px;
+            font-size: 12px;
+            max-width: 200px;
+            word-wrap: break-word;
+            border-radius: 5px;
+        }
+        .graph {
+            flex: 1;
+            width: auto;
+            height: auto;
+            margin-top: 0px;
+            border-radius: 13px;
+        }
+        .slider-container {
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .slider-container input[type=range] {
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CAS Discovery Prompts Clustering</h1>
+        <div class="graph" id="graph"></div>
+    </div>
+    <div class="slider-container">
+        <input type="range" min="0" max="1" step="0.01" value="0.895" id="threshold-slider">
+    </div>
+    <script src="../src/visualize.js"></script>
+</body>
+</html>
