@@ -38,9 +38,12 @@ function buildVisualization(pathData){
 
             // Define a color scale based on maturity levels
             const colorScale = {
-                'CAS Discovery  GeoEngineering': '#90c4a2',
-                'TTT Green Aviation': '#41b6c4',
-                'CAS Discovery  Health   Wellness': '#2c7fb8',
+                'CAS': '#90c4a2',
+                'CAS ': '#90c4a2',
+                'TTT': '#41b6c4',
+                'UI': '#2c7fb8',
+                'UI ': '#2c7fb8',
+                'nan' : '#90c4a2',
                 'CAS Discovery  Health and Wellness': '#2c7fb8',
                 'CAS Wicked Wild': '#253494', 
                 'CAS X1': '#00008B', 
@@ -50,9 +53,11 @@ function buildVisualization(pathData){
                 'CAS Execution':'#38b483'
             };
             const sourceList = {
-                'CAS Discovery  GeoEngineering': '#90c4a2',
-                'TTT Green Aviation': '#41b6c4',
-                'CAS Discovery  Health   Wellness': '#2c7fb8',
+                'CAS': '#90c4a2',
+                'CAS ': '#90c4a2',
+                'TTT': '#41b6c4',
+                'UI': '#2c7fb8',
+                'UI ': '#2c7fb8',
                 'CAS Discovery  Health and Wellness': '#2c7fb8',
                 'CAS Wicked Wild': '#253494',
                 'CAS X1': '#00008B',
