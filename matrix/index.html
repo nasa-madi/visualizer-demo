@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>D3 Matrix Visualization</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+        body {
+            background-color: white;
+        }
+        .cell {
+            stroke: #fff;
+            stroke-width: 1px;
+        }
+        .tooltip {
+            position: absolute;
+            text-align: center;
+            width: auto;
+            height: auto;
+            padding: 5px;
+            background: lightsteelblue;
+            border: 0px;
+            border-radius: 8px;
+            pointer-events: none;
+        }
+        .label {
+            font-size: 9px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // Load the JSON data
+        d3.json("data.json").then(function(data) {
+            const margin = {top: 150, right: 40, bottom: 100, left: 150};
+            const width = 800;
+            const height = 800;
+            const gridSize = Math.floor(width / data.nodes.length);
+            const legendElementWidth = gridSize * 2;
+
+            const svg = d3.select("body").append("svg")
+                .attr("width", width + margin.left + margin.right)
+                .attr("height", height + margin.top + margin.bottom)
+                .style("background-color", "white")
+                .append("g")
+                .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+            // Prepare the matrix data
+            const matrix = [];
+            const nodes = data.nodes.map(d => d.id);
+            nodes.forEach((node, i) => {
+                matrix[i] = d3.range(nodes.length).map(j => {
+                    return {id: node, x: j, y: i, value: 0};
+                });
+            });
+
+            data.links.forEach(link => {
+                const sourceIndex = nodes.indexOf(link.source);
+                const targetIndex = nodes.indexOf(link.target);
+                matrix[sourceIndex][targetIndex].value = link.value;
+            });
+
+            // Create scales
+            const colorScale = d3.scaleSequential(d3.interpolatePuRd)
+                .domain([0, d3.max(data.links, d => d.value)]);
+
+            // Create rows and columns
+            const row = svg.selectAll(".row")
+                .data(matrix)
+                .enter().append("g")
+                .attr("class", "row");
+
+            const cell = row.selectAll(".cell")
+                .data(d => d)
+                .enter().append("rect")
+                .attr("class", "cell")
+                .attr("x", d => d.x * gridSize)
+                .attr("y", d => d.y * gridSize)
+                .attr("width", gridSize)
+                .attr("height", gridSize)
+                .style("fill", d => colorScale(d.value))
+                .on("mouseover", handleMouseOver)
+                .on("mouseout", handleMouseOut);
+
+            // Add tooltips
+            const tooltip = d3.select("body").append("div")
+                .attr("class", "tooltip")
+                .style("opacity", 0);
+
+            function handleMouseOver(event, d) {
+                tooltip.transition()
+                    .duration(200)
+                    .style("opacity", .9);
+                tooltip.html("Value: " + d.value)
+                    .style("left", (event.pageX + 5) + "px")
+                    .style("top", (event.pageY - 28) + "px");
+            }
+
+            function handleMouseOut(event, d) {
+                tooltip.transition()
+                    .duration(500)
+                    .style("opacity", 0);
+            }
+
+            // Add labels
+            const labels = svg.append("g")
+                .attr("class", "labels");
+
+            labels.selectAll(".column-label")
+                .data(nodes)
+                .enter().append("text")
+                .attr("class", "column-label label")
+                .attr("x", 0)
+                .attr("y", 5)
+                .attr("transform", (d, i) => "translate(" + (i * gridSize + gridSize / 2) + ",-10)rotate(-90)")
+                .style("text-anchor", "start")
+                .text(d => d);
+
+            labels.selectAll(".row-label")
+                .data(nodes)
+                .enter().append("text")
+                .attr("class", "row-label label")
+                .attr("x", -6)
+                .attr("y", (d, i) => i * gridSize)
+                .attr("dy", ".32em")
+                .style("text-anchor", "end")
+                .text(d => d);
+        });
+    </script>
+</body>
+</html>

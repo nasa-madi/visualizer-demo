@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<title>CAS Discovery Prompts Clustering</title>
 <style>
 
 .links line {
@@ -13,23 +12,6 @@
   stroke-width: 1.5px;
 }
 
-.node text {
-  display: none;
-  font: 10px sans-serif;
-}
-
-.node:hover circle {
-  fill: #000;
-}
-
-.node:hover text {
-  display: inline;
-}
-
-.cell {
-  fill: none;
-  pointer-events: all;
-}
 
 path {
 	opacity: 0.4;
@@ -47,7 +29,7 @@ var svg = d3.select("svg"),
     width = +svg.attr("width"),
     height = +svg.attr("height");
 
-var color = d3.scaleOrdinal(d3.schemeCategory10);
+var color = d3.scaleOrdinal(d3.schemeCategory20);
 
 
 var voronoi = d3.voronoi()
@@ -56,10 +38,9 @@ var voronoi = d3.voronoi()
     .extent([[-1, -1], [width + 1, height + 1]]);
 
 
-
 var simulation = d3.forceSimulation()
     .force("link", d3.forceLink().id(function(d) { return d.id; }).strength(function(link) {   
-	  if (link.source.group == link.source.target) {
+	  if (link.source.label == link.source.label) {
 	    return 1;
 	  }
 	  else {
@@ -86,53 +67,14 @@ d3.json("data.json", function(error, graph) {
     .data(graph.nodes)
     .enter().append("circle")
       .attr("r", 5)
-      .attr("fill", function(d) { return color(d.group); })
+      .attr("fill", function(d) { return color(d.label); })
       .call(d3.drag()
           .on("start", dragstarted)
           .on("drag", dragged)
-          .on("end", dragended))
-    .on('mouseover', showLabel)
-    .on('mouseout', hideLabel);
-
-    var node = svg.selectAll(".node")
-    .data(force.nodes())
-    .enter().append("g")
-    .attr("class", "node")
-    .on("mouseover", mouseover)
-    .on("mouseout", mouseout)
-    .call(force.drag);
- //  .on("mouseover", function(d)
- // {
- //    d3.select(this).transition()
- //    .duration(750)
- //    .attr("r", 15);
- //     d3.select(this).append(text)
- //    .style("visibility", "visible");
- // })
-
-  var circle = node.append("circle")
-      .attr("r", 4.5);
-
-  var cell = node.append("path")
-      .attr("class", "cell");
-
-  var label = node.append("text")
-      .attr("dy", ".35em")
-      .text(function(d) { return d.id; });
-
-  node.append("svg:title")
-      .text(function(d) { return d.id; });
+          .on("end", dragended));
 
   node.append("title")
-    .text(function(d) { return d.id; });
-
-  // code below causes error
-
-  // var label =svg.append("text")
-  //   .text(function(d) { return d.id; })
-  //   .style("visibility", "hidden");
-
-  // end of added error
+      .text(function(d) { return d.id; });
 
   simulation
       .nodes(graph.nodes)
@@ -146,8 +88,8 @@ d3.json("data.json", function(error, graph) {
   var cells = svg.selectAll()
   .data(simulation.nodes())
   .enter().append("g")
-  .attr("fill",function(d) { return color(d.group); })
-  .attr("class",function(d) { return d.group })
+  .attr("fill",function(d) { return color(d.label); })
+  .attr("class",function(d) { return d.label })
 
   var cell = cells.append("path") 
 	.data(voronoi.polygons(simulation.nodes()))
@@ -162,12 +104,12 @@ d3.json("data.json", function(error, graph) {
 	
 	// sort the nodes into groups:	
 	node.each(function(d) {
-		if (groups.indexOf(d.group) == -1 ) {
-			groups.push(d.group);
-			coords[d.group] = [];
+		if (groups.indexOf(d.label) == -1 ) {
+			groups.push(d.label);
+			coords[d.label] = [];
 		}
 		
-		coords[d.group].push({x:d.x,y:d.y});	
+		coords[d.label].push({x:d.x,y:d.y});	
 	})
 		
 	// get the centroid of each group:
@@ -192,20 +134,6 @@ d3.json("data.json", function(error, graph) {
 		
 		centroids[group] = {x: cx, y: cy}	
 	}	
-
-	var label = svg.selectAll(".label")
-		.data(groups);
-		
-	label.enter()
-	    .append("text")
-	    .merge(label)
-		.attr("x",function(d) { return centroids[d].x})
-		.attr("y",function(d) { return centroids[d].y})
-		.text(function(d)  { return d; })
-		.attr("class","label")
-	    .style("text-anchor","end")
-	    .style("font-weight", "bold")
-	    .style("font-size", "7px");
 		
 	// don't modify points close the the group centroid:
 	var minDistance = 10;
@@ -216,8 +144,8 @@ d3.json("data.json", function(error, graph) {
 	   
 	// adjust each point if needed towards group centroid:
 	node.each(function(d) {
-		var cx = centroids[d.group].x;
-		var cy = centroids[d.group].y;
+		var cx = centroids[d.label].x;
+		var cy = centroids[d.label].y;
 		var x = d.x;
 		var y = d.y;
 		var dx = cx - x;
@@ -244,49 +172,12 @@ d3.json("data.json", function(error, graph) {
 	// update nodes:
     node
         .attr("cx", function(d) { return d.x; })
-        .attr("cy", function(d) { return d.y; })
-        .on('mouseover', showLabel)
-        .on('mouseout', hideLabel)
+        .attr("cy", function(d) { return d.y; });
   }
   
-  force.on("tick", function() {
-    cell
-        .data(voronoi(json.nodes))
-        .attr("d", function(d) { return d.length ? "M" + d.join("L") : null; });
 
-    link
-        .attr("x1", function(d) { return d.source.x; })
-        .attr("y1", function(d) { return d.source.y; })
-        .attr("x2", function(d) { return d.target.x; })
-        .attr("y2", function(d) { return d.target.y; });
-
-    circle
-        .attr("cx", function(d) { return d.x; })
-        .attr("cy", function(d) { return d.y; });
-
-    label
-        .attr("x", function(d) { return d.x + 8; })
-        .attr("y", function(d) { return d.y; });
-  });
-
-  // Show label on mouseover
-   function showLabel(event, d) {
-            label.filter(node => node.id === d.id)
-                .style('visibility', 'visible')
-            d3.select(this)
-                .style('stroke', 'hotpink')
-                .style('stroke-width', '3px');
-        }
-
-  // Hide label on mouseout
-    function hideLabel(event, d) {
-            label.filter(node => node.id === d.id)
-                .style('visibility', 'hidden');
-            d3.select(this)
-                .style('stroke', null)
-                .style('stroke-width', null);
-
-        }
+  
+  
   
 });
 
@@ -310,18 +201,6 @@ function dragended(d) {
 
 function renderCell(d) {
   return d == null ? null : "M" + d.join("L") + "Z";
-}
-
-function mouseover() {
-  d3.select(this).select("circle").transition()
-      .duration(750)
-      .attr("r", 16);
-}
-
-function mouseout() {
-  d3.select(this).select("circle").transition()
-      .duration(750)
-      .attr("r", 8);
 }
 
 </script>
