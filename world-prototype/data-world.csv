@@ -1,0 +1,197 @@
+Prompt,Source,Maturity,Description,Transcript
+How might we eliminate carbon emissions with High-temperature PEM Fuel Cell for Aviation?,Wicked Wild,High,"Opportunity: 1) To eliminate CO2 emission 2) To triple energy efficiencyCO2 production by hydrocarbon fueled aircraft that contributes to global warming is expected to triple by 2050. Continuing to fuel aircraft with hydrocarbons is not sustainable. 
+Replacing hydrocarbon fuel with H2 eliminates CO2 emission. Joint NACA/NASA - Air Force projects Bee and Suntan successfully flew a B-57B twin-engine bomber using liquid hydrogen (LH2),  and successfully fueled MW-scale aircraft engines (CW J-65 and P&W M304) using LH2 in the 1950s.
+Because LH2 volumetric energy density is 25% of jet fuel, H2 powered aircraft requires a much larger fuel tank. Replacing the combustion process with higher energy efficiency fuel cell electrochemical reaction may offset the lower LH2 energy density. The current PEM fuel cell energy efficiency (~50%) is ~2X an internal combustion engine. The estimated efficiency of high temperature PEM fuel cell (HT PEM FC) is >70%. The DOE is developing HT-PEM technologies for heavy duty vehicles but excludes considerations specific to aviation. 
+""Wicked-Wild"" Idea: Develop HT-PEM technology for aviation
+Using HT-PEM fuel cells to power electric aircraft eliminates CO2 emissions while sustaining timely, long-distance travel capability. 
+Develop HT-PEM fuel cell materials specifically for aviation 
+Focus on membranes, electrodes, and membrane electrode assemblies (MEA)
+Include other stack components as opportunities allow
+Test HT-PEM fuel cell materials, single cells, and cell stacks under aviation load profiles (high-power flight condition for take off and climb, low ambient air temperature and very dry air at high elevation, etc.)
+Demonstrate HT-PEM FC energy efficiency and CO2 emission reductions","the pitch is high temperature PEM Fuel cell for aviation.
+Flying Airplane takes a lot of energy. Burning hydrocarbon fuel is not efficient way of getting the energy.
+It causes pollution and release carbon dioxide into the air, which causes global warming. This presentation tries to address both of the problem, low efficiency of conversion and the global warming, the efficiency of electrochemical energy converging by fuel cell is much higher than any account conversion process for high temperature PCL the efficiency is 3 times of that for combustion engine. Fearing feeling a few cell with hydrogen eliminate carbon dioxide emission and combustion by product that causes air pollution.
+When you hydrogen in a turbine engine can't also power an airplane without carbon dioxide emission.
+However, the efficiency is low and it emits nitrogen oxide.
+The prototype, the volumetric energy density of liquid hydrogen, is about 1/4 of hydrocarbon fuel.
+The low efficiency of burning hydrogen means a much larger fuel tank and or a short flighting distance.
+it is the importance into the air and contributing to global warming, the high energy efficiency of fuel may offset the lower energy density of hydrogen.
+Therefore comparable few compare size of fuel tank can be used for similar flying distance of country airplane. You're placing.
+Engine with a highly efficient fuel cell is a great option.
+It means the size of fuel tank and the frying range of current airplane and also completely eliminated the imaging their causes, global warming and protect air. The Department of Energy is developing high temperature paint fusia for ground transportation, especially for heavy duty vehicle.
+The pitch this piece is for developing the similar technology for aviation.
+The developments are where you focus on material specific for aviation application, such as membranes, electrodes, membrane electrode assembly and other stack components to measure the progress of this activity.
+High temperature pain, fuel cell stacks and system will be tested under the aviation load profile. The result will be used to modify and optimize fuel cell system for aviation application.
+The results are important for the design of future policy system for electrified, electrified airplane."
+How might we employ AI to optimize resource allocation and reduce waste in various industries?,Health & Wellness,Medium,"AI can play a crucial role in optimizing resource allocation and reducing waste across various industries, from manufacturing to agriculture to energy. By analyzing real-time data on production processes, supply chains, and consumer demand, AI algorithms can help businesses make more informed decisions about how to allocate resources efficiently. This could involve predicting equipment failures and scheduling preventive maintenance, optimizing inventory levels to minimize waste, or dynamically adjusting production lines to meet changing market demands. AI-driven resource optimization could lead to significant cost savings, reduced environmental impact, and improved overall operational efficiency for businesses.",
+How might we use AI to improve healthcare diagnostics and treatment planning?,GeoEngineering,High,"AI has the capacity to transform healthcare by assisting medical professionals in making more accurate and efficient diagnoses and treatment decisions. Machine learning algorithms can analyze vast amounts of patient data, including medical records, imaging scans, and genetic information, to identify patterns and correlations that may be difficult for humans to discern. This could lead to earlier detection of diseases, more precise diagnoses, and personalized treatment plans based on a patient's specific health profile. Additionally, AI-powered tools could help streamline clinical workflows, reduce medical errors, and provide decision support to healthcare providers, ultimately improving patient outcomes and reducing healthcare costs.",
+How might we harness AI to enhance public safety and security?,GeoEngineering,Low,"AI has the potential to significantly enhance public safety and security by enabling more effective monitoring, prediction, and response to potential threats. Computer vision algorithms can analyze video footage from surveillance cameras to detect suspicious activities or individuals, while natural language processing can monitor online communications to identify potential security risks. AI-powered predictive policing tools can analyze crime data to forecast where and when crimes are likely to occur, allowing law enforcement agencies to allocate resources more effectively. Additionally, AI can assist in emergency response by optimizing resource deployment, providing real-time situational awareness, and supporting decision-making in high-pressure situations.",
+"How might new data technologies enable more democratic participation? Likewise, how might they negatively impact (e.g. AI making it easier to create and disseminate disinformation that destabilizes governance and societies)",GeoEngineering,Low,,
+How might we minimize crash landing drones and air vehicles?,Wicked Wild,High,"Provide redundant landing capabilities to UAVs to increase safety and public confidence in these systems. This will allow the economy to expand with the capabilities UAVs promise while managing the risks associated with their overflight of valuable assets and humans. We can take the next step to build on the success of Safe2Ditch intelligent landing system by adding backup propulsion and guidance to increase the options for a safe ditching and more precisely control the crash and mitigate damage/injury. Perform a analysis of available electric, pressure, 
+and rocket powered systems that can be added to drones to supplement 
+damaged systems and controlled by the Safe2Ditch system to expand its 
+ability to reduce the danger from ditching UAVs",
+How does climate change and severe weather events impact the % of airspace that is navigable by aircraft?,GeoEngineering,Low,,
+"Assuming that the commercial trend towards hospital consolidation and specialization continues and patients are farther away from advanced treatments, how might aviation impact accessibility of healthcare? (See: medical staffing, changes in healthcare business models, Direct-to-consumer health apps, travel nurses, etc.)",Health and Wellness,Medium,"Sources: 
+https://www.youtube.com/watch?v=jtIZZs-GAOA 
+https://rockhealth.com/insights/q1-2022-digital-health-funding-staying-the-course-in-choppy-waters/ 
+https://rockhealth.com/insights/2021-year-end-digital-health-funding-seismic-shifts-beneath-the-surface/ 
+https://www.aha.org/system/files/media/file/2021/11/2022-Environmental-Scan.pdf. 
+Problem Scoping: 
+Two divergent Healthcare Scenarios: 
+Medical treatments become cost-effective enough to move to or stay in local hospitals, lessening the need for travel. 
+Medical treatments become less cost-effective (or some do) to the point that treatment centers consolidate and are farther away from patients on average. This is the more likely scenario given the trends in health-apps, investing, travel nurses, minute-clinics, hospital funding problems. 
+Given scenario (2), there are two Aviation Scenarios: 
+Personal Air mobility or commercial aviation drops in cost sufficiently to counter the increased cost of healthcare. 
+Medical treatment (tools/supplies) become small enough and cheap enough to ship TO the patient, possibly by air (air hospital?) and counter the increased cost of healthcare. 
+Sub Problems: 
+Does the shift to outpatient clinics reduce the availability of hospitals offering complex procedures and put greater need on air travel for the critically ill? 
+Population is more distributed (remote work), so will more people be farther away from centralized services that cannot be financially solvent in closer facilities? 
+Will the advancement or cost-efficiency of treatments drop enough to distribute healthcare to local clinics? 
+Why is this a problem? 
+As medical health care technology becomes more advanced, the cost of health care more expensive, and population more widely distributed, aviation may have an increasing effect on the accessibility of health care. 
+What capabilities may be needed to address the problem? 
+Aviation can provide services in the future that are presently either centralized or provided by a range of other transportation. The challenge will be to right-size and optimize the aviation capability to the needs of the health care problem. 
+Transportation of medicine via UAVs with appropriate temperature/atmosphere/humidity control which can provide timely delivery, 
+Airborne ambulances that can transport while providing care. 
+Transportation of medical equipment to remote areas (on a rotation? As part of a pre-planned schedule?). 
+Miniaturization of health tech 
+More temp-stable medical goods that can survive rougher transport. 
+What trends might enable problem exploration and solution? 
+A broadening of capabilities in aviation ranging from the advent of personalized air vehicles to package delivery UAVs allowing a series of options for both human and package delivery; 
+Increasing level of capabilities due to technical advances allowing more localized and effective health care. These trends are counterbalanced by ever increasing healthcare costs that may limit patient access. 
+Telehealth – making people more comfortable with remote healthcare 
+Robotic Telehealth – letting doctors stay where they are but keep robots local for surgery, etc. 
+Cheaper diagnostics - reducing the need for travel to find out if you have a problem, reserving travel to treatment.’ 
+Medical Tourism – will the cost and accessibility of medical tourism counterbalance the need for rural access. 
+Reach - How many people, communities are going to be impacted or are impacted by the problem? 
+This is ANOTHER way that discrepancies between rural vs urban healthcare is mitigated by aviation. We scoped this to 100M because we believe that smaller procedures will become more accessible/local, but not ALL procedures. So globally, we believe that 100M people will be impacted or make decisions about treatment and safety based on access and cost. 
+Impact - What is the scale of the impact? 
+Score: 4-5 Majority 4 (given the costs and advanced nature of the treatments), but small percentage will be 5s, where care is absolutely critical to immediate survival. 
+Confidence - How confident are we in the impact and reach determinations? 
+We are assuming that the geographic consolidation of healthcare continues to the point that access is reduced. If that trend continues, we are confident aviation will be a greater player in access. If not, the question is moot. 
+Effort – what is the effort/scale needed to address? Wickedness? CAS-worthy? 
+It is suggested that this is a CAS-worthy problem. It is Wicked covering technical, political, societal, economic, and legal issues. It directly involves aerospace across the spectrum of vehicles. The range of technical challenges related to this topic are formidable spanning the range of NASA technologies. Other players in the market may influence parts of the system, but no one technology or solution can mitigate the entire issue of rural access. ",
+"In a world with ubiquitous sensing, how is it decided who or what does the sensing, and who makes the decision? Who receives the benefits of the data that is collected?",GeoEngineering,Medium,"Prompt:
+How can equity be enabled or preserved in the face of changing conditions such as climate change, AI advances, and increasing surveillance capabilities at both a macro and micro level?
+In a world with ubiquitous sensing, how is it decided who or what does the sensing, and who makes the decision? Who receives the benefits of the data that is collected?
+How to avoid a surveillance security state (e.g., Orwell's Big Brother)?  Is the provided (perceived) benefit enough to overcome said effect? (NOTE: original context was in the scope of constant monitoring and sensing). Will the need/desire for certain types of information cause a valuation (viewpoint) favoring some populations over others,
+How might we improve the equity of various socioeconomic, regional, and or ethnic groups whose welfare is impacted by ongoing ubiquitous sensing or improved monitoring?
+Is there a need for broad access to be monitored given possible benefits? Alternatively what impacts will these groups undergo for lack of monitoring availability to their environment
+How might TinyML improve adoption of wearables by the underprivileged for early detection and warning of disasters via economies of scale?
+How might devices, like wearables, enable citizen scientists to increase safety for populations in an equitable way?
+How might monitoring improve equity of Climate Change outcomes?
+How might AI improve the equity of welfare or economic attainment across borders and regions?
+How might AI analysis and predictions improve environmental outcomes for underprivileged communities via utilizing distributed data management?
+ Sources:
+
+The questions above have limited sources on the mural or direct extension from the mural text. However, from the Confluence Ethics page, there are generally relevant sources: 
+Metatrend #9: Trillion-Sensor Economy: The Ability to Sense and Know Anything, Anytime, Anywhere (diamandis.com)
+https://www.jstor.org/stable/26644936?read-now=1#page_scan_tab_contents
+Exploring the Ethics of Long-Term Research Engagement With Communities in Low- and Middle-Income Countries on JSTOR
+The Implications of Climate Change on Health among Vulnerable Populations in South Africa: A Systematic Review - PMC (nih.gov)
+Noncontact Vital Sign Detection With UAV-Borne Radars: An Overview of Recent Advances | IEEE Journals & Magazine | IEEE Xplore
+Research Efforts in Unmanned Aerial Vehicle Vital Sign Monitoring Systems – DSIAC
+https://www.washingtonpost.com/world/2023/08/31/china-floods-beijing-rain/
+https://www.simplilearn.com/challenges-of-big-data-article
+https://www.iarpa.gov/research-programs/smart-epants
+https://www.cultofmac.com/806788/researchers-explore-frontiers-of-heart-health-with-apple-watch/?utm_source=twitter
+https://safed.vtti.vt.edu/projects/development-of-a-connected-smart-vest-for-improved-roadside-work-zone-safety/and published results PDF
+https://safed.vtti.vt.edu/wp-content/uploads/2021/06/Safe-D-Final-Report-Smart-Vest-04-104-Final-Updated-FixedV1.pdf
+https://www.sciencedirect.com/science/article/pii/S2093791120303024
+https://www.cultofmac.com/807027/secret-apple-watch-glucose-monitoring-project-makes-gains/
+https://www.insiderintelligence.com/insights/wearable-technology-healthcare-medical-devices/
+https://rmets.onlinelibrary.wiley.com/doi/10.1002/joc.7391
+https://martech.org/4-areas-of-martech-with-ethical-concerns/
+https://www.washingtonpost.com/technology/2022/06/21/facebook-doj-discriminatory-housing-ads/ 
+https://medium.com/@JamesGrimmelmann/illegal-unethical-and-mood-altering-8b93af772688
+What is the problem or need?
+
+Ubiquitous Sensing
+Technology advances generate an environment of ubiquitous monitoring both on a personal and societal level. 
+Personal health monitoring: watches, phones and XR allow users to be informed regarding their heart rate, oxygen level, stress level. Privacy concerns arise related to use of personal information
+Wearables hacking - how can we trust the data and protect the users?
+There are also remote medical sensing technologies that could be as ubiquitous as CCTV, and even drone-mounted.
+NASA's Aeronautics technologies can enable persistent, wide-area coverage of climate-related parameters and NASA's Earth observing satellites add to the data gathering.
+Such sensing capabilities enable new opportunities to provide actionable information, detect problems and improve life, while at the same time imply severe ethical issues if misused.
+Big Data management and processing, including timing and synchronization, in an equitable manner resulting in high quality results is a major technical challenge.
+When does the problem come to a head?
+Time: Now to 15yrs
+Rate: Linearly to exponentially increasing impact
+The technology and infrastructure for ubiquitous sensing is already available or being established with some populations presently participating and impacted. The economic and societal drivers for their implementation are expected to generate broader implementation in the nearer term.
+What capabilities may be needed to address the problem?
+
+Ubiquitous Sensing
+System architectures and business models that allow incorporation of equity management mechanisms
+Use of democratized data gathering for early warning systems impacting safety and welfare
+AI, IoT, Wearables will allow people to create routing models and recommendations for vehicles
+Relationship: watches, phones and XR allow users to be informed regarding their heart rate, oxygen level, stress level.
+Spreading (Seeding?) of micro sensors to blanket areas in addition to mining wearable sensing data to cover the environment
+Monitoring climate change impacts: wearables may allow real time reports of climate impacts
+PAVs, UAVs, balloons, spacecraft integrating data for micro weather as well as macroweather
+Develop and deploy sensors and AUVs for studying ocean acidification and its impacts on ecosystems, as well as Carbon Capture & Storage (CCS) and ocean-based renewable energy technologies
+Improved sensing capabilities in & above the water / ice caps.
+Implementation of Big Data management of the ubiquitous sensing networks in an equitable manner resulting in high quality results.
+What trends are driving this capability or need that may influence the problem or solution space?
+
+Ubiquitous Sensing
+Technology advances that allow ubiquitous monitoring, combined with Big Data processing and communications, means that the infrastructure structure for Ubiquitous Sensing both on a personal and societal level already exists.
+Economic drivers are moving towards use of monitoring technologies to drive specific outcomes, not necessarily for the benefit of the population.
+Privacy concerns are declining among younger generations: decline in need for privacy with respect to certain areas of life may allow wearables to be used to communicate more broadly as part of IoT using cloud
+TinyML may enable wearables to be powerful computers, recommendation engines
+Broad sensing system capabilities are both becoming more pervasive and more easily implemented enabling a new level of monitoring and surveillance.
+Who would best know about this problem or solution? Who are the stakeholders?  (Can be specific or general.  Try to list as many as possible)
+Mixture of ethicists, legal scholars, corporate interests, international organizations, and technologists
+The stakeholders include those being monitored perhaps without their knowledge or permission, as well as those who benefit from the resulting data.
+Reach - How many people, communities are going to be impacted or are impacted by the problem in a given year across the globe?
+Size:  1B
+The ethical impact of climate change, AI, and ubiquitous sensing is a world wide issue
+Impact - What is the degree of the impact on a per-person basis?
+
+Score: (Pick 1)
+Changed to 1 after whole list reconciliation
+<3 - Minor improvement to biological needs (water/food/air) OR moderate improvement to safety/finances/stability OR critical improvement to social/community well-being>
+The ethical impact of climate change, AI, and ubiquitous sensing is significant and world changing.
+What is the relationship between the Problem and Aviation?
+Type: (Pick 1+)
+Partial Resolver - Aviation is one of the ways the problem is or could be mitigated (even if scale is poor or cost is high).  Aviation could have a greater role in mitigating the problem
+Influencer - Aviation/NASA has a role in how the problem could be mitigated, but does not directly touch the problem.  (e.g. upstream mftg pollution, local zoning around airports).
+Aviation has a minor role in causing climate change and use of AI. It could have a notable role in weather monitoring and mitigation, as well as personal and community surveillance, as well as the safe use of AI.  providing a platform for ubiquitous mobile sensing able  to go where desired without existing infrastructure.
+What is the nature of the gap or whitespace around the problem?
+Type: (Pick 1+)
+Known future problem, unaddressed
+Potential current problem, not fully understood
+Potential future problem, not fully understood
+ The possible ethical impact of climate change, AI and ubiquitous sensing are generally well known as in Big Brother concerns.  The overall impact of these evolving fields is unknown, esp. revolving around what is ethical to be monitored and whose information is it when monitoring occurs.
+Confidence - How confident are you in the impact and reach determinations?
+Score: (Pick 1)
+Changed to 2 after whole list reconciliation
+4 - The numbers are based on some direct and indirect data, with reasoned guesses or unit conversions
+Understanding the possible ethical impact of climate change and AI are well known, but the impact of these evolving fields is unknown  of ubiquitous sensing is at an early stage and will evolve in line with the understanding of the impact of increasingly more complex and pervasive technologies. 
+Scenario - Is there a simple scenario or narrative that can better explain this problem?  This is helpful for downstream readers who will not have the benefit of fully engaging the source material.
+<Scenario>
+(gpt-4) 
+In the not-so-distant future, we find a world grappling with the consequences of climate change, the advancement of artificial intelligence (AI), and the increasing capabilities of surveillance technology. These global challenges and opportunities touch everyone, yet they disproportionately impact communities in low- and middle-income countries (LMICs), which often bear the brunt of climate change effects and are least equipped to adapt to or influence AI and surveillance technologies.
+
+Imagine a coastal community in one such LMIC. The rising sea levels, a direct consequence of climate change, threaten their homes and livelihoods. However, their voices are often unheard in international climate policy discussions. Their limited resources and access to technology make it hard for them to adapt to these changes or participate in mitigation efforts.
+
+Meanwhile, the world around them is becoming increasingly digital. AI systems are transforming economies, Surveillance technologies are becoming ubiquitous, and wearable devices that could help detect and warn of disasters are out of their reach due to economic constraints. These communities are at risk of being left behind or, worse, exploited as the world around them transforms.
+
+This scenario is not just a possibility but a reality for many communities around the world today. The ethical impact of these changes is significant and global, affecting billions of people. The aviation industry is uniquely positioned to influence these challenges, from contributing to climate change mitigation to leveraging AI for weather monitoring and disaster prediction.
+
+However, there are significant gaps in understanding and addressing these problems. For instance, we need to ensure that the benefits of AI and surveillance technologies are equitably distributed and do not infringe on human rights. We also need to involve the most affected communities in climate change solutions and ensure their voices are heard.
+
+The potential impacts of these issues are well known, but the specific outcomes and how they will evolve are uncertain. As we navigate this future, we must be proactive in addressing these ethical considerations and strive for a world that is not only technologically advanced but also equitable and inclusive.",
+Coastal airports are susceptible to climate impacts,CAS ,Low,"Engineer multi-layered, adaptive infrastructures that serve as both airports and coastal defense structures, dynamically responding to changing sea levels.",
+How might weather changes impact the viability of long-range ocean transport e.g. commercial shipping?,CAS ,Low,,
+SWIFT - Accelerating and Enabling Novel Flight Research,CAS X1,High,"How can NASA conduct flight research more often and more cost effectively? 
+What new research can be enabled by high risk flight test opportunities? 
+Can we save on cost and schedule with a modular and reusable architecture that utilizes flight proven hardware and software?
+A cost-effective, aircraft research architecture that enables rapid flight research and has a flexible risk posture to evaluate novel technologies
+",
+MISTRAL - Multiscale Intelligent System for TRAcking & Localization of Emissions,CAS X1,Medium,"Persistent monitoring and localization radically curtails release of GHG at large oil-and-gas production sites and other focused release areas because many emissions are due to failure in equipment, such as leaks and undetected cessation of burn-off.
+Inform emittersand enable optimal solution to GHG emission: prevention at the source.
+Dynamic: No expensive ground installations; no cost of dismantling; in place on time.
+Versatile: Handle a broad range of emitters, human-made and natural; operate at optimal proximity; autonomous system uses state-of-the-art components. Develop affordable, ecologically sustainable, persistent, multiscale, autonomous airborne system for monitoring and localization of emissions over large areas of heterogeneous emitters, with primary focus on oil and gas production sites, such as the Permian Basin, with the area of 86,000 mi2.
+
+",
