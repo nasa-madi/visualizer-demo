@@ -56,7 +56,6 @@ var voronoi = d3.voronoi()
     .extent([[-1, -1], [width + 1, height + 1]]);
 
 
-
 var simulation = d3.forceSimulation()
     .force("link", d3.forceLink().id(function(d) { return d.id; }).strength(function(link) {   
 	  if (link.source.group == link.source.target) {
@@ -94,13 +93,7 @@ d3.json("data.json", function(error, graph) {
     .on('mouseover', showLabel)
     .on('mouseout', hideLabel);
 
-    var node = svg.selectAll(".node")
-    .data(force.nodes())
-    .enter().append("g")
-    .attr("class", "node")
-    .on("mouseover", mouseover)
-    .on("mouseout", mouseout)
-    .call(force.drag);
+
  //  .on("mouseover", function(d)
  // {
  //    d3.select(this).transition()
