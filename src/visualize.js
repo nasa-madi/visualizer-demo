@@ -50,7 +50,8 @@ function buildVisualization(pathData){
                 'CAS Discovery  Powering Sustainable Airports': '#337939',
                 'UI Blue Skies Competition 2022 - "Airports of Tomorrow"': '#7750b5',
                 'UI Blue Skies Competition 2023 - "Clean Aviation Energy"':'#a3a9d8',
-                'CAS Execution':'#38b483'
+                'CAS Execution':'#38b483', 
+                'Low': '#AA3377'
             };
             const sourceList = {
                 'CAS': '#AA3377',
@@ -64,7 +65,8 @@ function buildVisualization(pathData){
                 'CAS Discovery  Powering Sustainable Airports': '#337939',
                 'UI Blue Skies Competition 2022 - "Airports of Tomorrow"': '#7750b5',
                 'UI Blue Skies Competition 2023 - "Clean Aviation Energy"':'#a3a9d8',
-                'CAS Execution':'#38b483'
+                'CAS Execution':'#38b483',
+                'Low': '#AA3377',
             };
 
             // Map maturity levels to colors
