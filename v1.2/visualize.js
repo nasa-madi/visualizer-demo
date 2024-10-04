@@ -16,7 +16,6 @@ fetch('./output.json')
             d3.symbolStar,
             d3.symbolCross,
             d3.symbolWye,
-            d3.symbolAsterisk
         ];
         // Create an object to map sources to node shapes
         const sourceShapeMap = {};
