@@ -1,7 +1,7 @@
 Prompt,Source,Maturity-old,Maturity,Description,Transcript,,,,
 How might we leverage AI to enhance personalized learning experiences?,Wicked Wild,Medium,Low,"Artificial Intelligence has the potential to revolutionize education by providing personalized learning experiences tailored to each student's unique needs, abilities, and learning styles. By analyzing data on student performance, engagement, and preferences, AI algorithms could dynamically adapt the content, pace, and delivery of educational materials to optimize learning outcomes. This could involve recommending specific resources, adjusting the difficulty level of assignments, or providing targeted feedback and support. Personalized AI-driven learning could help students stay motivated, address their weaknesses, and excel in their strengths, ultimately leading to improved academic performance and a more fulfilling educational journey.",,,,,
-How might we use AI to improve healthcare diagnostics and treatment planning?,Discovery,Medium,Low,"AI has the capacity to transform healthcare by assisting medical professionals in making more accurate and efficient diagnoses and treatment decisions. Machine learning algorithms can analyze vast amounts of patient data, including medical records, imaging scans, and genetic information, to identify patterns and correlations that may be difficult for humans to discern. This could lead to earlier detection of diseases, more precise diagnoses, and personalized treatment plans based on a patient's specific health profile. Additionally, AI-powered tools could help streamline clinical workflows, reduce medical errors, and provide decision support to healthcare providers, ultimately improving patient outcomes and reducing healthcare costs.",,,,,
-How might we employ AI to optimize resource allocation and reduce waste in various industries?,Discovery,Medium,Low,"AI can play a crucial role in optimizing resource allocation and reducing waste across various industries, from manufacturing to agriculture to energy. By analyzing real-time data on production processes, supply chains, and consumer demand, AI algorithms can help businesses make more informed decisions about how to allocate resources efficiently. This could involve predicting equipment failures and scheduling preventive maintenance, optimizing inventory levels to minimize waste, or dynamically adjusting production lines to meet changing market demands. AI-driven resource optimization could lead to significant cost savings, reduced environmental impact, and improved overall operational efficiency for businesses.",,,,,
+How might we use AI to improve healthcare diagnostics and treatment planning?,Discovery,Medium,Medium,"AI has the capacity to transform healthcare by assisting medical professionals in making more accurate and efficient diagnoses and treatment decisions. Machine learning algorithms can analyze vast amounts of patient data, including medical records, imaging scans, and genetic information, to identify patterns and correlations that may be difficult for humans to discern. This could lead to earlier detection of diseases, more precise diagnoses, and personalized treatment plans based on a patient's specific health profile. Additionally, AI-powered tools could help streamline clinical workflows, reduce medical errors, and provide decision support to healthcare providers, ultimately improving patient outcomes and reducing healthcare costs.",,,,,
+How might we employ AI to optimize resource allocation and reduce waste in various industries?,Discovery,Medium,High,"AI can play a crucial role in optimizing resource allocation and reducing waste across various industries, from manufacturing to agriculture to energy. By analyzing real-time data on production processes, supply chains, and consumer demand, AI algorithms can help businesses make more informed decisions about how to allocate resources efficiently. This could involve predicting equipment failures and scheduling preventive maintenance, optimizing inventory levels to minimize waste, or dynamically adjusting production lines to meet changing market demands. AI-driven resource optimization could lead to significant cost savings, reduced environmental impact, and improved overall operational efficiency for businesses.",,,,,
 How might we harness AI to enhance public safety and security?,Discovery,Low,Low,"AI has the potential to significantly enhance public safety and security by enabling more effective monitoring, prediction, and response to potential threats. Computer vision algorithms can analyze video footage from surveillance cameras to detect suspicious activities or individuals, while natural language processing can monitor online communications to identify potential security risks. AI-powered predictive policing tools can analyze crime data to forecast where and when crimes are likely to occur, allowing law enforcement agencies to allocate resources more effectively. Additionally, AI can assist in emergency response by optimizing resource deployment, providing real-time situational awareness, and supporting decision-making in high-pressure situations.",,,,,
 How might we utilize AI to foster creativity and innovation in various fields?,Discovery,High,Low,"While AI is often associated with automation and efficiency, it also has the potential to foster creativity and innovation across various fields, from art and design to scientific research. Generative AI models can be used to create novel designs, artworks, or even musical compositions by learning from existing examples and combining elements in unique ways. In scientific research, AI can help identify promising new avenues for exploration by analyzing vast amounts of data and identifying patterns or correlations that humans might overlook. By providing new tools and inspiration, AI can augment human creativity and accelerate the pace of innovation in various domains.",,,,,
 How might we apply AI to promote environmental sustainability and combat climate change?,Discovery,High,Low,"AI can be a powerful tool in the fight against climate change and the promotion of environmental sustainability. Machine learning algorithms can analyze satellite imagery and sensor data to monitor deforestation, track wildlife populations, and detect changes in land use patterns. AI can also optimize renewable energy systems by predicting energy demand, optimizing power generation and distribution, and improving the efficiency of energy storage technologies. In agriculture, AI-powered precision farming techniques can help reduce water and pesticide use while maximizing crop yields. By providing insights and optimizations across various sectors, AI can support more sustainable and environmentally friendly practices on a global scale.",,,,,
@@ -3018,3 +3018,79 @@ energy source for aviation
 Resources at NASA - physics base computation modeling, supercomputing, turbo machinery and electric machine experts.  Outside NASA:  DOE, AFOSR, DOD, Universities
 Enhanced understanding of immunology, ecology, and food production.
 The ATP Synthase happens in chloroplasts of plant cells and mitochondria in other cells.  It is explored from a biology perspective. The whitespace is how it is interpreted as an energy conversion process.",,,,,
+Smart Structures and Systems Across Aviation and Civil Infrastructure ,Discovery,,Very High,"Research into smart structures and systems can provide critical insights: how might we shift to proactive maintenance of critical structures to reduce weight, increase uptime, and  
+improve longevity? 
+
+Advancements to smart structures and systems can improve safety and enable cost-effective decision making in maintenance and repair, both for aircraft and for civil infrastructure such as structurally deficient bridges. This is a case where aviation technology can learn from early adopters in civil infrastructure inspection and monitoring, and use NASA's engineering expertise to advance this technology area for mutual benefit.  
+
+In this opportunity concept report (OCR), we describe prospective research avenues in smart structures and systems to improve aircraft monitoring and inspection, with mutual benefit to bridge monitoring. We’ve also included a narrative survey of the problem space in bridge monitoring and aircraft health management stemming from findings during a site visit, conversations with subject matter experts, and targeted literature review. The survey has emphasis on relevant technologies, economic impact, feasibility, regulatory environment, and alignment with NASA’s mission. 
+
+Three solution vectors are outlined: (1) unmanned aircraft system (UAS) based automated inspection, (2) wireless distributed sensing, and (3) digital twin for reliability management. The UAS-based inspection and wireless distributed sensing complement each other’s strengths in providing safety improvements, with potential for disruptive economic impact by reducing maintenance costs and increasing aircraft longevity. Similar advantages apply to bridge and other infrastructure monitoring and inspection. An assessment of prospective research areas in the maturation path is provided, for example: system integration, demonstration cases, leveraging complementary inspection modalities, data format representation, and visualization needs.  
+
+Core research and development areas emphasize aspects related to prototyping, system integration, demonstration for aeronautics impact, and digital twin development for cross-cutting use cases. The opportunity area includes significant potential for partnership across NASA groups, across programs, with other governmental agencies, with commercial entities, and with academic institutions. This area provides a unique opportunity for collaboration with the civil engineering research community, providing for cross-pollination between two seemingly disparate fields that are targeting similar underlying technological advancements. 
+
+Investment in this technology area fits under “system-wide safety assurance” in NASA’s core strategic objective “Drive efficient and sustainable aviation” ?[1]?. NASA's ""for the benefit of all"" mandate makes this opportunity to serve two communities a good fit for Convergent Aeronautics Solutions (CAS).",,,,,
+"Unlocking the UAS Supply Chain, US Manufacturing Revitalization, and Rural UAS Use Cases",Discovery,,Very High,"THE PROBLEM 
+
+A common need across government, the public, and industry is an accessible path to affordable, US-made unmanned aerial vehicle/unmanned aerial systems (UAS) technology. This accessible path includes US-based manufacturing with reasonable procurement processes and prices, intellectual property (IP) ownership, and incentives for industry to take on innovation risks. Additionally, our research has shown that there is a need for autonomous systems to provide technology innovation for various applications. None of these needs-based concepts can move into implementation at scale because of supply chain and manufacturing issues. 
+
+WHAT IF… 
+
+NASA invests in creating a UAS Applications Innovation Consortium to revamp the relationship between small business and government as well as analyze the state of the US manufactured drone industry. This consortium will: 
+
+Develop novel use cases that have the greatest potential for public good, focused on applications in rural America. 
+
+Bring these use cases to teams at NASA with external collaborators to develop requirements and preliminary hardware designs for sustainably made (modular, repairable) UAS vehicles. 
+
+Conduct a supply-chain gap analysis to identify what is currently missing in the US-based supply chain to build and implement the UAS public use-case designs. 
+
+Deliver the analysis to the NASA Convergent Aeronautics Solutions (CAS) teams who will then work with industry and government partners to build and test the UAS public use-case designs using only US-manufactured parts for most or all components. 
+
+ ",,,,,
+A Future-Proofed Aviation Workforce - Leapfrogging Workforce Shortages and Building Rural Resiliency with AR-VR,Discovery,,Very High,"Skilled worker shortages are forecast in all sectors of aviation, including pilots and maintenance/repair technicians. The use of Augmented Reality and Virtual Reality (AR/VR) devices and technologies are becoming standard equipment in many industries requiring trained workers to maintain and repair increasingly complex systems. Interviews with industry SMEs and our own online research indicate that pilot training is being modernized by the use of AR/VR in many of the larger aviation schools. This research also clearly identified a workforce and safety gap: certified UAS repair and maintenance technicians.  
+
+The Connecting Rural Communities and Capabilities, (3C), sprint team explored how NASA might improve the lives and livelihoods of people in rural America. Workforce development, reskilling, and combatting “brain drain” as young people move from rural to urban centers were consistent challenges we heard in our research with rural stakeholders. Using AR/VR is an effective way to provide access to curriculum regardless of location and can bridge other access gaps for people with disabilities and other barriers such as distance or economic disadvantage. By leveraging trends identified in aviation workforce gaps as well as emerging technological capabilities, NASA is uniquely positioned to contribute to reducing this growing gap in workforce while simultaneously supporting economic resilience across America. 
+
+The recent release of advanced AR/VR technologies (e.g. Apple’s Vision Pro, MS Hololens, and others) and development platforms indicates that hardware and software have reached a critical stabilizing moment: enduring capabilities with tailorable, modular, upgradable hardware and software.  
+
+Promoting this area will also require collaboration with the FAA to develop and modernize the training requirements of UAS technicians as well as working with academia and industry to adopt this new technology on a broad basis and keep pace with innovation. Further collaboration with state and local economic development activities will help ensure equity across diverse populations and economic circumstances. 
+
+Additionally, NASA’s own workforce could ultimately benefit from innovation in training. Dome simulators for pilots and astronauts cost $2-4K per hour compared to mere hundreds of dollars per hour with VR/AR according to Herbert Schilling who leads the Scientific Computing and Visualization Team and Graphics and Visualization (GVIS) Lab at Glenn Research Center. Further, faster training could solve huge turnover issues in rocket maintenance as they are —according to one NASA Stakeholder in the Space directorate—""hiring anyone they can find."" Current NASA AR/VR efforts have been oriented towards data visualization. By developing and applying AR/VR technology to UAS maintenance, NASA solves one of its own issues in maintaining a reliable fleet of UAS to support its various missions. This OCR’s continuation could elevate and validate AR/VR for critical tasks and workforce development.",,,,,
+High Voltage Cables for Electrified Aircraft and Rural Power Grids,Discovery,,Very High,"The Problem
+Rural electric transmission and grid limitations currently hinder
+economic progress and crisis response capabilities in rural areas.
+Specifically, this results in (1) reduced capacity for economic
+growth and new industry development, (2) Vulnerability to power
+outages during natural disasters or extreme weather events, and
+(3) Challenges in integrating renewable energy sources.
+Concept/Solution
+WHAT IF EXISTING POWERLINE CONDUCTORS
+WERE REPLACED WITH NASA-DEVELOPED
+LIGHTWEIGHT WIRE TECHNOLOGY?
+We can explore the opportunity to co-design,
+demonstrate, and test systems that benefit both
+electric aircraft development and rural grid enhancement.
+This collaborative approach may create economies of
+scale, driving innovation and cost-effectiveness in both
+sectors simultaneously. If successful, this effort could
+catalyze new industrial opportunities that utilize rural
+America in new, accessible, and transformative ways.Barriers: Lack of transmission capability, landowner resistance to new easements, high cost and extensive
+distances, limitations to manufacturing processes
+Desirability: Highly desired by power cooperatives, desired by customers of power companies, landowners
+Feasibility: Technology is being tested and demonstrated in lab; appears to be feasible with continued optimization
+and production
+Viability: Economies of scale are likely needed to make affordable; need to increase scale of materials production
+Key Stakeholders: Power Co-ops, electricity transmission service providers, rural communities, farms and ranches,
+aircraft manufacturers, rural grids, airports, NASA, ARMD
+Transformational Potential for Aeronautics: Significant; an improved and highly efficient grid may provide the
+power needed for future fleets of electrified aircraft. Uses TTT-developed technology…
+Powering Rural Futures: NASA's High-Voltage Cabling
+Innovations for Grid Resilience
+Why should NASA Aeronautics address this now?
+• Catalyze the transfer of technology; the technology and relationships exist
+• Optimization is needed for flight; nearing readiness for grid-relevant tests
+• “Nobody likes to be serial number one and we’re not either.” Bobby Nasset, Supervisor
+of Civil Engineering and Project Manager, Basin Electric Power Cooperative
+• Analogous to the copper to fiber transition; Spaceflight launch services transition from
+NASA to commercial sector; DOE is investing BILLION$ in grid enhancements…
+",,,,,

@@ -24,22 +24,24 @@ fetch('./output.json')
             sourceShapeMap[source] = nodeShapes[index % nodeShapes.length];
         });
 
+        //#ffa500
 
         // Define a color scale based on maturity levels
         const colorScale = {
-            'Low': '#90c4a2',
-            'Medium': '#41b6c4',
-            'High': '#2c7fb8',
-            'Super High': '#253494',
-            'X1': '#41c491',
+            //'#90c4a2',
+            'Low': '#a1cdb0',
+            'Medium': '#4a8a5b',
+            'High': '#5e70a9',
+            'Very High': '#9c41c4',
+            'X1': '#c44169',
             'whitespace': '#942534'
         };
         const sourceList = {
             'Low': '#90c4a2',
-            'Medium': '#41b6c4',
-            'High': '#2c7fb8',
-            'Super High': '#253494',
-            'X1': '#41c491',
+            'Medium': '#41c491',
+            'High': '#41b6c4',
+            'Very High': '#2c7fb8 ',
+            'X1': '#253494',
             'whitespace': '#942534'
         };
 
