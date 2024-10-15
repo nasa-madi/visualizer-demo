@@ -29,13 +29,13 @@ fetch('./output.json')
         // Define a color scale based on maturity levels
         const colorScale = {
             //'#90c4a2',
-            'Low': '#90c4a2',
-            'Medium': '#41b6c4',
-            'High': '#97bbf5',
-            'Very High': '#253494',
-            'X1': '#41c491',
-            'X-Low': '#318dcd', 
-            'X-Medium': '#b8a7f9'
+            'Low': '#8fbc8f',
+            'Medium': '#20b2aa',
+            'High': '#4197e5',
+            'Very High': '#bf94e4',
+            'X1/Execution': '#3c4bab',
+            'X-Low': '#41c491', 
+            'X-Medium': '#318dcd'
         };
         const sourceList = {
             'Low': '#90c4a2',
