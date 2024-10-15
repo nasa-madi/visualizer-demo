@@ -31,20 +31,20 @@ fetch('./output.json')
             //'#90c4a2',
             'Low': '#90c4a2',
             'Medium': '#41b6c4',
-            'High': '#318dcd',
+            'High': '#97bbf5',
             'Very High': '#253494',
             'X1': '#41c491',
-            'X-Low': '#97bbf5', 
-            'X-Medium': '#b8a7f9',
-            'X-Low-neocolonial': '#ffbfd7', 
+            'X-Low': '#318dcd', 
+            'X-Medium': '#b8a7f9'
         };
         const sourceList = {
             'Low': '#90c4a2',
-            'Medium': '#41c491',
-            'High': '#41b6c4',
-            'Very High': '#2c7fb8 ',
-            'X1': '#253494',
-            'whitespace': '#942534'
+            'Medium': '#41b6c4',
+            'High': '#97bbf5',
+            'Very High': '#253494',
+            'X1': '#41c491',
+            'X-Low': '#318dcd', 
+            'X-Medium': '#b8a7f9'
         };
 
         // Map maturity levels to colors
