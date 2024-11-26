@@ -13,24 +13,47 @@ function buildVisualization(pathData) {
     fetch(pathData)
         .then(response => response.json())
         .then(embeddings => {
-            // Add slider HTML element
+            // Create a container for all controls
             const controls = d3.select('#graph')
                 .insert('div', 'svg')
                 .attr('class', 'controls');
             
-            controls.append('label')
+            // Cluster slider controls
+            const sliderDiv = controls.append('div')
+                .attr('class', 'slider-control');
+            
+            sliderDiv.append('label')
                 .text('Number of clusters: ');
             
-            controls.append('input')
+            sliderDiv.append('input')
                 .attr('type', 'range')
                 .attr('min', '2')
                 .attr('max', '10')
                 .attr('value', '5')
                 .attr('id', 'cluster-slider');
                 
-            controls.append('span')
+            sliderDiv.append('span')
                 .attr('id', 'cluster-value')
                 .text('5');
+
+            // Source filter dropdown
+            const filterDiv = controls.append('div')
+                .attr('class', 'filter-control');
+
+                filterDiv.append('label')
+                .text('Filter by source: ');
+            
+                const uniqueSources = ['All', ...new Set(embeddings.map(item => item.source))];
+            
+                filterDiv.append('select')
+                    .attr('id', 'source-filter')
+                    .selectAll('option')
+                    .data(uniqueSources)
+                    .enter()
+                    .append('option')
+                    .text(d => d)
+                    .attr('value', d => d);
+                
             // Extract the embedding vectors from the loaded data
             const embeddingVectors = embeddings.map(item => item.embedding);
             const maturityLevels = embeddings.map(item => item.source);
@@ -44,36 +67,55 @@ function buildVisualization(pathData) {
             const reducedData = pca.transform();
             
             // Initial visualization
-            updateVisualization(reducedData, sources, prompts, 5);
+             // Initial visualization - add 'All' as the default selectedSource
+             const initialK = 5;
+             const initialSource = 'All';
+             updateVisualization(reducedData, sources, prompts, initialK, initialSource);
 
             // Add event listener for slider
             d3.select('#cluster-slider').on('input', function() {
                 const k = parseInt(this.value);
+                const selectedSource = d3.select('#source-filter').property('value');
                 d3.select('#cluster-value').text(k);
                 // Clear previous visualization
                 d3.select('#graph svg').remove();
-                updateVisualization(reducedData, sources, prompts, k);
+                updateVisualization(reducedData, sources, prompts, k, selectedSource);
+            });
+             // Filter event listener
+             d3.select('#source-filter').on('change', function() {
+                const k = parseInt(d3.select('#cluster-slider').property('value'));
+                const selectedSource = this.value;
+                d3.select('#graph svg').remove();
+                updateVisualization(reducedData, sources, prompts, k, selectedSource);
             });
         });
     }
 // Add this new function to handle visualization updates
-function updateVisualization(reducedData, sources, prompts, k) {
+function updateVisualization(reducedData, sources, prompts, k, selectedSource) {
+    // Filter the data based on selected source
+    const filteredIndices = selectedSource === 'All' 
+        ? [...Array(sources.length).keys()]
+        : sources.map((s, i) => s === selectedSource ? i : -1).filter(i => i !== -1);
+    
+    const filteredData = filteredIndices.map(i => reducedData[i]);
+    const filteredSources = filteredIndices.map(i => sources[i]);
+    const filteredPrompts = filteredIndices.map(i => prompts[i]);
         // Perform k-means clustering with new k value
-         const clusterAssignments = kMeans(reducedData, k, 100);
+         const clusterAssignments = kMeans(filteredData, k, 100);
 
          // Perform dimensionality reduction (using first two dimensions for simplicity)
-         const points = reducedData.map((vector, index) => ({
+         const points = filteredData.map((vector, index) => ({
             x: vector[0],
             y: vector[1],
-            source: sources[index],
-            prompt: prompts[index],
+            source: filteredSources[index],
+            prompt: filteredPrompts[index],
             cluster: clusterAssignments[index]
         }));
 
          // Set up dimensions and margins
-        const margin = {top: 20, right: 180, bottom: 30, left: 50};
-        const width = 1200 - margin.left - margin.right;
-        const height = 600 - margin.top - margin.bottom;
+        const margin = {top: 20, right: 250, bottom: 300, left: 50};
+        const width = 1600 - margin.left - margin.right;
+        const height = 1200 - margin.top - margin.bottom;
 
 
         // Create SVG container
@@ -106,10 +148,10 @@ function updateVisualization(reducedData, sources, prompts, k) {
         svg.append('g')
             .call(d3.axisLeft(yScale));
         
-        // Fix the label creation and handling
-        const tooltip = svg.append("div")
-                .attr("class", "tooltip")
-                .style("opacity", 0);
+
+        const tooltip = d3.select("body").append("div")
+        .attr("class", "tooltip")
+        .style("opacity", 0);
             
             // Show label on mouseover
         function showLabel(event, d) {
@@ -126,39 +168,60 @@ function updateVisualization(reducedData, sources, prompts, k) {
                 .style('visibility', 'hidden');
             }
         
-            // Add points
-            svg.selectAll('circle')
-                .data(points)
-                .enter()
-                .append('circle')
-                .attr('cx', d => xScale(d.x))
-                .attr('cy', d => yScale(d.y))
-                .attr('r', 5)
-                .style('fill', d => colorScale(d.cluster))
-                //.style('fill', d => colorScale(d.source)) // old color scale based on source
-                .style('opacity', 0.7)
-                // Add tooltip on hover
-                .on('mouseover', function(event, d) {
-                    d3.select(this)
-                        .style('fill', 'red')
-                        .attr('r', 8);
+        svg.selectAll('circle')
+            .data(points)
+            .enter()
+            .append('circle')
+            .attr('cx', d => xScale(d.x))
+            .attr('cy', d => yScale(d.y))
+            .attr('r', 5)
+            .style('fill', d => colorScale(d.cluster))
+            .style('opacity', 0.6)
+            .on('mouseover', function(event, d) {
+                // Point styling
+                d3.select(this)
+                    .transition()
+                    .duration(200)
+                    .attr('r', 8)
+                    .style('opacity', 1);
+                
+                // Tooltip display
+                tooltip.transition()
+                    .duration(200)
+                    .style('opacity', 0.9);
                     
-                    // Show the corresponding label
-                    d3.select(`.label-${points.indexOf(d)}`)
-                        .style('visibility', 'visible')
-                        .attr('x', xScale(d.x) + 10)
-                        .attr('y', yScale(d.y) - 10);
-                })
-                .on('mouseout', function(event , d) {
-                   // Reset point style
-                   d3.select(this)
-                   .style('fill', d => colorScale(d.cluster))
-                   .attr('r', 5);
+                tooltip.html(`Prompt: ${d.prompt}`)
+                    .style('left', (event.pageX + 10) + 'px')
+                    .style('top', (event.pageY - 10) + 'px');
+            })
+            .on('mouseout', function(event, d) {
+                // Reset point styling
+                d3.select(this)
+                    .transition()
+                    .duration(200)
+                    .attr('r', 5)
+                    .style('opacity', 0.6)
+                    .style('fill', d => colorScale(d.cluster));
+        
+                // Hide tooltip
+                tooltip.transition()
+                    .duration(500)
+                    .style('opacity', 0);   
+    });
+
+
+// tooltip.html(`Prompt: ${d.prompt}`);
+//                 })
+//                 .on('mouseout', function(event , d) {
+//                    // Reset point style
+//                    d3.select(this)
+//                    .style('fill', d => colorScale(d.cluster))
+//                    .attr('r', 5);
                
-                    // Hide the label
-                    d3.select(`.label-${points.indexOf(d)}`)
-                        .style('visibility', 'hidden');
-                });
+//                     // Hide the label
+//                     d3.select(`.label-${points.indexOf(d)}`)
+//                         .style('visibility', 'hidden');
+//                 });
             // Add legend
             const legendSpacing = 25;
             const legend = svg.append('g')
