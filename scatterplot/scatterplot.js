@@ -16,7 +16,8 @@ function buildVisualization(pathData) {
             // Create a container for all controls
             const controls = d3.select('#graph')
                 .insert('div', 'svg')
-                .attr('class', 'controls');
+                .attr('class', 'controls')
+                .style('padding-left', '50px');
             
             // Cluster slider controls
             const sliderDiv = controls.append('div')
@@ -103,6 +104,9 @@ function updateVisualization(reducedData, sources, prompts, k, selectedSource) {
         // Perform k-means clustering with new k value
          const clusterAssignments = kMeans(filteredData, k, 100);
 
+         // Get the centroids from k-means
+         const centroids = getCentroids(filteredData, clusterAssignments, k);
+
          // Perform dimensionality reduction (using first two dimensions for simplicity)
          const points = filteredData.map((vector, index) => ({
             x: vector[0],
@@ -113,9 +117,9 @@ function updateVisualization(reducedData, sources, prompts, k, selectedSource) {
         }));
 
          // Set up dimensions and margins
-        const margin = {top: 20, right: 250, bottom: 300, left: 50};
-        const width = 1600 - margin.left - margin.right;
-        const height = 1200 - margin.top - margin.bottom;
+        const margin = {top: 20, right: 250, bottom: 300, left: 100};
+        const width = 1400 - margin.left - margin.right;
+        const height = 1100 - margin.top - margin.bottom;
 
 
         // Create SVG container
@@ -270,6 +274,19 @@ function updateVisualization(reducedData, sources, prompts, k, selectedSource) {
                             ${d.prompt}
                         </div>
                     `);
+
+    // After creating the circles for data points, add the centroids
+    svg.selectAll('.centroid')
+        .data(centroids)
+        .enter()
+        .append('circle')
+        .attr('class', 'centroid')
+        .attr('cx', d => xScale(d[0]))
+        .attr('cy', d => yScale(d[1]))
+        .attr('r', 7)
+        .style('fill', 'none')
+        .style('stroke', (d, i) => colorScale(i))
+        .style('stroke-width', 2);
 }
 
 // Helper function to calculate cosine similarity between two vectors
@@ -378,4 +395,28 @@ function euclideanDistance(a, b) {
 
 function arraysEqual(a, b) {
     return a.every((val, index) => val === b[index]);
+}
+
+// Add this helper function to calculate centroids
+function getCentroids(data, assignments, k) {
+    const centroids = Array(k).fill().map(() => Array(data[0].length).fill(0));
+    const counts = Array(k).fill(0);
+    
+    // Sum up all points in each cluster
+    data.forEach((point, i) => {
+        const cluster = assignments[i];
+        counts[cluster]++;
+        point.forEach((val, j) => {
+            centroids[cluster][j] += val;
+        });
+    });
+    
+    // Calculate average for each cluster
+    centroids.forEach((centroid, i) => {
+        centroid.forEach((sum, j) => {
+            centroids[i][j] = sum / (counts[i] || 1);
+        });
+    });
+    
+    return centroids;
 }
