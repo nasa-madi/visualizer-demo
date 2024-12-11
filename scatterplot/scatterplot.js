@@ -128,11 +128,11 @@ function buildVisualization(pathData) {
             voronoiToggleDiv.append('input')
                 .attr('type', 'checkbox')
                 .attr('id', 'voronoi-toggle')
-                .property('checked', true);  // Visible by default
+                .property('checked', false);  // Changed from true to false
 
             voronoiToggleDiv.append('label')
                 .attr('for', 'voronoi-toggle')
-                .text(' Show cluster regions');
+                .text(' Show cluster regions/Voronoi');
 
             // Add the event listener
             voronoiToggleDiv.select('#voronoi-toggle').on('change', function() {
@@ -376,7 +376,8 @@ function updateVisualization(reducedData, sources, prompts, k, selectedSource) {
         .attr('d', (_, i) => voronoi.renderCell(i))
         .style('fill', (_, i) => colorScale(i))
         .style('fill-opacity', 0.1)
-        .style('stroke', 'none');
+        .style('stroke', 'none')
+        .style('opacity', 0);  // Start hidden
 
     // Move this before the points and lines
     svg.append('g')
@@ -389,7 +390,22 @@ function updateVisualization(reducedData, sources, prompts, k, selectedSource) {
         .style('fill', 'none')
         .style('stroke', '#999')
         .style('stroke-width', 0.5)
-        .style('stroke-opacity', 0.3);
+        .style('stroke-opacity', 0.3)
+        .style('opacity', 0);  // Start hidden
+
+    // After the centroids circles code, add centroid labels:
+    svg.selectAll('.centroid-label')
+        .data(centroids)
+        .enter()
+        .append('text')
+        .attr('class', 'centroid-label')
+        .attr('x', d => xScale(d[0]))
+        .attr('y', d => yScale(d[1]) - 10)  // Position slightly above the centroid
+        .text((d, i) => `Cluster ${i + 1}`)
+        .style('text-anchor', 'middle')
+        .style('font-size', '12px')
+        .style('font-weight', 'bold')
+        .style('fill', (d, i) => colorScale(i));
 }
 
 // Helper function to calculate cosine similarity between two vectors
