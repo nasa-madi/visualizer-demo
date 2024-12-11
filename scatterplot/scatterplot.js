@@ -77,17 +77,41 @@ function buildVisualization(pathData) {
             d3.select('#cluster-slider').on('input', function() {
                 const k = parseInt(this.value);
                 const selectedSource = d3.select('#source-filter').property('value');
+                const showLines = d3.select('#line-toggle').property('checked');
                 d3.select('#cluster-value').text(k);
-                // Clear previous visualization
                 d3.select('#graph svg').remove();
                 updateVisualization(reducedData, sources, prompts, k, selectedSource);
+                d3.select('.lines-group').style('opacity', showLines ? 1 : 0);
             });
              // Filter event listener
              d3.select('#source-filter').on('change', function() {
                 const k = parseInt(d3.select('#cluster-slider').property('value'));
                 const selectedSource = this.value;
+                const showLines = d3.select('#line-toggle').property('checked');
                 d3.select('#graph svg').remove();
                 updateVisualization(reducedData, sources, prompts, k, selectedSource);
+                d3.select('.lines-group').style('opacity', showLines ? 1 : 0);
+            });
+
+            // Add line toggle control
+            const lineToggleDiv = controls.append('div')
+                .attr('class', 'line-control')
+                .style('margin-top', '10px');
+
+            lineToggleDiv.append('input')
+                .attr('type', 'checkbox')
+                .attr('id', 'line-toggle');
+
+            lineToggleDiv.append('label')
+                .attr('for', 'line-toggle')
+                .text(' Show lines to centroids');
+
+            lineToggleDiv.select('#line-toggle').on('change', function() {
+                const isChecked = d3.select(this).property('checked');
+                d3.select('.lines-group')
+                    .transition()
+                    .duration(300)
+                    .style('opacity', isChecked ? 1 : 0);
             });
         });
     }
@@ -287,6 +311,25 @@ function updateVisualization(reducedData, sources, prompts, k, selectedSource) {
         .style('fill', 'none')
         .style('stroke', (d, i) => colorScale(i))
         .style('stroke-width', 2);
+
+    // Create a group for the lines (add this before the points)
+    const linesGroup = svg.append('g')
+        .attr('class', 'lines-group')
+        .style('opacity', 0); // Hidden by default
+
+    // Add lines from points to centroids
+    linesGroup.selectAll('.centroid-line')
+        .data(points)
+        .enter()
+        .append('line')
+        .attr('class', 'centroid-line')
+        .attr('x1', d => xScale(d.x))
+        .attr('y1', d => yScale(d.y))
+        .attr('x2', d => xScale(centroids[d.cluster][0]))
+        .attr('y2', d => yScale(centroids[d.cluster][1]))
+        .style('stroke', d => colorScale(d.cluster))
+        .style('stroke-width', 0.5)
+        .style('stroke-opacity', 0.2);
 }
 
 // Helper function to calculate cosine similarity between two vectors
