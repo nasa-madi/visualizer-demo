@@ -78,19 +78,25 @@ function buildVisualization(pathData) {
                 const k = parseInt(this.value);
                 const selectedSource = d3.select('#source-filter').property('value');
                 const showLines = d3.select('#line-toggle').property('checked');
+                const showVoronoi = d3.select('#voronoi-toggle').property('checked');
                 d3.select('#cluster-value').text(k);
                 d3.select('#graph svg').remove();
                 updateVisualization(reducedData, sources, prompts, k, selectedSource);
                 d3.select('.lines-group').style('opacity', showLines ? 1 : 0);
+                d3.selectAll('.voronoi-background, .voronoi-borders')
+                    .style('opacity', showVoronoi ? 1 : 0);
             });
              // Filter event listener
              d3.select('#source-filter').on('change', function() {
                 const k = parseInt(d3.select('#cluster-slider').property('value'));
                 const selectedSource = this.value;
                 const showLines = d3.select('#line-toggle').property('checked');
+                const showVoronoi = d3.select('#voronoi-toggle').property('checked');
                 d3.select('#graph svg').remove();
                 updateVisualization(reducedData, sources, prompts, k, selectedSource);
                 d3.select('.lines-group').style('opacity', showLines ? 1 : 0);
+                d3.selectAll('.voronoi-background, .voronoi-borders')
+                    .style('opacity', showVoronoi ? 1 : 0);
             });
 
             // Add line toggle control
@@ -109,6 +115,29 @@ function buildVisualization(pathData) {
             lineToggleDiv.select('#line-toggle').on('change', function() {
                 const isChecked = d3.select(this).property('checked');
                 d3.select('.lines-group')
+                    .transition()
+                    .duration(300)
+                    .style('opacity', isChecked ? 1 : 0);
+            });
+
+            // Add Voronoi toggle control
+            const voronoiToggleDiv = controls.append('div')
+                .attr('class', 'voronoi-control')
+                .style('margin-top', '10px');
+
+            voronoiToggleDiv.append('input')
+                .attr('type', 'checkbox')
+                .attr('id', 'voronoi-toggle')
+                .property('checked', true);  // Visible by default
+
+            voronoiToggleDiv.append('label')
+                .attr('for', 'voronoi-toggle')
+                .text(' Show cluster regions');
+
+            // Add the event listener
+            voronoiToggleDiv.select('#voronoi-toggle').on('change', function() {
+                const isChecked = d3.select(this).property('checked');
+                d3.selectAll('.voronoi-background, .voronoi-borders')
                     .transition()
                     .duration(300)
                     .style('opacity', isChecked ? 1 : 0);
@@ -330,6 +359,37 @@ function updateVisualization(reducedData, sources, prompts, k, selectedSource) {
         .style('stroke', d => colorScale(d.cluster))
         .style('stroke-width', 0.5)
         .style('stroke-opacity', 0.2);
+
+    // Create Voronoi background
+    const delaunay = d3.Delaunay.from(
+        centroids.map(d => [xScale(d[0]), yScale(d[1])])
+    );
+    const voronoi = delaunay.voronoi([0, 0, width, height]);
+
+    // Add colored backgrounds using Voronoi cells
+    svg.append('g')
+        .attr('class', 'voronoi-background')
+        .selectAll('path')
+        .data(centroids)
+        .enter()
+        .append('path')
+        .attr('d', (_, i) => voronoi.renderCell(i))
+        .style('fill', (_, i) => colorScale(i))
+        .style('fill-opacity', 0.1)
+        .style('stroke', 'none');
+
+    // Move this before the points and lines
+    svg.append('g')
+        .attr('class', 'voronoi-borders')
+        .selectAll('path')
+        .data(centroids)
+        .enter()
+        .append('path')
+        .attr('d', (_, i) => voronoi.renderCell(i))
+        .style('fill', 'none')
+        .style('stroke', '#999')
+        .style('stroke-width', 0.5)
+        .style('stroke-opacity', 0.3);
 }
 
 // Helper function to calculate cosine similarity between two vectors
