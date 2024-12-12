@@ -1,389 +1,258 @@
 // Load the embeddings from output.json
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", async function() {
     var currentPath = window.location.pathname;
     console.log("Current Path:", currentPath);
     if (currentPath.endsWith("/")){
         currentPath = currentPath.slice(0, -1);
     }
-    buildVisualization(currentPath+"/output.json");
+    
+    // Load data and compute PCA once
+    const response = await fetch(currentPath+"/output-whitespace.json");
+    const embeddings = await response.json();
+    
+    // Extract data
+    const embeddingVectors = embeddings.map(item => item.embedding);
+    const sources = embeddings.map(item => item.source);
+    const prompts = embeddings.map(item => item.prompt);
+    const maturity = embeddings.map(item => item.maturity);
+    
+    // Compute PCA once for all data
+    const pca = new druid.PCA(embeddingVectors, {d: 2, seed: 42});
+    const allReducedData = pca.transform();
+    
+    // Compute clusters once with k=5
+    const k = 5;
+    const staticClusterAssignments = kMeans(allReducedData, k, 100);
+    const staticCentroids = getCentroids(allReducedData, staticClusterAssignments, k);
+    
+    // Initialize visualization with static clustering
+    buildVisualization(embeddings, allReducedData, sources, prompts, maturity, 
+        staticClusterAssignments, staticCentroids);
 });
 
-function buildVisualization(pathData) {
-    fetch(pathData)
-        .then(response => response.json())
-        .then(embeddings => {
-            // Create a container for all controls
-            const controls = d3.select('#graph')
-                .insert('div', 'svg')
-                .attr('class', 'controls')
-                .style('padding-left', '50px');
-            
-            // Cluster slider controls
-            const sliderDiv = controls.append('div')
-                .attr('class', 'slider-control');
-            
-            sliderDiv.append('label')
-                .text('Number of clusters: ');
-            
-            sliderDiv.append('input')
-                .attr('type', 'range')
-                .attr('min', '2')
-                .attr('max', '10')
-                .attr('value', '5')
-                .attr('id', 'cluster-slider');
-                
-            sliderDiv.append('span')
-                .attr('id', 'cluster-value')
-                .text('5');
-
-            // Source filter dropdown
-            const filterDiv = controls.append('div')
-                .attr('class', 'filter-control');
-
-                filterDiv.append('label')
-                .text('Filter by source: ');
-            
-                const uniqueSources = ['All', ...new Set(embeddings.map(item => item.source))];
-            
-                filterDiv.append('select')
-                    .attr('id', 'source-filter')
-                    .selectAll('option')
-                    .data(uniqueSources)
-                    .enter()
-                    .append('option')
-                    .text(d => d)
-                    .attr('value', d => d);
-                
-            // Extract the embedding vectors from the loaded data
-            const embeddingVectors = embeddings.map(item => item.embedding);
-            const maturityLevels = embeddings.map(item => item.source);
-            const prompts = embeddings.map(item => item.prompt);
-            const sources = embeddings.map(item => item.source);
-            const labels = embeddings.map(item => `<span class="maturity">${item.maturityLevels}</span> <span class="source">${item.source}</span><br>${item.prompt}`);
-
-            
-            // Perform PCA dimensionality reduction to 2 dimensions
-            const pca = new druid.PCA(embeddingVectors,{d: 2, seed: 42});
-            const reducedData = pca.transform();
-            
-            // Initial visualization
-             // Initial visualization - add 'All' as the default selectedSource
-             const initialK = 5;
-             const initialSource = 'All';
-             updateVisualization(reducedData, sources, prompts, initialK, initialSource);
-
-            // Add event listener for slider
-            d3.select('#cluster-slider').on('input', function() {
-                const k = parseInt(this.value);
-                const selectedSource = d3.select('#source-filter').property('value');
-                const showLines = d3.select('#line-toggle').property('checked');
-                const showVoronoi = d3.select('#voronoi-toggle').property('checked');
-                d3.select('#cluster-value').text(k);
-                d3.select('#graph svg').remove();
-                updateVisualization(reducedData, sources, prompts, k, selectedSource);
-                d3.select('.lines-group').style('opacity', showLines ? 1 : 0);
-                d3.selectAll('.voronoi-background, .voronoi-borders')
-                    .style('opacity', showVoronoi ? 1 : 0);
-            });
-             // Filter event listener
-             d3.select('#source-filter').on('change', function() {
-                const k = parseInt(d3.select('#cluster-slider').property('value'));
-                const selectedSource = this.value;
-                const showLines = d3.select('#line-toggle').property('checked');
-                const showVoronoi = d3.select('#voronoi-toggle').property('checked');
-                d3.select('#graph svg').remove();
-                updateVisualization(reducedData, sources, prompts, k, selectedSource);
-                d3.select('.lines-group').style('opacity', showLines ? 1 : 0);
-                d3.selectAll('.voronoi-background, .voronoi-borders')
-                    .style('opacity', showVoronoi ? 1 : 0);
-            });
-
-            // Add line toggle control
-            const lineToggleDiv = controls.append('div')
-                .attr('class', 'line-control')
-                .style('margin-top', '10px');
-
-            lineToggleDiv.append('input')
-                .attr('type', 'checkbox')
-                .attr('id', 'line-toggle');
-
-            lineToggleDiv.append('label')
-                .attr('for', 'line-toggle')
-                .text(' Show lines to centroids');
-
-            lineToggleDiv.select('#line-toggle').on('change', function() {
-                const isChecked = d3.select(this).property('checked');
-                d3.select('.lines-group')
-                    .transition()
-                    .duration(300)
-                    .style('opacity', isChecked ? 1 : 0);
-            });
-
-            // Add Voronoi toggle control
-            const voronoiToggleDiv = controls.append('div')
-                .attr('class', 'voronoi-control')
-                .style('margin-top', '10px');
-
-            voronoiToggleDiv.append('input')
-                .attr('type', 'checkbox')
-                .attr('id', 'voronoi-toggle')
-                .property('checked', false);  // Changed from true to false
-
-            voronoiToggleDiv.append('label')
-                .attr('for', 'voronoi-toggle')
-                .text(' Show cluster regions/Voronoi');
-
-            // Add the event listener
-            voronoiToggleDiv.select('#voronoi-toggle').on('change', function() {
-                const isChecked = d3.select(this).property('checked');
-                d3.selectAll('.voronoi-background, .voronoi-borders')
-                    .transition()
-                    .duration(300)
-                    .style('opacity', isChecked ? 1 : 0);
-            });
-        });
-    }
-// Add this new function to handle visualization updates
-function updateVisualization(reducedData, sources, prompts, k, selectedSource) {
-    // Filter the data based on selected source
-    const filteredIndices = selectedSource === 'All' 
-        ? [...Array(sources.length).keys()]
-        : sources.map((s, i) => s === selectedSource ? i : -1).filter(i => i !== -1);
+function buildVisualization(embeddings, allReducedData, sources, prompts, maturity, 
+    staticClusterAssignments, staticCentroids) {
     
-    const filteredData = filteredIndices.map(i => reducedData[i]);
-    const filteredSources = filteredIndices.map(i => sources[i]);
-    const filteredPrompts = filteredIndices.map(i => prompts[i]);
-        // Perform k-means clustering with new k value
-         const clusterAssignments = kMeans(filteredData, k, 100);
+    // Create controls first
+    const controls = d3.select('#graph')
+        .insert('div', 'svg')
+        .attr('class', 'controls')
+        .style('padding-left', '50px');
+    
+    // Cluster slider controls
+    const sliderDiv = controls.append('div')
+        .attr('class', 'slider-control');
 
-         // Get the centroids from k-means
-         const centroids = getCentroids(filteredData, clusterAssignments, k);
+    sliderDiv.append('label')
+        .text('Number of clusters: ');
 
-         // Perform dimensionality reduction (using first two dimensions for simplicity)
-         const points = filteredData.map((vector, index) => ({
-            x: vector[0],
-            y: vector[1],
-            source: filteredSources[index],
-            prompt: filteredPrompts[index],
-            cluster: clusterAssignments[index]
-        }));
-
-         // Set up dimensions and margins
-        const margin = {top: 20, right: 250, bottom: 300, left: 100};
-        const width = 1400 - margin.left - margin.right;
-        const height = 1100 - margin.top - margin.bottom;
-
-
-        // Create SVG container
-        const svg = d3.select('#graph')
-                .append('svg')
-                .attr('width', width + margin.left + margin.right)
-                .attr('height', height + margin.top + margin.bottom)
-                .append('g')
-                .attr('transform', `translate(${margin.left},${margin.top})`);
-
-           // Create color scale for clusters
-        const colorScale = d3.scaleOrdinal()
-            .domain([...Array(k).keys()])  // [0, 1, 2, ..., k-1]
-            .range(d3.schemeCategory10);   // Use D3's category10 color scheme
-
-        // Create scales for x and y axes
-        const xScale = d3.scaleLinear()
-            .domain(d3.extent(points, d => d.x))
-            .range([0, width]);
-
-        const yScale = d3.scaleLinear()
-            .domain(d3.extent(points, d => d.y))
-            .range([height, 0]);
-
-          // Add axes
-        svg.append('g')
-            .attr('transform', `translate(0,${height})`)
-            .call(d3.axisBottom(xScale));
-
-        svg.append('g')
-            .call(d3.axisLeft(yScale));
+    sliderDiv.append('input')
+        .attr('type', 'range')
+        .attr('min', '2')
+        .attr('max', '10')
+        .attr('value', '5')
+        .attr('id', 'cluster-slider');
         
+    sliderDiv.append('span')
+        .attr('id', 'cluster-value')
+        .text('5');
+    
+    // Source filter dropdown
+    const filterDiv = controls.append('div')
+        .attr('class', 'filter-control');
 
-        const tooltip = d3.select("body").append("div")
-        .attr("class", "tooltip")
-        .style("opacity", 0);
-            
-            // Show label on mouseover
-        function showLabel(event, d) {
-            labels.filter((_, i) => reducedData[i] === d)
-                .style('visibility', 'visible');
-            d3.select(this)
-                .style('stroke', 'hotpink')
-                .style('stroke-width', '2px');
-        }
-
-        // Hide label on mouseout
-        function hideLabel(event, d) {
-            labels.filter((_, i) => reducedData[i] === d)
-                .style('visibility', 'hidden');
-            }
-        
-        svg.selectAll('circle')
-            .data(points)
+        filterDiv.append('label')
+        .text('Filter by source: ');
+    
+        const uniqueSources = ['All', ...new Set(embeddings.map(item => item.source))];
+    
+        filterDiv.append('select')
+            .attr('id', 'source-filter')
+            .selectAll('option')
+            .data(uniqueSources)
             .enter()
-            .append('circle')
-            .attr('cx', d => xScale(d.x))
-            .attr('cy', d => yScale(d.y))
-            .attr('r', 5)
-            .style('fill', d => colorScale(d.cluster))
-            .style('opacity', 0.6)
-            .on('mouseover', function(event, d) {
-                // Point styling
-                d3.select(this)
-                    .transition()
-                    .duration(200)
-                    .attr('r', 8)
-                    .style('opacity', 1);
-                
-                // Tooltip display
-                tooltip.transition()
-                    .duration(200)
-                    .style('opacity', 0.9);
-                    
-                tooltip.html(`Prompt: ${d.prompt}`)
-                    .style('left', (event.pageX + 10) + 'px')
-                    .style('top', (event.pageY - 10) + 'px');
-            })
-            .on('mouseout', function(event, d) {
-                // Reset point styling
-                d3.select(this)
-                    .transition()
-                    .duration(200)
-                    .attr('r', 5)
-                    .style('opacity', 0.6)
-                    .style('fill', d => colorScale(d.cluster));
+            .append('option')
+            .text(d => d)
+            .attr('value', d => d);
         
-                // Hide tooltip
-                tooltip.transition()
-                    .duration(500)
-                    .style('opacity', 0);   
+    // Add line toggle control with label
+    const lineToggleDiv = controls.append('div')
+        .attr('class', 'line-control')
+        .style('margin-top', '10px');
+
+    lineToggleDiv.append('input')
+        .attr('type', 'checkbox')
+        .attr('id', 'line-toggle')
+        .property('checked', false);
+
+    lineToggleDiv.append('label')
+        .attr('for', 'line-toggle')
+        .text(' Show lines to centroids');
+
+    // Add Voronoi toggle control with label
+    const voronoiToggleDiv = controls.append('div')
+        .attr('class', 'voronoi-control')
+        .style('margin-top', '10px');
+
+    voronoiToggleDiv.append('input')
+        .attr('type', 'checkbox')
+        .attr('id', 'voronoi-toggle')
+        .property('checked', false);
+
+    voronoiToggleDiv.append('label')
+        .attr('for', 'voronoi-toggle')
+        .text(' Show cluster regions / Voronoi');
+
+    // Add back the cluster slider event listener - this computes new clusters for all data
+    d3.select('#cluster-slider').on('input', function() {
+        const k = parseInt(this.value);
+        const selectedSource = d3.select('#source-filter').property('value');
+        const showLines = d3.select('#line-toggle').property('checked');
+        const showVoronoi = d3.select('#voronoi-toggle').property('checked');
+        
+        // Recompute clusters for new k value using ALL data
+        const newClusterAssignments = kMeans(allReducedData, k, 100);
+        const newCentroids = getCentroids(allReducedData, newClusterAssignments, k);
+        
+        d3.select('#cluster-value').text(k);
+        d3.select('#graph svg').remove();
+        
+        // Store the new clustering for use in filtering
+        currentClusterAssignments = newClusterAssignments;
+        currentCentroids = newCentroids;
+        
+        // Update visualization with new clusters but respect current filter
+        updateVisualization(allReducedData, sources, prompts, newClusterAssignments, 
+            newCentroids, selectedSource, maturity);
+            
+        setTimeout(() => {
+            d3.select('.lines-group').style('opacity', showLines ? 1 : 0);
+            d3.selectAll('.voronoi-background path, .voronoi-borders path')
+                .style('opacity', showVoronoi ? 1 : 0);
+        }, 100);
     });
 
+    // Update filter event listener to use current clustering
+    d3.select('#source-filter').on('change', function() {
+        const selectedSource = this.value;
+        const showLines = d3.select('#line-toggle').property('checked');
+        const showVoronoi = d3.select('#voronoi-toggle').property('checked');
+        
+        d3.select('#graph svg').remove();
+        
+        // Use the current clustering assignments and centroids
+        updateVisualization(allReducedData, sources, prompts, currentClusterAssignments, 
+            currentCentroids, selectedSource, maturity);
+            
+        setTimeout(() => {
+            d3.select('.lines-group').style('opacity', showLines ? 1 : 0);
+            d3.selectAll('.voronoi-background path, .voronoi-borders path')
+                .style('opacity', showVoronoi ? 1 : 0);
+        }, 100);
+    });
 
-// tooltip.html(`Prompt: ${d.prompt}`);
-//                 })
-//                 .on('mouseout', function(event , d) {
-//                    // Reset point style
-//                    d3.select(this)
-//                    .style('fill', d => colorScale(d.cluster))
-//                    .attr('r', 5);
-               
-//                     // Hide the label
-//                     d3.select(`.label-${points.indexOf(d)}`)
-//                         .style('visibility', 'hidden');
-//                 });
-            // Add legend
-            const legendSpacing = 25;
-            const legend = svg.append('g')
-                .attr('class', 'legend')
-                .attr('transform', `translate(${width + 20}, 20)`);
+    // Initialize current clustering variables
+    let currentClusterAssignments = staticClusterAssignments;
+    let currentCentroids = staticCentroids;
 
-             // Add cluster legend items
-            legend.selectAll('circle')
-                .data([...Array(k).keys()])
-                .enter()
-                .append('circle')
-                .attr('cx', 10)
-                .attr('cy', (d, i) => i * legendSpacing)
-                .attr('r', 5)
-                .style('fill', d => colorScale(d));
+    // Initial visualization with k=5
+    const initialSource = 'All';
+    updateVisualization(allReducedData, sources, prompts, staticClusterAssignments, 
+        staticCentroids, initialSource, maturity);
 
-            legend.selectAll('text')
-                .data([...Array(k).keys()])
-                .enter()
-                .append('text')
-                .attr('x', 25)
-                .attr('y', (d, i) => i * legendSpacing + 5)
-                .text(d => `Cluster ${d + 1}`)
-                .style('font-size', '12px');
+    // Add line toggle event listener
+    lineToggleDiv.select('#line-toggle').on('change', function() {
+        const isChecked = d3.select(this).property('checked');
+        d3.selectAll('.lines-group')
+            .style('opacity', isChecked ? 1 : 0)
+            .style('pointer-events', isChecked ? 'all' : 'none');
+    });
 
-            // Add labels to the nodes
-             const label = svg.append('g')
-                       .attr('class', 'labels') // Add class to the <g> element for styling
-                       .selectAll('foreignObject')
-                       .data(points)
-                       .enter()
-                       .append('foreignObject')
-                       .attr('class', (d, i) => `node-label label-${i}`) // Add class to the <foreignObject> element
-                       .attr('width', 200)
-                       .attr('height', 100)
-                       .style('visibility', 'hidden')
-                       .style('pointer-events', 'none') // Prevent labels from interfering with mouse events
-                       .attr('x', d => xScale(d.x) + 10)
-                       .attr('y', d => yScale(d.y) - 10)
-                       .append('xhtml:div')
-                       .attr('class', 'label-content')
-                       .html(d => `
-                        <div class="label-box">
-                            <span class="source">${d.source}</span>
-                            <br/>
-                            ${d.prompt}
-                        </div>
-                    `);
+    // Add Voronoi toggle event listener
+    voronoiToggleDiv.select('#voronoi-toggle').on('change', function() {
+        const isChecked = d3.select(this).property('checked');
+        d3.selectAll('.voronoi-background path, .voronoi-borders path')
+            .style('opacity', isChecked ? 1 : 0)
+            .style('pointer-events', isChecked ? 'all' : 'none');
+    });
+}
 
-    // After creating the circles for data points, add the centroids
-    svg.selectAll('.centroid')
-        .data(centroids)
-        .enter()
-        .append('circle')
-        .attr('class', 'centroid')
-        .attr('cx', d => xScale(d[0]))
-        .attr('cy', d => yScale(d[1]))
-        .attr('r', 7)
-        .style('fill', 'none')
-        .style('stroke', (d, i) => colorScale(i))
-        .style('stroke-width', 2);
+// Update visualization function to use static clusters
+function updateVisualization(reducedData, sources, prompts, clusterAssignments, centroids, 
+    selectedSource, maturity) {
+    // Set up dimensions and margins first
+    const margin = {top: 20, right: 250, bottom: 300, left: 100};
+    const width = 1400 - margin.left - margin.right;
+    const height = 1100 - margin.top - margin.bottom;
 
-    // Create a group for the lines (add this before the points)
-    const linesGroup = svg.append('g')
-        .attr('class', 'lines-group')
-        .style('opacity', 0); // Hidden by default
+    // Create SVG container
+    const svg = d3.select('#graph')
+        .append('svg')
+        .attr('width', width + margin.left + margin.right)
+        .attr('height', height + margin.top + margin.bottom)
+        .append('g')
+        .attr('transform', `translate(${margin.left},${margin.top})`);
 
-    // Add lines from points to centroids
-    linesGroup.selectAll('.centroid-line')
-        .data(points)
-        .enter()
-        .append('line')
-        .attr('class', 'centroid-line')
-        .attr('x1', d => xScale(d.x))
-        .attr('y1', d => yScale(d.y))
-        .attr('x2', d => xScale(centroids[d.cluster][0]))
-        .attr('y2', d => yScale(centroids[d.cluster][1]))
-        .style('stroke', d => colorScale(d.cluster))
-        .style('stroke-width', 0.5)
-        .style('stroke-opacity', 0.2);
+    // Create scales using full dataset
+    const xScale = d3.scaleLinear()
+        .domain(d3.extent(reducedData.map(d => d[0])))
+        .range([0, width]);
 
-    // Create Voronoi background
+    const yScale = d3.scaleLinear()
+        .domain(d3.extent(reducedData.map(d => d[1])))
+        .range([height, 0]);
+
+    // Get the current k from the cluster assignments
+    const k = Math.max(...clusterAssignments) + 1;  // Get k from actual assignments
+    
+    const colorScale = d3.scaleOrdinal()
+        .domain([...Array(k).keys()])
+        .range(d3.schemeCategory10);
+
+    // Add axes first
+    svg.append('g')
+        .attr('transform', `translate(0,${height})`)
+        .call(d3.axisBottom(xScale));
+
+    svg.append('g')
+        .call(d3.axisLeft(yScale));
+
+    // Add tooltip
+    const tooltip = d3.select("body").append("div")
+        .attr("class", "tooltip")
+        .style("opacity", 0);
+
+    // Create Voronoi using the original centroids (not filtered)
     const delaunay = d3.Delaunay.from(
-        centroids.map(d => [xScale(d[0]), yScale(d[1])])
+        centroids.slice(0, k).map(d => [xScale(d[0]), yScale(d[1])])
     );
     const voronoi = delaunay.voronoi([0, 0, width, height]);
 
-    // Add colored backgrounds using Voronoi cells
+    // Get toggle states with fallback values
+    const showVoronoi = d3.select('#voronoi-toggle').empty() ? false : 
+        d3.select('#voronoi-toggle').property('checked');
+    const showLines = d3.select('#line-toggle').empty() ? false : 
+        d3.select('#line-toggle').property('checked');
+
+    // Use these values when setting initial opacity
     svg.append('g')
         .attr('class', 'voronoi-background')
         .selectAll('path')
-        .data(centroids)
+        .data(centroids.slice(0, k))
         .enter()
         .append('path')
         .attr('d', (_, i) => voronoi.renderCell(i))
         .style('fill', (_, i) => colorScale(i))
         .style('fill-opacity', 0.1)
         .style('stroke', 'none')
-        .style('opacity', 0);  // Start hidden
+        .style('opacity', showVoronoi ? 1 : 0);
 
-    // Move this before the points and lines
+    // Add Voronoi borders with original centroids
     svg.append('g')
         .attr('class', 'voronoi-borders')
         .selectAll('path')
-        .data(centroids)
+        .data(centroids.slice(0, k))
         .enter()
         .append('path')
         .attr('d', (_, i) => voronoi.renderCell(i))
@@ -391,21 +260,179 @@ function updateVisualization(reducedData, sources, prompts, k, selectedSource) {
         .style('stroke', '#999')
         .style('stroke-width', 0.5)
         .style('stroke-opacity', 0.3)
-        .style('opacity', 0);  // Start hidden
+        .style('opacity', showVoronoi ? 1 : 0);
+
+    // Create points with visibility based on filter but keep original cluster assignments
+    const points = reducedData.map((vector, index) => ({
+        x: vector[0],
+        y: vector[1],
+        source: sources[index],
+        prompt: prompts[index],
+        maturity: maturity[index],
+        cluster: clusterAssignments[index],
+        visible: selectedSource === 'All' || sources[index] === selectedSource
+    }));
+
+    // Update point visualization to respect visibility
+    svg.selectAll('circle')
+        .data(points)
+        .enter()
+        .append('circle')
+        .attr('cx', d => xScale(d.x))
+        .attr('cy', d => yScale(d.y))
+        .attr('r', 5)
+        .style('fill', d => d.source === 'whitespace' ? 'none' : colorScale(d.cluster))
+        .style('stroke', d => d.source === 'whitespace' ? colorScale(d.cluster) : 'none')
+        .style('stroke-width', d => d.source === 'whitespace' ? 1 : 0)
+        .style('opacity', d => d.visible ? 0.6 : 0)
+        .style('pointer-events', d => d.visible ? 'all' : 'none')
+        .on('mouseover', function(event, d) {
+            // Point styling
+            d3.select(this)
+                .transition()
+                .duration(200)
+                .attr('r', 8)
+                .style('opacity', d.visible ? 1 : 0);
+            
+            // Tooltip display
+            tooltip.transition()
+                .duration(200)
+                .style('opacity', 0.9);
+                    
+            tooltip.html(`
+                <strong>Source:</strong> ${d.source}<br>
+                <strong>Maturity:</strong> ${d.maturity}<br>
+                <strong>Prompt:</strong> ${d.prompt}
+            `)
+                .style('left', (event.pageX + 10) + 'px')
+                .style('top', (event.pageY - 10) + 'px');
+        })
+        .on('mouseout', function(event, d) {
+            // Reset point styling
+            d3.select(this)
+                .transition()
+                .duration(200)
+                .attr('r', 5)
+                .style('opacity', d.visible ? 0.6 : 0);
+
+            // Hide tooltip
+            tooltip.transition()
+                .duration(500)
+                .style('opacity', 0);   
+        });
+
+    // Get the actual centroids from the current clustering
+    const currentCentroids = getCentroids(reducedData, clusterAssignments, k);
+
+    // Use currentCentroids for the X marks
+    svg.selectAll('.centroid')
+        .data(currentCentroids)
+        .enter()
+        .append('path')
+        .attr('class', 'centroid')
+        .attr('d', d => {
+            const x = xScale(d[0]);
+            const y = yScale(d[1]);
+            const size = 7;  // Size of the X
+            return `M${x-size},${y-size} L${x+size},${y+size} M${x-size},${y+size} L${x+size},${y-size}`;
+        })
+        .style('stroke', 'black')
+        .style('stroke-width', 2)
+        .style('fill', 'none');
+
+    // Create a group for the lines (move this before points)
+    const linesGroup = svg.append('g')
+        .attr('class', 'lines-group')
+        .style('opacity', showLines ? 1 : 0)
+        .style('pointer-events', showLines ? 'all' : 'none');
+
+    // Add lines from points to centroids (only for visible points)
+    linesGroup.selectAll('.centroid-line')
+        .data(points.filter(d => d.visible))  // Only create lines for visible points
+        .enter()
+        .append('line')
+        .attr('class', 'centroid-line')
+        .attr('x1', d => xScale(d.x))
+        .attr('y1', d => yScale(d.y))
+        .attr('x2', d => xScale(currentCentroids[d.cluster][0]))
+        .attr('y2', d => yScale(currentCentroids[d.cluster][1]))
+        .style('stroke', d => colorScale(d.cluster))
+        .style('stroke-width', 0.5)
+        .style('stroke-opacity', 0.2);
 
     // After the centroids circles code, add centroid labels:
     svg.selectAll('.centroid-label')
-        .data(centroids)
+        .data(currentCentroids)
         .enter()
         .append('text')
         .attr('class', 'centroid-label')
         .attr('x', d => xScale(d[0]))
-        .attr('y', d => yScale(d[1]) - 10)  // Position slightly above the centroid
+        .attr('y', d => yScale(d[1]) - 10)
         .text((d, i) => `Cluster ${i + 1}`)
         .style('text-anchor', 'middle')
         .style('font-size', '12px')
         .style('font-weight', 'bold')
         .style('fill', (d, i) => colorScale(i));
+
+    // Update the legend to include whitespace points
+    const legendData = [
+        ...Array(k).keys(),  // Only include current number of clusters
+        'whitespace',
+        'centroid'
+    ];
+
+    const legend = svg.append('g')
+        .attr('class', 'legend')
+        .attr('transform', `translate(${width + 20}, 20)`);
+
+    // Add legend items for clusters and whitespace
+    legend.selectAll('.legend-marker')
+        .data(legendData)
+        .enter()
+        .append('g')
+        .attr('class', 'legend-item')
+        .attr('transform', (d, i) => `translate(0, ${i * 25})`)
+        .each(function(d, i) {
+            const g = d3.select(this);
+            const clusterIndex = typeof d === 'number' ? d : 0;  // Use first cluster color for whitespace
+            
+            if (d === 'whitespace') {
+                // Hollow circle for whitespace
+                g.append('circle')
+                    .attr('cx', 10)
+                    .attr('cy', 0)
+                    .attr('r', 5)
+                    .style('fill', 'none')
+                    .style('stroke', 'black')
+                    .style('stroke-width', 1);
+            } else if (d === 'centroid') {
+                // X mark for centroids
+                g.append('path')
+                    .attr('d', 'M5,-5 L15,5 M5,5 L15,-5')
+                    .style('stroke', 'black')
+                    .style('stroke-width', 2);
+            } else {
+                // Filled circle for regular clusters
+                g.append('circle')
+                    .attr('cx', 10)
+                    .attr('cy', 0)
+                    .attr('r', 5)
+                    .style('fill', colorScale(clusterIndex));
+            }
+
+            // Add labels with matching colors
+            g.append('text')
+                .attr('x', 25)
+                .attr('y', 5)
+                .text(d === 'whitespace' ? 'Whitespace Points' : 
+                      d === 'centroid' ? 'Cluster Centers' : 
+                      `Cluster ${d + 1}`)
+                .style('font-size', '12px')
+                .style('fill', d => {
+                    if (d === 'whitespace' || d === 'centroid') return 'black';
+                    return colorScale(d);
+                });
+        });
 }
 
 // Helper function to calculate cosine similarity between two vectors
